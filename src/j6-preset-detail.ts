@@ -45,6 +45,20 @@ export class J6PresetDetail extends LitElement {
       border-bottom: 1px solid #444;
       padding-bottom: 0.5rem;
     }
+    .tag-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1rem;
+    }
+    .tag {
+      background: #333;
+      color: #f0f0f0;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      border: 1px solid #444;
+    }
     .param-group p {
       margin: 0.5rem 0;
     }
@@ -70,6 +84,11 @@ export class J6PresetDetail extends LitElement {
     return html`
       <h2>[${this.preset.id}] ${this.preset.name}</h2>
       <p class="description">${this.preset.notes}</p>
+      ${this.preset.tags?.length ? html`
+        <div class="tag-bar">
+          ${this.preset.tags.map((tag: string) => html`<span class="tag">${tag}</span>`) }
+        </div>
+      ` : ''}
       
       <h3>Amp Envelope Visualizer</h3>
       <div class="envelope-visualizer">
