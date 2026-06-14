@@ -223,6 +223,35 @@ export class J6App extends LitElement {
         grid-template-columns: 400px 1fr;
       }
     }
+    .clear-filters-btn {
+      padding: 8px 16px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #2a2a2a;
+      color: #e0e0e0;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      height: 38px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .clear-filters-btn:hover:not(:disabled) {
+      background: #ff5500;
+      border-color: #ff5500;
+      color: #fff;
+      box-shadow: 0 0 8px rgba(255, 85, 0, 0.4);
+    }
+    .clear-filters-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      border-color: #222;
+      background: #181818;
+      color: #666;
+    }
   `;
 
   @state() private searchQuery = '';
@@ -234,6 +263,26 @@ export class J6App extends LitElement {
   @state() private activeWaveform = 'All';
   @state() private selectedPreset = presetsData[0]; // Default to 1-1
   @state() private filtersOpen = false;
+
+  private get hasActiveFilters() {
+    return this.searchQuery !== '' ||
+      this.activeGenreMood !== 'All' ||
+      this.activeInstrumentType !== 'All' ||
+      this.activeCharacter !== 'All' ||
+      this.activeEnvelope !== 'All' ||
+      this.activeEffects !== 'All' ||
+      this.activeWaveform !== 'All';
+  }
+
+  private clearFilters() {
+    this.searchQuery = '';
+    this.activeGenreMood = 'All';
+    this.activeInstrumentType = 'All';
+    this.activeCharacter = 'All';
+    this.activeEnvelope = 'All';
+    this.activeEffects = 'All';
+    this.activeWaveform = 'All';
+  }
 
   get filteredPresets() {
     const q = this.searchQuery.trim().toLowerCase();
@@ -282,10 +331,11 @@ export class J6App extends LitElement {
       <label style="display:flex;flex-direction:column;gap:4px;">
         <span style="font-size:0.8rem;color:#aaa;">${category}</span>
         <select
+          .value=${selectedValue}
           @change=${(e: Event) => { (this as any)[field] = (e.target as HTMLSelectElement).value; }}
           style="padding:8px;border-radius:6px;border:1px solid #333;background:#141414;color:#e0e0e0;min-width:180px;"
         >
-          <option value="All">All</option>
+          <option value="All" ?selected=${selectedValue === 'All'}>All</option>
           ${tags.map(tag => html`<option value=${tag} ?selected=${selectedValue === tag}>${tag}</option>`) }
         </select>
       </label>
@@ -334,6 +384,13 @@ export class J6App extends LitElement {
           ${this.renderCategorySelect('Envelope', groupedTags.get('Envelope') || [], this.activeEnvelope, 'activeEnvelope')}
           ${this.renderCategorySelect('Effects', groupedTags.get('Effects') || [], this.activeEffects, 'activeEffects')}
           ${this.renderCategorySelect('Waveform', groupedTags.get('Waveform') || [], this.activeWaveform, 'activeWaveform')}
+          <button
+            class="clear-filters-btn"
+            ?disabled=${!this.hasActiveFilters}
+            @click=${this.clearFilters}
+          >
+            Clear Filters
+          </button>
         </div>
       </header>
 
