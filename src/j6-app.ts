@@ -167,6 +167,44 @@ export class J6App extends LitElement {
     header {
       margin-bottom: 1rem;
     }
+    .filter-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: #1e1e1e;
+      cursor: pointer;
+      border: 1px solid #333;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .filter-drawer-header.open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: none;
+    }
+    .filter-drawer-header:hover {
+      background: #2a2a2a;
+    }
+    .filter-drawer-content {
+      display: none;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      padding: 1rem;
+      align-items: flex-end;
+    }
+    .filter-drawer-content.open {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .toggle-icon {
+      color: #ff5500;
+      font-size: 0.8rem;
+    }
     @media (min-width: 768px) {
       .layout {
         grid-template-columns: 400px 1fr;
@@ -182,6 +220,7 @@ export class J6App extends LitElement {
   @state() private activeEffects = 'All';
   @state() private activeWaveform = 'All';
   @state() private selectedPreset = presetsData[0]; // Default to 1-1
+  @state() private filtersOpen = false;
 
   get filteredPresets() {
     const q = this.searchQuery.trim().toLowerCase();
@@ -257,13 +296,22 @@ export class J6App extends LitElement {
     return html`
       <header>
         <h1>Roland J-6 Preset Explorer</h1>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:flex-end;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
           <input
             placeholder="Search by name, notes, waveform, etc..."
             .value=${this.searchQuery}
             @input=${(e: InputEvent) => { this.searchQuery = (e.target as HTMLInputElement).value; }}
             style="flex:1;min-width:240px;padding:8px;border-radius:6px;border:1px solid #333;background:#141414;color:#e0e0e0;"
           />
+        </div>
+
+        <div class="filter-drawer-header ${this.filtersOpen ? 'open' : ''}" @click=${() => this.filtersOpen = !this.filtersOpen}>
+          <div>
+            <span style="color:#ff5500;">☰</span> <span>Filters</span>
+          </div>
+          <div class="toggle-icon">${this.filtersOpen ? '▲' : '▼'}</div>
+        </div>
+        <div class="filter-drawer-content ${this.filtersOpen ? 'open' : ''}">
           ${this.renderCategorySelect('Genre / Mood', groupedTags.get('Genre / Mood') || [], this.activeGenreMood, 'activeGenreMood')}
           ${this.renderCategorySelect('Instrument / Type', groupedTags.get('Instrument / Type') || [], this.activeInstrumentType, 'activeInstrumentType')}
           ${this.renderCategorySelect('Character', groupedTags.get('Character') || [], this.activeCharacter, 'activeCharacter')}
