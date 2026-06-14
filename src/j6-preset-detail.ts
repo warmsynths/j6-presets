@@ -27,6 +27,37 @@ export class J6PresetDetail extends LitElement {
       stroke: #ff5500; /* Roland orange vibe */
       stroke-width: 3;
       fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: trace-line 3s ease-in-out infinite, neon-pulse 2s infinite ease-in-out;
+    }
+    @keyframes trace-line {
+      0% {
+        stroke-dashoffset: 1000;
+      }
+      40% {
+        stroke-dashoffset: 0;
+      }
+      60% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: 1000;
+      }
+    }
+    @keyframes neon-pulse {
+      0% {
+        filter: drop-shadow(0 0 2px rgba(255, 85, 0, 0.4));
+        stroke-width: 3px;
+      }
+      50% {
+        filter: drop-shadow(0 0 8px rgba(255, 85, 0, 1)) drop-shadow(0 0 16px rgba(255, 85, 0, 0.6));
+        stroke-width: 4px;
+      }
+      100% {
+        filter: drop-shadow(0 0 2px rgba(255, 85, 0, 0.4));
+        stroke-width: 3px;
+      }
     }
     .params-grid {
       display: grid;
