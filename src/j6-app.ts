@@ -167,6 +167,19 @@ export class J6App extends LitElement {
     header {
       margin-bottom: 1rem;
     }
+    .attribution {
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: 0.35rem;
+      line-height: 1.4;
+    }
+    .attribution a {
+      color: #ff9500;
+      text-decoration: none;
+    }
+    .attribution a:hover {
+      text-decoration: underline;
+    }
     .filter-drawer-header {
       display: flex;
       justify-content: space-between;
@@ -296,6 +309,9 @@ export class J6App extends LitElement {
     return html`
       <header>
         <h1>Roland J-6 Preset Explorer</h1>
+        <div class="attribution">
+          Based on Nick Standing's Roland J-6 compilation spreadsheet and video. <a href="https://www.youtube.com/watch?v=z6hoNwWadR8" target="_blank" rel="noreferrer">Watch the source video</a>.
+        </div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
           <input
             placeholder="Search by name, notes, waveform, etc..."
