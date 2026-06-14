@@ -1,142 +1,16 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-
-// Assume presetsData is imported from your static clean JSON file
 import { presetsData as rawPresetsData } from './presets-data.js';
+import { inferTags, getTagCategory } from './utils.js';
+import { RawPreset, Preset } from './types.js';
 import './j6-preset-list.js';
 import './j6-preset-detail.js';
 
-// Utility helpers for deriving producer-friendly tags
-const tagMatchers: Array<[RegExp, string[]]> = [
-  [/deadmau5/i, ['Progressive House', 'EDM']],
-  [/avicii/i, ['Melodic EDM', 'Pop']],
-  [/chiptune/i, ['Chiptune', 'Retro']],
-  [/lo[- ]?fi/i, ['Lo-Fi']],
-  [/house/i, ['House']],
-  [/trance/i, ['Trance']],
-  [/dance/i, ['Dance']],
-  [/ambient/i, ['Ambient']],
-  [/juno/i, ['Vintage', 'Analog']],
-  [/303/i, ['Acid', 'Bassline']],
-  [/bass/i, ['Bass']],
-  [/brass/i, ['Brass']],
-  [/organ/i, ['Organ']],
-  [/strings/i, ['Strings']],
-  [/piano/i, ['Piano']],
-  [/pad/i, ['Pad']],
-  [/lead/i, ['Lead']],
-  [/pluck/i, ['Pluck']],
-  [/synth/i, ['Synth']],
-  [/noise/i, ['Noise']],
-  [/bell/i, ['Bell']],
-  [/vintage/i, ['Vintage']],
-  [/metallic/i, ['Metallic']],
-  [/dark/i, ['Dark']],
-  [/bright/i, ['Bright']],
-  [/soft/i, ['Soft']],
-  [/aggressive/i, ['Aggressive']],
-  [/hyper pop/i, ['Hyperpop']],
-  [/rock/i, ['Rock']],
-  [/house music/i, ['House']],
-  [/deep house/i, ['Deep House']],
-  [/hip hop/i, ['Hip Hop']],
-  [/rnb/i, ['R&B']],
-  [/sci-fi/i, ['Sci-Fi']],
-  [/industrial/i, ['Industrial']],
-  [/noise style/i, ['Noise']],
-  [/soundtrack/i, ['Soundtrack']],
-];
-
-function addTag(tags: Set<string>, value: string | string[]) {
-  if (Array.isArray(value)) {
-    value.forEach(v => v && tags.add(v));
-  } else if (value) {
-    tags.add(value);
-  }
-}
-
-function inferTags(p: any) {
-  const tags = new Set<string>();
-  const note = p.notesDescription || '';
-  const lowerName = (p.soundNameCategory || '').toLowerCase();
-  const lowerNote = note.toLowerCase();
-
-  // Extract explicit parenthetical cues from the notes
-  const re = /\(([^)]+)\)/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(note)) !== null) {
-    const extracted = m[1].trim();
-    if (!extracted) continue;
-
-    // Skip raw "Good for ..." phrases; those are better handled by keyword tagging.
-    if (/^good for\s+/i.test(extracted)) {
-      continue;
-    }
-
-    // Add any other useful parenthetical tags, like "Ambient Swell" or "Vintage tape warble feel".
-    addTag(tags, extracted);
-  }
-
-  // Keyword-based tags from name and note text
-  tagMatchers.forEach(([regex, outcome]) => {
-    if (regex.test(note) || regex.test(lowerName)) {
-      addTag(tags, outcome);
-    }
-  });
-
-  // Instrument/character tags from the sound name
-  const nameKeywords: Array<[RegExp, string]> = [
-    [/pad/i, 'Pad'],
-    [/lead/i, 'Lead'],
-    [/bass/i, 'Bass'],
-    [/keys/i, 'Keys'],
-    [/organ/i, 'Organ'],
-    [/piano/i, 'Piano'],
-    [/pluck/i, 'Pluck'],
-    [/brass/i, 'Brass'],
-    [/strings/i, 'Strings'],
-    [/bell/i, 'Bell'],
-    [/whistle/i, 'Whistle'],
-    [/clav/i, 'Clav'],
-    [/synth/i, 'Synth'],
-  ];
-  nameKeywords.forEach(([regex, tag]) => {
-    if (regex.test(p.soundNameCategory)) addTag(tags, tag);
-  });
-
-  // Waveform flavor
-  const waveform = (p.waveformOscType || '').toLowerCase();
-  if (waveform.includes('saw')) addTag(tags, 'Saw');
-  if (waveform.includes('square')) addTag(tags, 'Square');
-  if (waveform.includes('sub')) addTag(tags, 'Sub');
-  if (waveform.includes('noise')) addTag(tags, 'Noise');
-  if (waveform.includes('triangle')) addTag(tags, 'Triangle');
-  if (waveform.includes('sync')) addTag(tags, 'Sync');
-  if (waveform.includes('pwm')) addTag(tags, 'PWM');
-  if (waveform.includes('cross-mod') || waveform.includes('cross mod')) addTag(tags, 'Cross-Mod');
-
-  // Brightness/texture from filter + resonance
-  if (p.filterFreq === 'High') addTag(tags, 'Bright');
-  if (p.filterFreq === 'Low') addTag(tags, 'Dark');
-  if (p.resonance === 'High') addTag(tags, 'Resonant');
-  if (p.resonance === 'Low') addTag(tags, 'Smooth');
-
-  // Attack/release envelope tags
-  if (p.attack === 'Fast') addTag(tags, 'Sharp Attack');
-  if (p.attack === 'Slow') addTag(tags, 'Slow Attack');
-  if (p.release === 'Slow') addTag(tags, 'Long Release');
-  if (p.release === 'Fast') addTag(tags, 'Snappy Release');
-  if (p.sustain === 'Max') addTag(tags, 'Sustained');
-
-  // Effects and mood
-  if (p.chorus && p.chorus !== 'Off') addTag(tags, p.chorus);
-  if (p.delayReverb && p.delayReverb !== 'Off') addTag(tags, p.delayReverb);
-
-  return Array.from(tags);
-}
-
-// Map raw data to standard property names expected by the app components
-const presetsData = rawPresetsData.map((p: any) => {
+/**
+ * Mapped list of presets, parsed to conform to the {@link Preset} interface,
+ * with standard IDs, names, and tags inferred.
+ */
+const presetsData: Preset[] = (rawPresetsData as RawPreset[]).map((p: RawPreset) => {
   return {
     ...p,
     id: p.bankPatch,
@@ -147,6 +21,10 @@ const presetsData = rawPresetsData.map((p: any) => {
   };
 });
 
+/**
+ * Main application component for the Roland J-6 Preset Explorer.
+ * Orchestrates preset list selection, metadata filtering, and detail display.
+ */
 @customElement('j6-app')
 export class J6App extends LitElement {
   static styles = css`
@@ -252,17 +130,51 @@ export class J6App extends LitElement {
       background: #181818;
       color: #666;
     }
+    footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #222;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    footer a {
+      color: #ff5500;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    footer a:hover {
+      color: #ff7733;
+      text-decoration: underline;
+    }
   `;
 
-  @state() private searchQuery = '';
-  @state() private activeGenreMood = 'All';
-  @state() private activeInstrumentType = 'All';
-  @state() private activeCharacter = 'All';
-  @state() private activeEnvelope = 'All';
-  @state() private activeEffects = 'All';
-  @state() private activeWaveform = 'All';
-  @state() private selectedPreset = presetsData[0]; // Default to 1-1
-  @state() private filtersOpen = false;
+  /** The current search query typed in the search bar. */
+  @state() private searchQuery: string = '';
+
+  /** Currently selected filter for Genre / Mood. */
+  @state() private activeGenreMood: string = 'All';
+
+  /** Currently selected filter for Instrument / Type. */
+  @state() private activeInstrumentType: string = 'All';
+
+  /** Currently selected filter for Character. */
+  @state() private activeCharacter: string = 'All';
+
+  /** Currently selected filter for Envelope behavior. */
+  @state() private activeEnvelope: string = 'All';
+
+  /** Currently selected filter for Effects. */
+  @state() private activeEffects: string = 'All';
+
+  /** Currently selected filter for Waveform. */
+  @state() private activeWaveform: string = 'All';
+
+  /** The preset object currently highlighted in the detail view. */
+  @state() private selectedPreset: Preset = presetsData[0];
+
+  /** Whether the filter options drawer is open. */
+  @state() private filtersOpen: boolean = false;
 
   private get hasActiveFilters() {
     return this.searchQuery !== '' ||
@@ -303,28 +215,7 @@ export class J6App extends LitElement {
     });
   }
 
-  private getTagCategory(tag: string) {
-    const normalized = tag.toLowerCase();
-    if (/^(progressive house|edm|melodic edm|pop|chiptune|retro|lo-fi|house|trance|dance|ambient|acid|bassline|hip hop|r&b|sci-fi|industrial|soundtrack|hyperpop|rock|vintage|analog)$/.test(normalized)) {
-      return 'Genre / Mood';
-    }
-    if (/^(pad|lead|bass|keys|organ|piano|pluck|brass|strings|bell|whistle|clav|synth)$/.test(normalized)) {
-      return 'Instrument / Type';
-    }
-    if (/^(bright|dark|soft|aggressive|metallic|noise|smooth|resonant|sustained)$/.test(normalized)) {
-      return 'Character';
-    }
-    if (/^(sharp attack|slow attack|long release|snappy release)$/.test(normalized)) {
-      return 'Envelope';
-    }
-    if (/^(chorus|reverb|delay|chorus \d|reverb \d|delay \d)$/.test(normalized)) {
-      return 'Effects';
-    }
-    if (/^(saw|square|sub|triangle|sync|pwm|cross-mod)$/.test(normalized)) {
-      return 'Waveform';
-    }
-    return 'Other';
-  }
+  // Removed local getTagCategory method in favor of utility import
 
   private renderCategorySelect(category: string, tags: string[], selectedValue: string, field: string) {
     return html`
@@ -348,7 +239,7 @@ export class J6App extends LitElement {
     presetsData.forEach(p => (p.tags || []).forEach((t: string) => tagSet.add(t)));
     const groupedTags = new Map<string, string[]>();
     Array.from(tagSet).sort((a, b) => a.localeCompare(b)).forEach(tag => {
-      const category = this.getTagCategory(tag);
+      const category = getTagCategory(tag);
       const list = groupedTags.get(category) ?? [];
       list.push(tag);
       groupedTags.set(category, list);
@@ -405,6 +296,13 @@ export class J6App extends LitElement {
           .preset=${this.selectedPreset}>
         </j6-preset-detail>
       </div>
+
+      <footer>
+        <p>
+          Built by <a href="https://github.com/warmsynths" target="_blank" rel="noopener noreferrer">Warm Synths</a>.
+          Want to contribute? Find us on <a href="https://github.com/warmsynths/j6-presets" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+      </footer>
     `;
   }
 }

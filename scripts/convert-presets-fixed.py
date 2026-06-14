@@ -1,9 +1,9 @@
-﻿import csv
+import csv
 from pathlib import Path
 import json
 import re
 
-csv_path = Path('src/Roland J-6 Preset Sounds Ver1.0 (RAW).xlsx - Sheet1.csv')
+csv_path = Path('data/Roland J-6 Preset Sounds Ver1.0 (RAW).xlsx - Sheet1.csv')
 js_path = Path('src/presets-data.js')
 
 with csv_path.open(newline='', encoding='utf-8') as csvfile:
@@ -72,7 +72,6 @@ for row in rows[6:]:
 
     items.append(record)
 
-js_content = 'export const presetsData = ' + json.dumps(items, indent=2) + ';
-'
+js_content = 'export const presetsData = ' + json.dumps(items, indent=2) + ';\n'
 js_path.write_text(js_content, encoding='utf-8')
 print(f'Wrote {len(items)} presets to {js_path}')

@@ -1,9 +1,15 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { Preset } from './types.js';
 
+/**
+ * Component representing the detailed inspector for a selected Roland J-6 preset.
+ * Displays preset tags, dynamic Amp Envelope visualizer, and synthesis parameters.
+ */
 @customElement('j6-preset-detail')
 export class J6PresetDetail extends LitElement {
-  @property({ type: Object }) preset: any = null;
+  /** The selected preset object. */
+  @property({ type: Object }) preset: Preset | null = null;
 
   static styles = css`
     :host {
@@ -95,8 +101,13 @@ export class J6PresetDetail extends LitElement {
     }
   `;
 
-  // Map text descriptors to standard X/Y spacing points for an SVG path
-  getEnvelopePath() {
+  /**
+   * Maps textual envelope parameters (attack, decay, sustain, release) to 
+   * standard X/Y coordinate segments for drawing the SVG envelope visualization.
+   * 
+   * @returns An SVG path definition string (`d` attribute value)
+   */
+  getEnvelopePath(): string {
     if (!this.preset) return 'M 0 100 L 100 100';
     
     // Default base coordinates: Start at bottom left (0, 100)

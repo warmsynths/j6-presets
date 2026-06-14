@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 import re
 
-csv_path = Path('src/Roland J-6 Preset Sounds Ver1.0 (RAW).xlsx - Sheet1.csv')
+csv_path = Path('data/Roland J-6 Preset Sounds Ver1.0 (RAW).xlsx - Sheet1.csv')
 js_path = Path('src/presets-data.js')
 
 with csv_path.open(newline='', encoding='utf-8') as csvfile:

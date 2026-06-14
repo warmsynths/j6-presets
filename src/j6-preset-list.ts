@@ -1,11 +1,20 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
+import { Preset } from './types.js';
 
+/**
+ * Component representing the list of presets, supporting drawer/accordion behavior
+ * on mobile and a persistent sidebar list layout on desktop screens.
+ */
 @customElement('j6-preset-list')
 export class J6PresetList extends LitElement {
-  @property({ type: Array }) presets: any[] = [];
+  /** The list of filtered presets to display. */
+  @property({ type: Array }) presets: Preset[] = [];
+
+  /** The bankPatch ID of the currently selected preset. */
   @property({ type: String }) selectedId = '';
 
+  /** Tracks whether the preset drawer is expanded on mobile views. */
   @state() private isOpen = false;
 
   static styles = css`
