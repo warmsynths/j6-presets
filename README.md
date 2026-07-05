@@ -1,5 +1,7 @@
 # Roland J-6 Preset Explorer
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ![Roland J-6 Preset Explorer Screenshot](./public/screenshot.png)
 
 > Built from the work of Nick Standing and their compilation spreadsheet and video.
@@ -97,3 +99,7 @@ npm run preview
 - The app is built with Lit 3 and TypeScript.
 - `index.html` mounts `<j6-app>` and loads `src/j6-app.ts` as an ES module.
 - The app is deliberately kept static and dependency-light for fast loading.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
