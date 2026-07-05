@@ -1,5 +1,7 @@
 # Roland J-6 Preset Explorer
 
+![Roland J-6 Preset Explorer Screenshot](./public/screenshot.png)
+
 > Built from the work of Nick Standing and their compilation spreadsheet and video.
 > See: https://www.youtube.com/watch?v=z6hoNwWadR8
 
@@ -25,6 +27,7 @@ The Roland J-6 has many preset descriptions that are not always easy to scan or 
 
 ## Key features
 
+- Skeuomorphic retro synth UI design inspired by classic Roland instruments
 - Text search across preset name, notes, waveform, filter, effects, and tags
 - Category filters for:
   - Genre / Mood
