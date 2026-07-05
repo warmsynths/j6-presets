@@ -31,19 +31,10 @@ const presetsData: Preset[] = (rawPresetsData as RawPreset[]).map((p: RawPreset)
 export class J6App extends LitElement {
   // Preset States
   @state() private selectedPreset: Preset = presetsData[0];
-  @state() private searchQuery: string = '';
-  @state() private activeGenreMood: string = 'All';
-  @state() private activeInstrumentType: string = 'All';
-  @state() private activeCharacter: string = 'All';
-  @state() private activeEnvelope: string = 'All';
-  @state() private activeEffects: string = 'All';
-  @state() private activeWaveform: string = 'All';
 
   // UI Interactive States
   @state() private presetListOpen = false;
-  @state() private filtersOpen = false;
   @state() private aboutOpen = false;
-  @state() private searchOn = true;
   @state() private isEdited = false;
 
   // Custom tweaked parameters (override preset defaults)
@@ -779,57 +770,6 @@ Effect Chorus: ${this.customValues.effect}%
     });
   }
 
-  private clearFilters() {
-    this.searchQuery = '';
-    this.activeGenreMood = 'All';
-    this.activeInstrumentType = 'All';
-    this.activeCharacter = 'All';
-    this.activeEnvelope = 'All';
-    this.activeEffects = 'All';
-    this.activeWaveform = 'All';
-  }
-
-  private get hasActiveFilters() {
-    return this.searchQuery !== '' ||
-      this.activeGenreMood !== 'All' ||
-      this.activeInstrumentType !== 'All' ||
-      this.activeCharacter !== 'All' ||
-      this.activeEnvelope !== 'All' ||
-      this.activeEffects !== 'All' ||
-      this.activeWaveform !== 'All';
-  }
-
-  get filteredPresets() {
-    const q = this.searchQuery.trim().toLowerCase();
-    return presetsData.filter(preset => {
-      const hay = [preset.name, preset.notes, preset.waveformOscType, preset.bankPatch, preset.filterFreq, preset.delayEffects, (preset.tags || []).join(' ')]
-        .filter(Boolean)
-        .join(' ').toLowerCase();
-
-      const matchesSearch = !this.searchOn || q === '' || hay.includes(q);
-      const matchesGenreMood = this.activeGenreMood === 'All' || (preset.tags || []).some((t: string) => t.toLowerCase() === this.activeGenreMood.toLowerCase());
-      const matchesInstrumentType = this.activeInstrumentType === 'All' || (preset.tags || []).some((t: string) => t.toLowerCase() === this.activeInstrumentType.toLowerCase());
-      const matchesCharacter = this.activeCharacter === 'All' || (preset.tags || []).some((t: string) => t.toLowerCase() === this.activeCharacter.toLowerCase());
-      const matchesEnvelope = this.activeEnvelope === 'All' || (preset.tags || []).some((t: string) => t.toLowerCase() === this.activeEnvelope.toLowerCase());
-      const matchesEffects = this.activeEffects === 'All' || (preset.tags || []).some((t: string) => t.toLowerCase() === this.activeEffects.toLowerCase());
-      const matchesWaveform = this.activeWaveform === 'All' || (preset.tags || []).some((t: string) => t.toLowerCase() === this.activeWaveform.toLowerCase());
-
-      return matchesSearch && matchesGenreMood && matchesInstrumentType && matchesCharacter && matchesEnvelope && matchesEffects && matchesWaveform;
-    });
-  }
-
-  get groupedTags() {
-    const tagSet = new Set<string>();
-    presetsData.forEach(p => (p.tags || []).forEach((t: string) => tagSet.add(t)));
-    const grouped = new Map<string, string[]>();
-    Array.from(tagSet).sort((a, b) => a.localeCompare(b)).forEach(tag => {
-      const category = getTagCategory(tag);
-      const list = grouped.get(category) ?? [];
-      list.push(tag);
-      grouped.set(category, list);
-    });
-    return grouped;
-  }
 
   // Render sub-templates
   private renderFader(label: string, value: number, paramName: string) {
@@ -864,21 +804,7 @@ Effect Chorus: ${this.customValues.effect}%
     `;
   }
 
-  private renderCategorySelect(category: string, tags: string[], selectedValue: string, field: string) {
-    return html`
-      <div class="filter-group">
-        <label>${category}</label>
-        <select
-          class="filter-select"
-          .value=${selectedValue}
-          @change=${(e: Event) => { (this as any)[field] = (e.target as HTMLSelectElement).value; }}
-        >
-          <option value="All">All</option>
-          ${tags.map(tag => html`<option value=${tag} ?selected=${selectedValue === tag}>${tag}</option>`) }
-        </select>
-      </div>
-    `;
-  }
+
 
   override render() {
     const p = this.selectedPreset;
@@ -893,11 +819,18 @@ Effect Chorus: ${this.customValues.effect}%
     const isChorusIActive = p.chorus === 'I';
     const isChorusIIActive = p.chorus === 'II';
 
-    // Count categories of filtered list
-    const filteredList = this.filteredPresets;
-    const bassCount = filteredList.filter(pr => (pr.tags || []).some(t => t.toLowerCase() === 'bass')).length;
-    const padCount = filteredList.filter(pr => (pr.tags || []).some(t => t.toLowerCase() === 'pad')).length;
-    const leadCount = filteredList.filter(pr => (pr.tags || []).some(t => t.toLowerCase() === 'lead')).length;
+    // ADSR calculation
+    const aWidth = (this.customValues.a || 0) * 0.25;
+    const dWidth = (this.customValues.d || 0) * 0.25;
+    const sHeight = (this.customValues.s || 0) * 0.40;
+    const sWidth = 25;
+    const rWidth = (this.customValues.r || 0) * 0.25;
+    const p1 = `0,40`;
+    const p2 = `${aWidth},0`;
+    const p3 = `${aWidth + dWidth},${40 - sHeight}`;
+    const p4 = `${aWidth + dWidth + sWidth},${40 - sHeight}`;
+    const p5 = `${aWidth + dWidth + sWidth + rWidth},40`;
+    const adsrPath = `M ${p1} L ${p2} L ${p3} L ${p4} L ${p5}`;
 
     return html`
       <div class="synth-container">
@@ -931,29 +864,11 @@ Effect Chorus: ${this.customValues.effect}%
                       ${p.name || 'MELLOW SUB OCTAVE'}
                     </button>
                     
-                    <!-- LED Search field -->
-                    <div class="led-search-screen">
-                      <input 
-                        class="led-search-input" 
-                        placeholder="SEARCH..."
-                        .value=${this.searchQuery}
-                        @input=${(e: InputEvent) => { 
-                          this.searchQuery = (e.target as HTMLInputElement).value;
-                          this.presetListOpen = true; 
-                        }}
-                      />
-                      <svg class="led-search-icon" viewBox="0 0 24 24">
-                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    <!-- ADSR LCD Screen -->
+                    <div class="led-search-screen" style="padding: 0; overflow: hidden; justify-content: center;">
+                      <svg viewBox="0 0 100 40" style="width: 90%; height: 80%; overflow: visible;" preserveAspectRatio="none">
+                        <path d=${adsrPath} fill="none" stroke="#ff5d00" stroke-width="2" vector-effect="non-scaling-stroke" filter="drop-shadow(0 0 4px rgba(255, 93, 0, 0.7))"/>
                       </svg>
-                    </div>
-
-                    <!-- Search Toggle -->
-                    <div class="search-toggle-container">
-                      <span class="search-toggle-label">SEARCH ON</span>
-                      <button 
-                        class="search-toggle-btn ${this.searchOn ? 'active' : ''}" 
-                        @click=${() => this.searchOn = !this.searchOn}
-                      ></button>
                     </div>
                   </div>
 
@@ -964,12 +879,7 @@ Effect Chorus: ${this.customValues.effect}%
                       ${p.notes || 'Factory patch preset definition'}
                     </div>
 
-                    <div class="patch-counts">
-                      FILTERED<br/>
-                      (BASS: ${bassCount},<br/>
-                      PAD: ${padCount},<br/>
-                      LEAD: ${leadCount})
-                    </div>
+
                   </div>
                   
                 </div>
@@ -1140,10 +1050,21 @@ Effect Chorus: ${this.customValues.effect}%
 
                   <!-- Section 2: Utilities -->
                   <div class="chorus-section">
-                    <div style="display:flex; gap: 6px;">
-                      <button class="retro-btn accent" @click=${this.handleSendGet}>Send/Get</button>
-                      <button class="retro-btn" @click=${() => this.filtersOpen = true}>Option</button>
-                      <button class="retro-btn" @click=${() => this.aboutOpen = true}>Help</button>
+                    <div class="chorus-picker">
+                      <div class="chorus-button">
+                        <span>
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8c8e94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block; margin-bottom: 1px;">
+                            <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"/>
+                          </svg>
+                        </span>
+                        <div class="led-well"></div>
+                        <button class="btn-key key-sub" title="Send/Get Patch" @click=${this.handleSendGet}></button>
+                      </div>
+                      <div class="chorus-button">
+                        <span style="font-size: 0.75rem; line-height: 12px; margin-bottom: 1px;">?</span>
+                        <div class="led-well ${this.aboutOpen ? 'active' : ''}"></div>
+                        <button class="btn-key key-sub ${this.aboutOpen ? 'active' : ''}" title="Help" @click=${() => this.aboutOpen = true}></button>
+                      </div>
                     </div>
                   </div>
 
@@ -1179,7 +1100,7 @@ Effect Chorus: ${this.customValues.effect}%
         <div class="modal-backdrop" @click=${() => this.presetListOpen = false}>
           <div class="preset-dropdown-container" @click=${(e: Event) => e.stopPropagation()}>
             <j6-preset-list
-              .presets=${this.filteredPresets}
+              .presets=${presetsData}
               .selectedId=${this.selectedPreset.id}
               @preset-selected=${(e: CustomEvent) => {
                 this.selectedPreset = e.detail;
@@ -1190,29 +1111,7 @@ Effect Chorus: ${this.customValues.effect}%
         </div>
       ` : ''}
 
-      <!-- FILTER DRAWER MODAL -->
-      ${this.filtersOpen ? html`
-        <div class="modal-backdrop" @click=${() => this.filtersOpen = false}>
-          <div class="retro-modal" @click=${(e: Event) => e.stopPropagation()}>
-            <div class="modal-header">
-              <span class="modal-title">FILTER PRESETS</span>
-              <button class="close-btn" @click=${() => this.filtersOpen = false}>&times;</button>
-            </div>
-            <div class="modal-body filter-grid">
-              ${this.renderCategorySelect('Genre / Mood', this.groupedTags.get('Genre / Mood') || [], this.activeGenreMood, 'activeGenreMood')}
-              ${this.renderCategorySelect('Instrument / Type', this.groupedTags.get('Instrument / Type') || [], this.activeInstrumentType, 'activeInstrumentType')}
-              ${this.renderCategorySelect('Character', this.groupedTags.get('Character') || [], this.activeCharacter, 'activeCharacter')}
-              ${this.renderCategorySelect('Envelope', this.groupedTags.get('Envelope') || [], this.activeEnvelope, 'activeEnvelope')}
-              ${this.renderCategorySelect('Effects', this.groupedTags.get('Effects') || [], this.activeEffects, 'activeEffects')}
-              ${this.renderCategorySelect('Waveform', this.groupedTags.get('Waveform') || [], this.activeWaveform, 'activeWaveform')}
-            </div>
-            <div class="modal-footer">
-              <button class="retro-btn" @click=${this.clearFilters} ?disabled=${!this.hasActiveFilters}>CLEAR ALL</button>
-              <button class="retro-btn accent" @click=${() => this.filtersOpen = false}>OK</button>
-            </div>
-          </div>
-        </div>
-      ` : ''}
+
 
       <!-- ABOUT/HELP MODAL -->
       ${this.aboutOpen ? html`
