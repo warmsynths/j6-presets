@@ -67,18 +67,18 @@ export class J6App extends LitElement {
     .synth-header {
       background: repeating-linear-gradient(90deg, #111214, #111214 1.5px, #1a1b20 1.5px, #1a1b20 3px);
       border-bottom: 4px solid #08080a;
-      padding: 16px 28px;
+      padding: 12px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
     }
 
     .header-left {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
     }
 
     .roland-logo {
@@ -127,26 +127,26 @@ export class J6App extends LitElement {
 
     /* Main Synth Panel (Continuous Flat Plate) */
     .synth-body {
-      padding: 24px;
+      padding: 16px;
       background: #15161b; /* Charcoal grey background */
     }
 
     .synth-grid {
       display: grid;
       grid-template-columns: 1.25fr 1fr;
-      gap: 20px;
+      gap: 12px;
     }
 
     .grid-left {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 12px;
     }
 
     .grid-right {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 12px;
     }
 
     .full-width-module {
