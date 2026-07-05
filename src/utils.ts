@@ -171,3 +171,96 @@ export function getTagCategory(tag: string): string {
   }
   return 'Other';
 }
+
+/**
+ * Maps Attack, Decay, and Release envelope settings to slider percentage (0-100).
+ */
+export function mapEnvelopeParam(val: string | undefined): number {
+  if (!val) return 0;
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('none') || normalized === 'x') return 0;
+  if (normalized.includes('fast')) return 20;
+  if (normalized.includes('mid') || normalized.includes('med')) return 60;
+  if (normalized.includes('slow')) return 100;
+  return 0;
+}
+
+/**
+ * Maps Sustain envelope settings to slider percentage (0-100).
+ */
+export function mapSustainParam(val: string | undefined): number {
+  if (!val) return 0;
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('off') || normalized === 'x') return 0;
+  if (normalized.includes('low')) return 30;
+  if (normalized.includes('mid') || normalized.includes('med')) return 65;
+  if (normalized.includes('high') || normalized.includes('max')) return 100;
+  return 0;
+}
+
+/**
+ * Maps Filter Cutoff (FREQ) settings to slider percentage (0-100).
+ */
+export function mapFreqParam(val: string | undefined): number {
+  if (!val) return 50;
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('low')) return 15;
+  if (normalized.includes('mid') || normalized.includes('med')) return 55;
+  if (normalized.includes('high')) return 85;
+  if (normalized.includes('tuned')) return 70;
+  return 50;
+}
+
+/**
+ * Maps Resonance settings to slider percentage (0-100).
+ */
+export function mapResParam(val: string | undefined): number {
+  if (!val) return 0;
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('low')) return 10;
+  if (normalized.includes('mid') || normalized.includes('med')) return 45;
+  if (normalized.includes('high')) return 80;
+  if (normalized.includes('max')) return 100;
+  return 0;
+}
+
+/**
+ * Maps Env Mod settings to slider percentage (0-100).
+ * Since Env Mod has bipolar values (e.g. - Med, - Low, + Low, + Mid, + High),
+ * we map them to a 0-100 range centered at 50.
+ */
+export function mapEnvModParam(val: string | undefined): number {
+  if (!val || val === 'x') return 50; // Centered (no mod)
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('- med') || normalized.includes('- high')) return 15;
+  if (normalized.includes('- low')) return 35;
+  if (normalized.includes('+ low')) return 65;
+  if (normalized.includes('+ mid') || normalized.includes('+ med')) return 80;
+  if (normalized.includes('+ high')) return 95;
+  return 50;
+}
+
+/**
+ * Maps LFO settings to slider percentage (0-100).
+ */
+export function mapLfoParam(val: string | undefined): number {
+  if (!val || val === 'x') return 0;
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('low')) return 30;
+  if (normalized.includes('mid') || normalized.includes('med')) return 65;
+  if (normalized.includes('high')) return 100;
+  return 0;
+}
+
+/**
+ * Maps PWM settings to slider percentage (0-100).
+ */
+export function mapPwmParam(val: string | undefined): number {
+  if (!val || val === 'x') return 0;
+  const normalized = val.toLowerCase().trim();
+  if (normalized.includes('fixed')) return 30;
+  if (normalized.includes('env')) return 50;
+  if (normalized.includes('lfo')) return 85;
+  return 0;
+}
+
