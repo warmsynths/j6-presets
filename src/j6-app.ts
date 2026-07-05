@@ -603,14 +603,17 @@ export class J6App extends LitElement {
       overflow: hidden; font-family: 'Inter', sans-serif;
     }
     .modal-header {
-      background: #b52c24; padding: 10px 16px; display: flex;
-      justify-content: space-between; align-items: center; border-bottom: 2px solid #751a14;
+      background: #111214; padding: 10px 16px; display: flex;
+      justify-content: space-between; align-items: center; border-bottom: 2px solid #2a2b30;
     }
-    .modal-title { font-size: 0.8rem; font-weight: bold; color: #fff; letter-spacing: 0.08em; }
-    .close-btn { background: transparent; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; }
+    .modal-title { font-size: 0.8rem; font-weight: bold; color: #ff5d00; letter-spacing: 0.08em; }
+    .close-btn { background: transparent; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; transition: color 0.2s ease; }
+    .close-btn:hover { color: #ff5d00; }
     .modal-body { padding: 20px; }
     .modal-body.text-content h3 { margin-top: 0; color: #ff5d00; }
     .modal-body.text-content p { line-height: 1.5; font-size: 0.9rem; color: #b2b4b8; }
+    .modal-body.text-content a { color: #ff5d00; text-decoration: none; font-weight: bold; transition: color 0.2s ease; }
+    .modal-body.text-content a:hover { color: #fff; text-decoration: underline; }
     .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
     .filter-group { display: flex; flex-direction: column; gap: 6px; }
     .filter-group label { font-size: 0.75rem; font-weight: bold; color: #8c8e94; text-transform: uppercase; }
