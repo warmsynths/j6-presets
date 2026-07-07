@@ -546,7 +546,7 @@ export class J6App extends LitElement {
     /* Waveform selector styling */
     .waveform-picker {
       display: flex;
-      gap: 12px;
+      gap: 16px;
       align-items: flex-end;
     }
 
@@ -554,17 +554,23 @@ export class J6App extends LitElement {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      width: 44px;
     }
 
     .waveform-label {
-      font-size: 0.6rem;
-      font-weight: bold;
-      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: #a4a5aa;
+      font-family: var(--font-sans);
       text-transform: uppercase;
-      height: 12px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      min-height: 16px;
+      white-space: nowrap;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     /* Inset LED well above switches */
@@ -586,14 +592,14 @@ export class J6App extends LitElement {
 
     /* Skeuomorphic retro keys with thick black borders and deep drop shadows */
     .btn-key {
-      width: 34px;
-      height: 34px;
+      width: 44px;
+      height: 44px;
       border: 2px solid #101113;
-      border-radius: 4px;
-      box-shadow: 0 4px 0 #000000, 0 6px 10px rgba(0, 0, 0, 0.6);
+      border-radius: 3px;
+      box-shadow: 0 5px 0 #000000, 0 6px 10px rgba(0, 0, 0, 0.7);
       cursor: pointer;
       box-sizing: border-box;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      transition: transform 0.05s ease, box-shadow 0.05s ease;
       position: relative;
     }
 
@@ -607,7 +613,7 @@ export class J6App extends LitElement {
 
     /* Only physically depress the button while the mouse is actively holding it down */
     .btn-key:active {
-      transform: translateY(3px);
+      transform: translateY(4px);
       box-shadow: 0 1px 0 #000000, 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -642,20 +648,30 @@ export class J6App extends LitElement {
 
     .chorus-picker {
       display: flex;
-      gap: 10px;
+      gap: 16px;
     }
 
     .chorus-button {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      width: 44px;
     }
 
     .chorus-button span {
-      font-size: 0.6rem;
-      font-weight: bold;
-      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: #a4a5aa;
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+      min-height: 16px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* Modals & Overlays */
@@ -1052,20 +1068,20 @@ Effect Chorus: ${this.customValues.effect}%
 
                     <div class="waveform-item">
                       <span class="waveform-label">
-                        <span style="font-size:0.5rem; letter-spacing:0.02em;">SUB</span>
+                        <span>SUB</span>
                       </span>
                       <div class="led-well ${isSubActive ? 'active' : ''}"></div>
                       <button class="btn-key key-sub ${isSubActive ? 'active' : ''}"></button>
                     </div>
 
                     <div class="waveform-item">
-                      <span class="waveform-label" style="font-size:0.55rem; font-family:sans-serif;">Sub 50%</span>
+                      <span class="waveform-label">Sub 50%</span>
                       <div class="led-well ${isSub50Active ? 'active' : ''}"></div>
                       <button class="btn-key key-sub50 ${isSub50Active ? 'active' : ''}"></button>
                     </div>
 
                     <div class="waveform-item">
-                      <span class="waveform-label" style="font-size:0.55rem;">Noise</span>
+                      <span class="waveform-label">Noise</span>
                       <div class="led-well ${isNoiseActive ? 'active' : ''}"></div>
                       <button class="btn-key key-noise ${isNoiseActive ? 'active' : ''}"></button>
                     </div>
@@ -1176,7 +1192,7 @@ Effect Chorus: ${this.customValues.effect}%
                         <button class="btn-key key-sub" title="Send/Get Patch" @click=${this.handleSendGet}></button>
                       </div>
                       <div class="chorus-button">
-                        <span style="font-size: 0.75rem; line-height: 12px; margin-bottom: 1px;">?</span>
+                        <span>?</span>
                         <div class="led-well ${this.aboutOpen ? 'active' : ''}"></div>
                         <button class="btn-key key-sub ${this.aboutOpen ? 'active' : ''}" title="Help" @click=${() => this.aboutOpen = true}></button>
                       </div>

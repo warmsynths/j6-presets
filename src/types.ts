@@ -95,18 +95,18 @@ export interface ChordSet {
   number: number;
   genre: string;
   chords: string[];
-  voicings: string[][];
-  voicingValidation: VoicingValidation;
-  analysis: ChordAnalysis;
+  voicings?: string[][];
+  voicingValidation?: VoicingValidation;
+  analysis?: ChordAnalysis;
 }
 
 /**
  * Chords Data Root
  */
 export interface ChordsData {
-  source: string;
-  voicingSource: string;
-  generatedAt: string;
-  keys: string[];
-  sets: ChordSet[];
+  source?: string;
+  voicingSource?: string;
+  generatedAt?: string;
+  keys?: string[];
+  chord_sets: ChordSet[];
 }

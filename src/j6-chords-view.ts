@@ -9,28 +9,21 @@ const chordsData = (chordsDataRaw as unknown) as ChordsData;
 export class J6ChordsView extends LitElement {
   @state() private searchQuery: string = '';
   @state() private selectedGenre: string = 'All';
-  @state() private selectedKey: string = 'All';
   
   @state() private currentFilteredIndex: number = 0;
   @state() private showSearchModal: boolean = false;
 
   private get uniqueGenres() {
-    return ['All', ...Array.from(new Set(chordsData.sets.map(s => s.genre))).sort()];
-  }
-
-  private get uniqueKeys() {
-    return ['All', ...Array.from(new Set(chordsData.sets.map(s => s.analysis.bestKey))).sort()];
+    return ['All', ...Array.from(new Set(chordsData.chord_sets.map(s => s.genre))).sort()];
   }
 
   private get filteredSets() {
-    return chordsData.sets.filter(s => {
+    return chordsData.chord_sets.filter(s => {
       if (this.selectedGenre !== 'All' && s.genre !== this.selectedGenre) return false;
-      if (this.selectedKey !== 'All' && s.analysis.bestKey !== this.selectedKey) return false;
       if (this.searchQuery) {
         const q = this.searchQuery.toLowerCase();
         if (
           !s.genre.toLowerCase().includes(q) &&
-          !s.analysis.bestKey.toLowerCase().includes(q) &&
           !s.number.toString().includes(q) &&
           !s.chords.some(c => c.toLowerCase().includes(q))
         ) {
@@ -51,11 +44,9 @@ export class J6ChordsView extends LitElement {
     return sets[this.currentFilteredIndex];
   }
 
-  private selectFilterValue(type: 'genre' | 'key', value: string) {
+  private selectFilterValue(type: 'genre', value: string) {
     if (type === 'genre') {
       this.selectedGenre = value;
-    } else {
-      this.selectedKey = value;
     }
     this.currentFilteredIndex = 0;
   }
@@ -316,6 +307,7 @@ export class J6ChordsView extends LitElement {
       flex-direction: column;
       align-items: center;
       gap: 12px;
+      width: 44px;
     }
 
     .patch-legend {
@@ -327,6 +319,10 @@ export class J6ChordsView extends LitElement {
       letter-spacing: 0.05em;
       text-align: center;
       min-height: 16px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .patch-btn {
@@ -486,13 +482,6 @@ export class J6ChordsView extends LitElement {
                     <span class="led-text" style="font-size: 0.8rem;">${this.selectedGenre}</span>
                   </div>
                 </div>
-
-                <div class="cycle-group">
-                  <div class="cycle-label">KEY</div>
-                  <div class="led-screen clickable" style="min-width: 60px;" @click=${() => this.showSearchModal = true}>
-                    <span class="led-text" style="font-size: 0.8rem;">${this.selectedKey}</span>
-                  </div>
-                </div>
               </div>
 
             </div>
@@ -526,20 +515,26 @@ export class J6ChordsView extends LitElement {
                 ${this.currentSet ? html`
                   <div class="info-screen">
                     <div class="info-row">
-                      <span class="info-label">GENRE / KEY</span>
-                      <span style="color: #fff; font-weight: bold;">${this.currentSet.genre} • ${this.currentSet.analysis.bestKey}</span>
+                      <span class="info-label">GENRE</span>
+                      <span style="color: #fff; font-weight: bold;">${this.currentSet.genre}</span>
                     </div>
-                    <div class="info-row">
-                      <span class="info-label">PROGRESSION</span>
-                      <span style="color: #fff;">${this.currentSet.analysis.recommendedProgression}</span>
-                    </div>
-                    ${this.currentSet.analysis.tags && this.currentSet.analysis.tags.length > 0 ? html`
-                      <div class="info-row" style="margin-top: 4px;">
-                        <span class="info-label">TAGS</span>
-                        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                          ${this.currentSet.analysis.tags.map(tag => html`<span class="tag-bubble">${tag}</span>`)}
-                        </div>
+                    ${this.currentSet.analysis ? html`
+                      <div class="info-row">
+                        <span class="info-label">KEY</span>
+                        <span style="color: #fff; font-weight: bold;">${this.currentSet.analysis.bestKey}</span>
                       </div>
+                      <div class="info-row">
+                        <span class="info-label">PROGRESSION</span>
+                        <span style="color: #fff;">${this.currentSet.analysis.recommendedProgression}</span>
+                      </div>
+                      ${this.currentSet.analysis.tags && this.currentSet.analysis.tags.length > 0 ? html`
+                        <div class="info-row" style="margin-top: 4px;">
+                          <span class="info-label">TAGS</span>
+                          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            ${this.currentSet.analysis.tags.map(tag => html`<span class="tag-bubble">${tag}</span>`)}
+                          </div>
+                        </div>
+                      ` : ''}
                     ` : ''}
                   </div>
                 ` : html`
@@ -560,9 +555,9 @@ export class J6ChordsView extends LitElement {
           <div class="chords-row">
             ${this.currentSet ? this.currentSet.chords.map((chord, index) => {
               const colorClass = index < 4 ? 'color-3' : index < 8 ? 'color-1' : 'color-2';
-              const voicing = this.currentSet!.voicings[index];
+              const voicing = this.currentSet!.voicings?.[index];
               return html`
-                <div class="patch-btn-wrapper" title="Voicing: ${voicing?.join(', ') || 'N/A'}">
+                <div class="patch-btn-wrapper" title="${voicing ? `Voicing: ${voicing.join(', ')}` : 'N/A'}">
                   <div class="patch-legend">${chord}</div>
                   <button class="patch-btn ${colorClass}" @click=${() => this.handleChordClick(chord, voicing)}></button>
                 </div>
@@ -607,15 +602,7 @@ export class J6ChordsView extends LitElement {
                 </div>
               </div>
 
-              <!-- KEY FILTER -->
-              <div class="modal-section">
-                <div class="modal-section-title">Filter by Key</div>
-                <div class="modal-list">
-                  ${this.uniqueKeys.map(k => html`
-                    <button class="modal-item-btn ${this.selectedKey === k ? 'selected' : ''}" @click=${() => this.selectFilterValue('key', k)}>${k}</button>
-                  `)}
-                </div>
-              </div>
+
 
               <!-- MATCHING SETS -->
               <div class="modal-section" style="margin-top: 12px;">
@@ -628,7 +615,7 @@ export class J6ChordsView extends LitElement {
                     <button class="modal-item-btn set-list-btn ${this.currentSet?.number === set.number ? 'selected' : ''}" @click=${() => this.jumpToSet(set.number)}>
                       <span class="s-num">#${set.number.toString().padStart(2, '0')}</span>
                       <span class="s-genre">${set.genre}</span>
-                      <span class="s-key">${set.analysis.bestKey}</span>
+                      <span class="s-key">${set.analysis?.bestKey || ''}</span>
                     </button>
                   `)}
                 </div>
@@ -642,8 +629,8 @@ export class J6ChordsView extends LitElement {
     `;
   }
 
-  private handleChordClick(chord: string, voicing: string[]) {
-    const text = `Chord: ${chord}\nVoicing: ${voicing?.join(', ')}`;
+  private handleChordClick(chord: string, voicing?: string[]) {
+    const text = voicing ? `Chord: ${chord}\nVoicing: ${voicing.join(', ')}` : `Chord: ${chord}`;
     navigator.clipboard.writeText(text).then(() => {
         // Output copied to clipboard
     });
