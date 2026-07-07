@@ -57,3 +57,56 @@ export interface Preset extends RawPreset {
   /** Inferred search/filter tags based on name and note attributes */
   tags: string[];
 }
+
+/**
+ * Chord analysis data
+ */
+export interface ChordAnalysis {
+  summaryJa: string;
+  bestKey: string;
+  topKeys: { key: string; score: number; raw: number }[];
+  diatonicToneRatio: number;
+  tags: string[];
+  qualityCounts: Record<string, number>;
+  extensionCounts: Record<string, number>;
+  alterationCounts: Record<string, number>;
+  whiteInferredKey: string;
+  whiteInferredKeyScore: number;
+  recommendedProgressionName: string;
+  recommendedProgression: string;
+  blackSubstitutionsToWhite: string;
+  blackMappingReasonCounts: string;
+}
+
+/**
+ * Voicing validation data
+ */
+export interface VoicingValidation {
+  matchesSource: boolean;
+  sourceTokenCount: number;
+  extractedTokenCount: number;
+  usedFallback: boolean;
+}
+
+/**
+ * Chord set
+ */
+export interface ChordSet {
+  number: number;
+  genre: string;
+  chords: string[];
+  voicings: string[][];
+  voicingValidation: VoicingValidation;
+  analysis: ChordAnalysis;
+}
+
+/**
+ * Chords Data Root
+ */
+export interface ChordsData {
+  source: string;
+  voicingSource: string;
+  generatedAt: string;
+  keys: string[];
+  sets: ChordSet[];
+}

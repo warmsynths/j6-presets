@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { presetsData as rawPresetsData } from './presets-data.js';
+import rawPresetsData from '../data/presets.json';
 import {
   inferTags,
   getTagCategory,
@@ -14,6 +14,7 @@ import {
 } from './utils.js';
 import { RawPreset, Preset } from './types.js';
 import './j6-preset-list.js';
+import './j6-chords-view.js';
 
 // Parse raw data to Preset interface
 const presetsData: Preset[] = (rawPresetsData as RawPreset[]).map((p: RawPreset) => {
@@ -1197,9 +1198,7 @@ Effect Chorus: ${this.customValues.effect}%
             </div>
           </div>
           ` : this.activeView === 'chords' ? html`
-            <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; color: #5d5f66; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border: 2px dashed #2e3037; border-radius: 4px; margin: 16px;">
-              Chords view coming soon
-            </div>
+            <j6-chords-view></j6-chords-view>
           ` : html`
             <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; color: #5d5f66; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border: 2px dashed #2e3037; border-radius: 4px; margin: 16px;">
               Styles view coming soon
