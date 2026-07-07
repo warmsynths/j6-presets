@@ -14,6 +14,9 @@ export class J6ChordsView extends LitElement {
   @state() private currentFilteredIndex: number = 0;
   @state() private showSearchModal: boolean = false;
   @state() private showComplexHelpModal: boolean = false;
+  @state() private genreFilterCollapsed: boolean = localStorage.getItem('j6-presets:genre-filter-collapsed') === null
+    ? true
+    : localStorage.getItem('j6-presets:genre-filter-collapsed') === 'true';
 
   private get uniqueGenres() {
     return ['All', ...Array.from(new Set(chordsData.chord_sets.map(s => s.genre))).sort()];
@@ -63,6 +66,11 @@ export class J6ChordsView extends LitElement {
       this.selectedGenre = value;
     }
     this.currentFilteredIndex = 0;
+  }
+
+  private toggleGenreFilter() {
+    this.genreFilterCollapsed = !this.genreFilterCollapsed;
+    localStorage.setItem('j6-presets:genre-filter-collapsed', String(this.genreFilterCollapsed));
   }
 
   private jumpToSet(setNumber: number) {
@@ -485,6 +493,34 @@ export class J6ChordsView extends LitElement {
       padding-bottom: 6px;
     }
 
+    .modal-section-title.collapsible {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: color 0.15s ease;
+    }
+
+    .modal-section-title.collapsible:hover {
+      color: #fff;
+    }
+
+    .modal-section-title.collapsible .collapse-icon {
+      font-size: 0.6rem;
+      transition: transform 0.2s ease;
+      color: #5d5f66;
+      display: inline-block;
+    }
+
+    .modal-section-title.collapsible:hover .collapse-icon {
+      color: #ff5d00;
+    }
+
+    .modal-section-title.collapsible.collapsed .collapse-icon {
+      transform: rotate(-90deg);
+    }
+
     .modal-list {
       display: flex;
       flex-wrap: wrap;
@@ -830,12 +866,17 @@ export class J6ChordsView extends LitElement {
 
               <!-- GENRE FILTER -->
               <div class="modal-section">
-                <div class="modal-section-title">Filter by Genre</div>
-                <div class="modal-list">
-                  ${this.uniqueGenres.map(g => html`
-                    <button class="modal-item-btn ${this.selectedGenre === g ? 'selected' : ''}" @click=${() => this.selectFilterValue('genre', g)}>${g}</button>
-                  `)}
+                <div class="modal-section-title collapsible ${this.genreFilterCollapsed ? 'collapsed' : ''}" @click=${this.toggleGenreFilter}>
+                  <span>Filter by Genre</span>
+                  <span class="collapse-icon">▼</span>
                 </div>
+                ${!this.genreFilterCollapsed ? html`
+                  <div class="modal-list">
+                    ${this.uniqueGenres.map(g => html`
+                      <button class="modal-item-btn ${this.selectedGenre === g ? 'selected' : ''}" @click=${() => this.selectFilterValue('genre', g)}>${g}</button>
+                    `)}
+                  </div>
+                ` : ''}
               </div>
 
 

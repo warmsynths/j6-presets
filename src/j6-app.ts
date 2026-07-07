@@ -38,7 +38,10 @@ export class J6App extends LitElement {
   @state() private aboutOpen = false;
   @state() private isEdited = false;
 
-  @state() private activeView: 'preset' | 'chords' | 'styles' = 'preset';
+  @state() private activeView: 'preset' | 'chords' | 'styles' = 
+    ['preset', 'chords', 'styles'].includes(localStorage.getItem('j6-presets:active-view') || '')
+      ? (localStorage.getItem('j6-presets:active-view') as 'preset' | 'chords' | 'styles')
+      : 'preset';
 
   // Custom tweaked parameters (override preset defaults)
   @state() private customValues: Record<string, number> = {};
@@ -848,13 +851,16 @@ export class J6App extends LitElement {
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const x = e.clientX - rect.left;
     const third = rect.width / 3;
+    let view: 'preset' | 'chords' | 'styles' = 'preset';
     if (x < third) {
-      this.activeView = 'preset';
+      view = 'preset';
     } else if (x < third * 2) {
-      this.activeView = 'chords';
+      view = 'chords';
     } else {
-      this.activeView = 'styles';
+      view = 'styles';
     }
+    this.activeView = view;
+    localStorage.setItem('j6-presets:active-view', view);
   }
 
   private updateFaderFromCoord(clientY: number, track: HTMLElement, paramName: string) {
