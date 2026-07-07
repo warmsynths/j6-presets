@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "name": "Pop"
+  },
+  {
+    "id": 2,
+    "name": "Jazz"
+  },
+  {
+    "id": 3,
+    "name": "Blues"
+  },
+  {
+    "id": 4,
+    "name": "Trad Maj"
+  },
+  {
+    "id": 5,
+    "name": "Trad Min"
+  },
+  {
+    "id": 6,
+    "name": "Trad Min 2"
+  },
+  {
+    "id": 7,
+    "name": "Pop Min"
+  },
+  {
+    "id": 8,
+    "name": "Jazz Min"
+  },
+  {
+    "id": 9,
+    "name": "Oct Stack"
+  },
+  {
+    "id": 10,
+    "name": "4th Stack"
+  },
+  {
+    "id": 11,
+    "name": "5th Stack"
+  },
+  {
+    "id": 12,
+    "name": "Utility"
+  },
+  {
+    "id": 13,
+    "name": "Pop/Synth"
+  },
+  {
+    "id": 14,
+    "name": "Cinematic"
+  },
+  {
+    "id": 15,
+    "name": "Cinematic/Synthwave"
+  },
+  {
+    "id": 16,
+    "name": "Cinematic/House"
+  },
+  {
+    "id": 17,
+    "name": "New Age/Cinematic"
+  },
+  {
+    "id": 18,
+    "name": "Synthwave"
+  },
+  {
+    "id": 19,
+    "name": "Synthwave/House"
+  },
+  {
+    "id": 20,
+    "name": "Trance"
+  },
+  {
+    "id": 21,
+    "name": "House"
+  },
+  {
+    "id": 22,
+    "name": "Techno"
+  },
+  {
+    "id": 23,
+    "name": "House/Techno"
+  },
+  {
+    "id": 24,
+    "name": "EDM"
+  },
+  {
+    "id": 25,
+    "name": "Gospel/R&B"
+  },
+  {
+    "id": 26,
+    "name": "Funk"
+  },
+  {
+    "id": 27,
+    "name": "Neo Soul"
+  },
+  {
+    "id": 28,
+    "name": "Neo-Soul"
+  },
+  {
+    "id": 29,
+    "name": "Jazz/Bossa"
+  }
+]

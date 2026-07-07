@@ -1,0 +1,5582 @@
+[
+  {
+    "set_id": 1,
+    "index": 0,
+    "chord": "Cadd9"
+  },
+  {
+    "set_id": 1,
+    "index": 1,
+    "chord": "C#M9/C"
+  },
+  {
+    "set_id": 1,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 1,
+    "index": 3,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 1,
+    "index": 4,
+    "chord": "Cadd9/E"
+  },
+  {
+    "set_id": 1,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 1,
+    "index": 6,
+    "chord": "Dadd9/F#"
+  },
+  {
+    "set_id": 1,
+    "index": 7,
+    "chord": "Em7/G"
+  },
+  {
+    "set_id": 1,
+    "index": 8,
+    "chord": "Fm6/G#"
+  },
+  {
+    "set_id": 1,
+    "index": 9,
+    "chord": "FM/A"
+  },
+  {
+    "set_id": 1,
+    "index": 10,
+    "chord": "Gm/A#"
+  },
+  {
+    "set_id": 1,
+    "index": 11,
+    "chord": "G/B"
+  },
+  {
+    "set_id": 2,
+    "index": 0,
+    "chord": "CM9"
+  },
+  {
+    "set_id": 2,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 2,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 2,
+    "index": 3,
+    "chord": "D#dim7"
+  },
+  {
+    "set_id": 2,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 2,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 2,
+    "index": 6,
+    "chord": "F#m7b5"
+  },
+  {
+    "set_id": 2,
+    "index": 7,
+    "chord": "F/A"
+  },
+  {
+    "set_id": 2,
+    "index": 8,
+    "chord": "G#dim7"
+  },
+  {
+    "set_id": 2,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 2,
+    "index": 10,
+    "chord": "C/A#"
+  },
+  {
+    "set_id": 2,
+    "index": 11,
+    "chord": "Bm7b5"
+  },
+  {
+    "set_id": 3,
+    "index": 0,
+    "chord": "D7sus2/C"
+  },
+  {
+    "set_id": 3,
+    "index": 1,
+    "chord": "C#7#9"
+  },
+  {
+    "set_id": 3,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 3,
+    "index": 3,
+    "chord": "D7#9"
+  },
+  {
+    "set_id": 3,
+    "index": 4,
+    "chord": "E7#9"
+  },
+  {
+    "set_id": 3,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 3,
+    "index": 6,
+    "chord": "F#7#9"
+  },
+  {
+    "set_id": 3,
+    "index": 7,
+    "chord": "G7(13)"
+  },
+  {
+    "set_id": 3,
+    "index": 8,
+    "chord": "G#7(13)"
+  },
+  {
+    "set_id": 3,
+    "index": 9,
+    "chord": "Am7(11)"
+  },
+  {
+    "set_id": 3,
+    "index": 10,
+    "chord": "A#9"
+  },
+  {
+    "set_id": 3,
+    "index": 11,
+    "chord": "Bm7(11)"
+  },
+  {
+    "set_id": 4,
+    "index": 0,
+    "chord": "Dsus2/C"
+  },
+  {
+    "set_id": 4,
+    "index": 1,
+    "chord": "C#7#9"
+  },
+  {
+    "set_id": 4,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 4,
+    "index": 3,
+    "chord": "D#9"
+  },
+  {
+    "set_id": 4,
+    "index": 4,
+    "chord": "Em9"
+  },
+  {
+    "set_id": 4,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 4,
+    "index": 6,
+    "chord": "F#m7b5"
+  },
+  {
+    "set_id": 4,
+    "index": 7,
+    "chord": "Gaug7"
+  },
+  {
+    "set_id": 4,
+    "index": 8,
+    "chord": "G#7(13)"
+  },
+  {
+    "set_id": 4,
+    "index": 9,
+    "chord": "Aaug7"
+  },
+  {
+    "set_id": 4,
+    "index": 10,
+    "chord": "A#7(13)"
+  },
+  {
+    "set_id": 4,
+    "index": 11,
+    "chord": "Bm7(11)"
+  },
+  {
+    "set_id": 5,
+    "index": 0,
+    "chord": "CM9"
+  },
+  {
+    "set_id": 5,
+    "index": 1,
+    "chord": "C#M7"
+  },
+  {
+    "set_id": 5,
+    "index": 2,
+    "chord": "DM9"
+  },
+  {
+    "set_id": 5,
+    "index": 3,
+    "chord": "D#M9"
+  },
+  {
+    "set_id": 5,
+    "index": 4,
+    "chord": "EM9"
+  },
+  {
+    "set_id": 5,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 5,
+    "index": 6,
+    "chord": "F#M9"
+  },
+  {
+    "set_id": 5,
+    "index": 7,
+    "chord": "GM9"
+  },
+  {
+    "set_id": 5,
+    "index": 8,
+    "chord": "G#M9"
+  },
+  {
+    "set_id": 5,
+    "index": 9,
+    "chord": "AM9"
+  },
+  {
+    "set_id": 5,
+    "index": 10,
+    "chord": "A#M9"
+  },
+  {
+    "set_id": 5,
+    "index": 11,
+    "chord": "BM9"
+  },
+  {
+    "set_id": 6,
+    "index": 0,
+    "chord": "C9"
+  },
+  {
+    "set_id": 6,
+    "index": 1,
+    "chord": "C#9"
+  },
+  {
+    "set_id": 6,
+    "index": 2,
+    "chord": "D9"
+  },
+  {
+    "set_id": 6,
+    "index": 3,
+    "chord": "D#9"
+  },
+  {
+    "set_id": 6,
+    "index": 4,
+    "chord": "E7#9"
+  },
+  {
+    "set_id": 6,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 6,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 6,
+    "index": 7,
+    "chord": "G7(13)"
+  },
+  {
+    "set_id": 6,
+    "index": 8,
+    "chord": "G#dim7"
+  },
+  {
+    "set_id": 6,
+    "index": 9,
+    "chord": "Aaug7"
+  },
+  {
+    "set_id": 6,
+    "index": 10,
+    "chord": "A#7(13)"
+  },
+  {
+    "set_id": 6,
+    "index": 11,
+    "chord": "Bm7b5"
+  },
+  {
+    "set_id": 7,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 7,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 7,
+    "index": 2,
+    "chord": "Dm"
+  },
+  {
+    "set_id": 7,
+    "index": 3,
+    "chord": "D#dim7"
+  },
+  {
+    "set_id": 7,
+    "index": 4,
+    "chord": "Em"
+  },
+  {
+    "set_id": 7,
+    "index": 5,
+    "chord": "F"
+  },
+  {
+    "set_id": 7,
+    "index": 6,
+    "chord": "F#m7b5"
+  },
+  {
+    "set_id": 7,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 7,
+    "index": 8,
+    "chord": "G#dim7"
+  },
+  {
+    "set_id": 7,
+    "index": 9,
+    "chord": "Am"
+  },
+  {
+    "set_id": 7,
+    "index": 10,
+    "chord": "A#"
+  },
+  {
+    "set_id": 7,
+    "index": 11,
+    "chord": "Bdim"
+  },
+  {
+    "set_id": 8,
+    "index": 0,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 8,
+    "index": 1,
+    "chord": "C#"
+  },
+  {
+    "set_id": 8,
+    "index": 2,
+    "chord": "Ddim"
+  },
+  {
+    "set_id": 8,
+    "index": 3,
+    "chord": "Eb"
+  },
+  {
+    "set_id": 8,
+    "index": 4,
+    "chord": "Edim7"
+  },
+  {
+    "set_id": 8,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 8,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 8,
+    "index": 7,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 8,
+    "index": 8,
+    "chord": "G#"
+  },
+  {
+    "set_id": 8,
+    "index": 9,
+    "chord": "Am7b5"
+  },
+  {
+    "set_id": 8,
+    "index": 10,
+    "chord": "A#"
+  },
+  {
+    "set_id": 8,
+    "index": 11,
+    "chord": "Bdim7"
+  },
+  {
+    "set_id": 9,
+    "index": 0,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 9,
+    "index": 1,
+    "chord": "C#"
+  },
+  {
+    "set_id": 9,
+    "index": 2,
+    "chord": "Ddim"
+  },
+  {
+    "set_id": 9,
+    "index": 3,
+    "chord": "D#aug"
+  },
+  {
+    "set_id": 9,
+    "index": 4,
+    "chord": "Em"
+  },
+  {
+    "set_id": 9,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 9,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 9,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 9,
+    "index": 8,
+    "chord": "G#"
+  },
+  {
+    "set_id": 9,
+    "index": 9,
+    "chord": "Am7b5"
+  },
+  {
+    "set_id": 9,
+    "index": 10,
+    "chord": "A#"
+  },
+  {
+    "set_id": 9,
+    "index": 11,
+    "chord": "Bdim"
+  },
+  {
+    "set_id": 10,
+    "index": 0,
+    "chord": "Cmadd9"
+  },
+  {
+    "set_id": 10,
+    "index": 1,
+    "chord": "C#M7"
+  },
+  {
+    "set_id": 10,
+    "index": 2,
+    "chord": "Dm7b5"
+  },
+  {
+    "set_id": 10,
+    "index": 3,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 10,
+    "index": 4,
+    "chord": "Edim7"
+  },
+  {
+    "set_id": 10,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 10,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 10,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 10,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 10,
+    "index": 9,
+    "chord": "Am7b5"
+  },
+  {
+    "set_id": 10,
+    "index": 10,
+    "chord": "G#/A#"
+  },
+  {
+    "set_id": 10,
+    "index": 11,
+    "chord": "Bdim7"
+  },
+  {
+    "set_id": 11,
+    "index": 0,
+    "chord": "Cmadd9"
+  },
+  {
+    "set_id": 11,
+    "index": 1,
+    "chord": "Gdim/C#"
+  },
+  {
+    "set_id": 11,
+    "index": 2,
+    "chord": "Dm7b5"
+  },
+  {
+    "set_id": 11,
+    "index": 3,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 11,
+    "index": 4,
+    "chord": "EM9"
+  },
+  {
+    "set_id": 11,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 11,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 11,
+    "index": 7,
+    "chord": "Gaug7"
+  },
+  {
+    "set_id": 11,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 11,
+    "index": 9,
+    "chord": "Am7b5"
+  },
+  {
+    "set_id": 11,
+    "index": 10,
+    "chord": "Cm7/A#"
+  },
+  {
+    "set_id": 11,
+    "index": 11,
+    "chord": "Baug#9"
+  },
+  {
+    "set_id": 12,
+    "index": 0,
+    "chord": "Cm7(11)"
+  },
+  {
+    "set_id": 12,
+    "index": 1,
+    "chord": "C#7#9"
+  },
+  {
+    "set_id": 12,
+    "index": 2,
+    "chord": "Dm7b5"
+  },
+  {
+    "set_id": 12,
+    "index": 3,
+    "chord": "D#M7#5"
+  },
+  {
+    "set_id": 12,
+    "index": 4,
+    "chord": "E9"
+  },
+  {
+    "set_id": 12,
+    "index": 5,
+    "chord": "F9"
+  },
+  {
+    "set_id": 12,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 12,
+    "index": 7,
+    "chord": "G7#9"
+  },
+  {
+    "set_id": 12,
+    "index": 8,
+    "chord": "G#M7b5"
+  },
+  {
+    "set_id": 12,
+    "index": 9,
+    "chord": "Am7b5"
+  },
+  {
+    "set_id": 12,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 12,
+    "index": 11,
+    "chord": "Bdim7"
+  },
+  {
+    "set_id": 13,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 13,
+    "index": 1,
+    "chord": "C#9"
+  },
+  {
+    "set_id": 13,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 13,
+    "index": 3,
+    "chord": "D#9"
+  },
+  {
+    "set_id": 13,
+    "index": 4,
+    "chord": "EM9"
+  },
+  {
+    "set_id": 13,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 13,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 13,
+    "index": 7,
+    "chord": "G7(13)"
+  },
+  {
+    "set_id": 13,
+    "index": 8,
+    "chord": "G#m6"
+  },
+  {
+    "set_id": 13,
+    "index": 9,
+    "chord": "Am7b5"
+  },
+  {
+    "set_id": 13,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 13,
+    "index": 11,
+    "chord": "Bm7b5"
+  },
+  {
+    "set_id": 14,
+    "index": 0,
+    "chord": "C5"
+  },
+  {
+    "set_id": 14,
+    "index": 1,
+    "chord": "C4"
+  },
+  {
+    "set_id": 14,
+    "index": 2,
+    "chord": "C#5"
+  },
+  {
+    "set_id": 14,
+    "index": 3,
+    "chord": "C#4"
+  },
+  {
+    "set_id": 14,
+    "index": 4,
+    "chord": "D5"
+  },
+  {
+    "set_id": 14,
+    "index": 5,
+    "chord": "D4"
+  },
+  {
+    "set_id": 14,
+    "index": 6,
+    "chord": "D#5"
+  },
+  {
+    "set_id": 14,
+    "index": 7,
+    "chord": "D#4"
+  },
+  {
+    "set_id": 14,
+    "index": 8,
+    "chord": "E5"
+  },
+  {
+    "set_id": 14,
+    "index": 9,
+    "chord": "E4"
+  },
+  {
+    "set_id": 14,
+    "index": 10,
+    "chord": "F5"
+  },
+  {
+    "set_id": 14,
+    "index": 11,
+    "chord": "F4"
+  },
+  {
+    "set_id": 15,
+    "index": 0,
+    "chord": "F4"
+  },
+  {
+    "set_id": 15,
+    "index": 1,
+    "chord": "C4"
+  },
+  {
+    "set_id": 15,
+    "index": 2,
+    "chord": "F#4"
+  },
+  {
+    "set_id": 15,
+    "index": 3,
+    "chord": "C#4"
+  },
+  {
+    "set_id": 15,
+    "index": 4,
+    "chord": "G4"
+  },
+  {
+    "set_id": 15,
+    "index": 5,
+    "chord": "D4"
+  },
+  {
+    "set_id": 15,
+    "index": 6,
+    "chord": "G#4"
+  },
+  {
+    "set_id": 15,
+    "index": 7,
+    "chord": "D#4"
+  },
+  {
+    "set_id": 15,
+    "index": 8,
+    "chord": "A4"
+  },
+  {
+    "set_id": 15,
+    "index": 9,
+    "chord": "E4"
+  },
+  {
+    "set_id": 15,
+    "index": 10,
+    "chord": "A#4"
+  },
+  {
+    "set_id": 15,
+    "index": 11,
+    "chord": "F4"
+  },
+  {
+    "set_id": 16,
+    "index": 0,
+    "chord": "G4"
+  },
+  {
+    "set_id": 16,
+    "index": 1,
+    "chord": "C4"
+  },
+  {
+    "set_id": 16,
+    "index": 2,
+    "chord": "G#4"
+  },
+  {
+    "set_id": 16,
+    "index": 3,
+    "chord": "C#4"
+  },
+  {
+    "set_id": 16,
+    "index": 4,
+    "chord": "A4"
+  },
+  {
+    "set_id": 16,
+    "index": 5,
+    "chord": "D4"
+  },
+  {
+    "set_id": 16,
+    "index": 6,
+    "chord": "A#4"
+  },
+  {
+    "set_id": 16,
+    "index": 7,
+    "chord": "D#4"
+  },
+  {
+    "set_id": 16,
+    "index": 8,
+    "chord": "B4"
+  },
+  {
+    "set_id": 16,
+    "index": 9,
+    "chord": "E4"
+  },
+  {
+    "set_id": 16,
+    "index": 10,
+    "chord": "C5"
+  },
+  {
+    "set_id": 16,
+    "index": 11,
+    "chord": "F4"
+  },
+  {
+    "set_id": 17,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 17,
+    "index": 1,
+    "chord": "C#"
+  },
+  {
+    "set_id": 17,
+    "index": 2,
+    "chord": "D"
+  },
+  {
+    "set_id": 17,
+    "index": 3,
+    "chord": "D#"
+  },
+  {
+    "set_id": 17,
+    "index": 4,
+    "chord": "E"
+  },
+  {
+    "set_id": 17,
+    "index": 5,
+    "chord": "F"
+  },
+  {
+    "set_id": 17,
+    "index": 6,
+    "chord": "F#"
+  },
+  {
+    "set_id": 17,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 17,
+    "index": 8,
+    "chord": "G#"
+  },
+  {
+    "set_id": 17,
+    "index": 9,
+    "chord": "A"
+  },
+  {
+    "set_id": 17,
+    "index": 10,
+    "chord": "A#"
+  },
+  {
+    "set_id": 17,
+    "index": 11,
+    "chord": "B"
+  },
+  {
+    "set_id": 18,
+    "index": 0,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 18,
+    "index": 1,
+    "chord": "C#m"
+  },
+  {
+    "set_id": 18,
+    "index": 2,
+    "chord": "Dm"
+  },
+  {
+    "set_id": 18,
+    "index": 3,
+    "chord": "D#m"
+  },
+  {
+    "set_id": 18,
+    "index": 4,
+    "chord": "E"
+  },
+  {
+    "set_id": 18,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 18,
+    "index": 6,
+    "chord": "F#m"
+  },
+  {
+    "set_id": 18,
+    "index": 7,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 18,
+    "index": 8,
+    "chord": "G#m"
+  },
+  {
+    "set_id": 18,
+    "index": 9,
+    "chord": "Am"
+  },
+  {
+    "set_id": 18,
+    "index": 10,
+    "chord": "A#m"
+  },
+  {
+    "set_id": 18,
+    "index": 11,
+    "chord": "Bm"
+  },
+  {
+    "set_id": 19,
+    "index": 0,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 19,
+    "index": 1,
+    "chord": "C#M7"
+  },
+  {
+    "set_id": 19,
+    "index": 2,
+    "chord": "DM7"
+  },
+  {
+    "set_id": 19,
+    "index": 3,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 19,
+    "index": 4,
+    "chord": "EM7"
+  },
+  {
+    "set_id": 19,
+    "index": 5,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 19,
+    "index": 6,
+    "chord": "F#FM7"
+  },
+  {
+    "set_id": 19,
+    "index": 7,
+    "chord": "GM7"
+  },
+  {
+    "set_id": 19,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 19,
+    "index": 9,
+    "chord": "AM7"
+  },
+  {
+    "set_id": 19,
+    "index": 10,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 19,
+    "index": 11,
+    "chord": "BM7"
+  },
+  {
+    "set_id": 20,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 20,
+    "index": 1,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 20,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 20,
+    "index": 3,
+    "chord": "D#m7"
+  },
+  {
+    "set_id": 20,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 20,
+    "index": 5,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 20,
+    "index": 6,
+    "chord": "F#m7"
+  },
+  {
+    "set_id": 20,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 20,
+    "index": 8,
+    "chord": "G#m7"
+  },
+  {
+    "set_id": 20,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 20,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 20,
+    "index": 11,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 21,
+    "index": 0,
+    "chord": "CM9"
+  },
+  {
+    "set_id": 21,
+    "index": 1,
+    "chord": "C#M9"
+  },
+  {
+    "set_id": 21,
+    "index": 2,
+    "chord": "DM9"
+  },
+  {
+    "set_id": 21,
+    "index": 3,
+    "chord": "D#M9"
+  },
+  {
+    "set_id": 21,
+    "index": 4,
+    "chord": "EM9"
+  },
+  {
+    "set_id": 21,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 21,
+    "index": 6,
+    "chord": "F#M9"
+  },
+  {
+    "set_id": 21,
+    "index": 7,
+    "chord": "GM9"
+  },
+  {
+    "set_id": 21,
+    "index": 8,
+    "chord": "G#M9"
+  },
+  {
+    "set_id": 21,
+    "index": 9,
+    "chord": "AM9"
+  },
+  {
+    "set_id": 21,
+    "index": 10,
+    "chord": "A#M9"
+  },
+  {
+    "set_id": 21,
+    "index": 11,
+    "chord": "BM9"
+  },
+  {
+    "set_id": 22,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 22,
+    "index": 1,
+    "chord": "C#m9"
+  },
+  {
+    "set_id": 22,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 22,
+    "index": 3,
+    "chord": "D#m9"
+  },
+  {
+    "set_id": 22,
+    "index": 4,
+    "chord": "Em9"
+  },
+  {
+    "set_id": 22,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 22,
+    "index": 6,
+    "chord": "F#m9"
+  },
+  {
+    "set_id": 22,
+    "index": 7,
+    "chord": "Gm9"
+  },
+  {
+    "set_id": 22,
+    "index": 8,
+    "chord": "G#m9"
+  },
+  {
+    "set_id": 22,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 22,
+    "index": 10,
+    "chord": "A#m9"
+  },
+  {
+    "set_id": 22,
+    "index": 11,
+    "chord": "Bm9"
+  },
+  {
+    "set_id": 23,
+    "index": 0,
+    "chord": "CM9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 1,
+    "chord": "C#M9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 2,
+    "chord": "DM9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 3,
+    "chord": "D#M9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 4,
+    "chord": "EM9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 5,
+    "chord": "FM9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 6,
+    "chord": "F#M9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 7,
+    "chord": "GM9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 8,
+    "chord": "G#M9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 9,
+    "chord": "AM9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 10,
+    "chord": "A#M9/#11"
+  },
+  {
+    "set_id": 23,
+    "index": 11,
+    "chord": "BM9/#11"
+  },
+  {
+    "set_id": 24,
+    "index": 0,
+    "chord": "Cm9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 1,
+    "chord": "C#m9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 2,
+    "chord": "Dm9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 3,
+    "chord": "D#m9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 4,
+    "chord": "Em9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 5,
+    "chord": "Fm9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 6,
+    "chord": "F#m9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 7,
+    "chord": "Gm9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 8,
+    "chord": "G#m9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 9,
+    "chord": "Am9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 10,
+    "chord": "A#m9/11"
+  },
+  {
+    "set_id": 24,
+    "index": 11,
+    "chord": "Bm9/11"
+  },
+  {
+    "set_id": 25,
+    "index": 0,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 1,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 2,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 3,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 4,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 5,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 6,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 7,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 8,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 9,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 10,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 25,
+    "index": 11,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 26,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 26,
+    "index": 1,
+    "chord": "Cm7/D#"
+  },
+  {
+    "set_id": 26,
+    "index": 2,
+    "chord": "Cm7/G"
+  },
+  {
+    "set_id": 26,
+    "index": 3,
+    "chord": "Cm7/A#"
+  },
+  {
+    "set_id": 26,
+    "index": 4,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 26,
+    "index": 5,
+    "chord": "Cm7/D#"
+  },
+  {
+    "set_id": 26,
+    "index": 6,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 26,
+    "index": 7,
+    "chord": "Cm7/G"
+  },
+  {
+    "set_id": 26,
+    "index": 8,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 26,
+    "index": 9,
+    "chord": "Cm7/D#"
+  },
+  {
+    "set_id": 26,
+    "index": 10,
+    "chord": "Cm7/G"
+  },
+  {
+    "set_id": 26,
+    "index": 11,
+    "chord": "Cm7/A#"
+  },
+  {
+    "set_id": 27,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 27,
+    "index": 1,
+    "chord": "Em"
+  },
+  {
+    "set_id": 27,
+    "index": 2,
+    "chord": "G"
+  },
+  {
+    "set_id": 27,
+    "index": 3,
+    "chord": "Am"
+  },
+  {
+    "set_id": 27,
+    "index": 4,
+    "chord": "Bm"
+  },
+  {
+    "set_id": 27,
+    "index": 5,
+    "chord": "C"
+  },
+  {
+    "set_id": 27,
+    "index": 6,
+    "chord": "Em"
+  },
+  {
+    "set_id": 27,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 27,
+    "index": 8,
+    "chord": "Am"
+  },
+  {
+    "set_id": 27,
+    "index": 9,
+    "chord": "Bm"
+  },
+  {
+    "set_id": 27,
+    "index": 10,
+    "chord": "C"
+  },
+  {
+    "set_id": 27,
+    "index": 11,
+    "chord": "Em"
+  },
+  {
+    "set_id": 28,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 28,
+    "index": 1,
+    "chord": "C7"
+  },
+  {
+    "set_id": 28,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 28,
+    "index": 3,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 28,
+    "index": 4,
+    "chord": "C/E"
+  },
+  {
+    "set_id": 28,
+    "index": 5,
+    "chord": "F"
+  },
+  {
+    "set_id": 28,
+    "index": 6,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 28,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 28,
+    "index": 8,
+    "chord": "C/G"
+  },
+  {
+    "set_id": 28,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 28,
+    "index": 10,
+    "chord": "Eaug/A#"
+  },
+  {
+    "set_id": 28,
+    "index": 11,
+    "chord": "G7/B"
+  },
+  {
+    "set_id": 29,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 29,
+    "index": 1,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 29,
+    "index": 2,
+    "chord": "G"
+  },
+  {
+    "set_id": 29,
+    "index": 3,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 29,
+    "index": 4,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 29,
+    "index": 5,
+    "chord": "CM7/E"
+  },
+  {
+    "set_id": 29,
+    "index": 6,
+    "chord": "F"
+  },
+  {
+    "set_id": 29,
+    "index": 7,
+    "chord": "D7/G"
+  },
+  {
+    "set_id": 29,
+    "index": 8,
+    "chord": "G"
+  },
+  {
+    "set_id": 29,
+    "index": 9,
+    "chord": "Am"
+  },
+  {
+    "set_id": 29,
+    "index": 10,
+    "chord": "Dm"
+  },
+  {
+    "set_id": 29,
+    "index": 11,
+    "chord": "G7"
+  },
+  {
+    "set_id": 30,
+    "index": 0,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 30,
+    "index": 1,
+    "chord": "D#"
+  },
+  {
+    "set_id": 30,
+    "index": 2,
+    "chord": "G#"
+  },
+  {
+    "set_id": 30,
+    "index": 3,
+    "chord": "A#"
+  },
+  {
+    "set_id": 30,
+    "index": 4,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 30,
+    "index": 5,
+    "chord": "G#"
+  },
+  {
+    "set_id": 30,
+    "index": 6,
+    "chord": "D#"
+  },
+  {
+    "set_id": 30,
+    "index": 7,
+    "chord": "A#sus4/D"
+  },
+  {
+    "set_id": 30,
+    "index": 8,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 30,
+    "index": 9,
+    "chord": "G/B"
+  },
+  {
+    "set_id": 30,
+    "index": 10,
+    "chord": "G#"
+  },
+  {
+    "set_id": 30,
+    "index": 11,
+    "chord": "F/A"
+  },
+  {
+    "set_id": 31,
+    "index": 0,
+    "chord": "Cadd11"
+  },
+  {
+    "set_id": 31,
+    "index": 1,
+    "chord": "Bb/C"
+  },
+  {
+    "set_id": 31,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 31,
+    "index": 3,
+    "chord": "D7"
+  },
+  {
+    "set_id": 31,
+    "index": 4,
+    "chord": "Cadd9/E"
+  },
+  {
+    "set_id": 31,
+    "index": 5,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 31,
+    "index": 6,
+    "chord": "F7"
+  },
+  {
+    "set_id": 31,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 31,
+    "index": 8,
+    "chord": "A/G"
+  },
+  {
+    "set_id": 31,
+    "index": 9,
+    "chord": "FM7/A"
+  },
+  {
+    "set_id": 31,
+    "index": 10,
+    "chord": "F/Bb"
+  },
+  {
+    "set_id": 31,
+    "index": 11,
+    "chord": "G7/B"
+  },
+  {
+    "set_id": 32,
+    "index": 0,
+    "chord": "Cmb13"
+  },
+  {
+    "set_id": 32,
+    "index": 1,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 32,
+    "index": 2,
+    "chord": "G7/D"
+  },
+  {
+    "set_id": 32,
+    "index": 3,
+    "chord": "A#/D#"
+  },
+  {
+    "set_id": 32,
+    "index": 4,
+    "chord": "C7"
+  },
+  {
+    "set_id": 32,
+    "index": 5,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 32,
+    "index": 6,
+    "chord": "D#"
+  },
+  {
+    "set_id": 32,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 32,
+    "index": 8,
+    "chord": "G#M9"
+  },
+  {
+    "set_id": 32,
+    "index": 9,
+    "chord": "G#m6"
+  },
+  {
+    "set_id": 32,
+    "index": 10,
+    "chord": "F7/A"
+  },
+  {
+    "set_id": 32,
+    "index": 11,
+    "chord": "A#add11"
+  },
+  {
+    "set_id": 33,
+    "index": 0,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 33,
+    "index": 1,
+    "chord": "F/E"
+  },
+  {
+    "set_id": 33,
+    "index": 2,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 33,
+    "index": 3,
+    "chord": "G"
+  },
+  {
+    "set_id": 33,
+    "index": 4,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 33,
+    "index": 5,
+    "chord": "C"
+  },
+  {
+    "set_id": 33,
+    "index": 6,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 33,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 33,
+    "index": 8,
+    "chord": "C"
+  },
+  {
+    "set_id": 33,
+    "index": 9,
+    "chord": "A/C#"
+  },
+  {
+    "set_id": 33,
+    "index": 10,
+    "chord": "Dm"
+  },
+  {
+    "set_id": 33,
+    "index": 11,
+    "chord": "G/F"
+  },
+  {
+    "set_id": 34,
+    "index": 0,
+    "chord": "Csus2"
+  },
+  {
+    "set_id": 34,
+    "index": 1,
+    "chord": "Dsus2"
+  },
+  {
+    "set_id": 34,
+    "index": 2,
+    "chord": "D#sus2"
+  },
+  {
+    "set_id": 34,
+    "index": 3,
+    "chord": "Fsus2"
+  },
+  {
+    "set_id": 34,
+    "index": 4,
+    "chord": "Gsus2"
+  },
+  {
+    "set_id": 34,
+    "index": 5,
+    "chord": "A#sus2"
+  },
+  {
+    "set_id": 34,
+    "index": 6,
+    "chord": "Csus2"
+  },
+  {
+    "set_id": 34,
+    "index": 7,
+    "chord": "Dsus2"
+  },
+  {
+    "set_id": 34,
+    "index": 8,
+    "chord": "D#sus2"
+  },
+  {
+    "set_id": 34,
+    "index": 9,
+    "chord": "Fsus2"
+  },
+  {
+    "set_id": 34,
+    "index": 10,
+    "chord": "Gsus2"
+  },
+  {
+    "set_id": 34,
+    "index": 11,
+    "chord": "A#sus2"
+  },
+  {
+    "set_id": 35,
+    "index": 0,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 35,
+    "index": 1,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 35,
+    "index": 2,
+    "chord": "DM7"
+  },
+  {
+    "set_id": 35,
+    "index": 3,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 35,
+    "index": 4,
+    "chord": "EM7"
+  },
+  {
+    "set_id": 35,
+    "index": 5,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 35,
+    "index": 6,
+    "chord": "F#M7"
+  },
+  {
+    "set_id": 35,
+    "index": 7,
+    "chord": "D#m7"
+  },
+  {
+    "set_id": 35,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 35,
+    "index": 9,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 35,
+    "index": 10,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 35,
+    "index": 11,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 36,
+    "index": 0,
+    "chord": "Ebsus2/C"
+  },
+  {
+    "set_id": 36,
+    "index": 1,
+    "chord": "Fsus2/D"
+  },
+  {
+    "set_id": 36,
+    "index": 2,
+    "chord": "Gsus2/E"
+  },
+  {
+    "set_id": 36,
+    "index": 3,
+    "chord": "Absus2/F"
+  },
+  {
+    "set_id": 36,
+    "index": 4,
+    "chord": "Bbsus2/G"
+  },
+  {
+    "set_id": 36,
+    "index": 5,
+    "chord": "Csus2/A"
+  },
+  {
+    "set_id": 36,
+    "index": 6,
+    "chord": "Dsus2/B"
+  },
+  {
+    "set_id": 36,
+    "index": 7,
+    "chord": "Ebsus2/C"
+  },
+  {
+    "set_id": 36,
+    "index": 8,
+    "chord": "Fsus2/D"
+  },
+  {
+    "set_id": 36,
+    "index": 9,
+    "chord": "Gsus2/E"
+  },
+  {
+    "set_id": 36,
+    "index": 10,
+    "chord": "Absus2/F"
+  },
+  {
+    "set_id": 36,
+    "index": 11,
+    "chord": "Bbsus2/G"
+  },
+  {
+    "set_id": 37,
+    "index": 0,
+    "chord": "C6sus2"
+  },
+  {
+    "set_id": 37,
+    "index": 1,
+    "chord": "Dsus2"
+  },
+  {
+    "set_id": 37,
+    "index": 2,
+    "chord": "Emadd11"
+  },
+  {
+    "set_id": 37,
+    "index": 3,
+    "chord": "Dadd9/F#"
+  },
+  {
+    "set_id": 37,
+    "index": 4,
+    "chord": "Gadd9"
+  },
+  {
+    "set_id": 37,
+    "index": 5,
+    "chord": "Am7/11"
+  },
+  {
+    "set_id": 37,
+    "index": 6,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 37,
+    "index": 7,
+    "chord": "C6"
+  },
+  {
+    "set_id": 37,
+    "index": 8,
+    "chord": "D6"
+  },
+  {
+    "set_id": 37,
+    "index": 9,
+    "chord": "Emadd9"
+  },
+  {
+    "set_id": 37,
+    "index": 10,
+    "chord": "E7sus4"
+  },
+  {
+    "set_id": 37,
+    "index": 11,
+    "chord": "Em7b5/F"
+  },
+  {
+    "set_id": 38,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 38,
+    "index": 1,
+    "chord": "Gsus4"
+  },
+  {
+    "set_id": 38,
+    "index": 2,
+    "chord": "G7sus4"
+  },
+  {
+    "set_id": 38,
+    "index": 3,
+    "chord": "A#/D#"
+  },
+  {
+    "set_id": 38,
+    "index": 4,
+    "chord": "C/E"
+  },
+  {
+    "set_id": 38,
+    "index": 5,
+    "chord": "Gsus4/F"
+  },
+  {
+    "set_id": 38,
+    "index": 6,
+    "chord": "D/F#"
+  },
+  {
+    "set_id": 38,
+    "index": 7,
+    "chord": "C/G"
+  },
+  {
+    "set_id": 38,
+    "index": 8,
+    "chord": "E/G#"
+  },
+  {
+    "set_id": 38,
+    "index": 9,
+    "chord": "Am"
+  },
+  {
+    "set_id": 38,
+    "index": 10,
+    "chord": "Fsus4"
+  },
+  {
+    "set_id": 38,
+    "index": 11,
+    "chord": "G"
+  },
+  {
+    "set_id": 39,
+    "index": 0,
+    "chord": "C6sus4"
+  },
+  {
+    "set_id": 39,
+    "index": 1,
+    "chord": "Gmadd9/D"
+  },
+  {
+    "set_id": 39,
+    "index": 2,
+    "chord": "Edim11"
+  },
+  {
+    "set_id": 39,
+    "index": 3,
+    "chord": "Fsus2/D"
+  },
+  {
+    "set_id": 39,
+    "index": 4,
+    "chord": "BbM7"
+  },
+  {
+    "set_id": 39,
+    "index": 5,
+    "chord": "Gmadd9"
+  },
+  {
+    "set_id": 39,
+    "index": 6,
+    "chord": "Am/G"
+  },
+  {
+    "set_id": 39,
+    "index": 7,
+    "chord": "C7/G"
+  },
+  {
+    "set_id": 39,
+    "index": 8,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 39,
+    "index": 9,
+    "chord": "Gm/A"
+  },
+  {
+    "set_id": 39,
+    "index": 10,
+    "chord": "C7/A#"
+  },
+  {
+    "set_id": 39,
+    "index": 11,
+    "chord": "A#m6"
+  },
+  {
+    "set_id": 40,
+    "index": 0,
+    "chord": "Cadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 1,
+    "chord": "Dadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 2,
+    "chord": "D#add9"
+  },
+  {
+    "set_id": 40,
+    "index": 3,
+    "chord": "Fadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 4,
+    "chord": "Gadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 5,
+    "chord": "G#add9"
+  },
+  {
+    "set_id": 40,
+    "index": 6,
+    "chord": "A#add9"
+  },
+  {
+    "set_id": 40,
+    "index": 7,
+    "chord": "Cadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 8,
+    "chord": "Dadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 9,
+    "chord": "D#add9"
+  },
+  {
+    "set_id": 40,
+    "index": 10,
+    "chord": "Fadd9"
+  },
+  {
+    "set_id": 40,
+    "index": 11,
+    "chord": "Gadd9"
+  },
+  {
+    "set_id": 41,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 41,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 41,
+    "index": 2,
+    "chord": "Fsus2/D"
+  },
+  {
+    "set_id": 41,
+    "index": 3,
+    "chord": "D#add9"
+  },
+  {
+    "set_id": 41,
+    "index": 4,
+    "chord": "Csus2/E"
+  },
+  {
+    "set_id": 41,
+    "index": 5,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 41,
+    "index": 6,
+    "chord": "F#dim"
+  },
+  {
+    "set_id": 41,
+    "index": 7,
+    "chord": "Gsus4"
+  },
+  {
+    "set_id": 41,
+    "index": 8,
+    "chord": "G#6"
+  },
+  {
+    "set_id": 41,
+    "index": 9,
+    "chord": "Csus2/A"
+  },
+  {
+    "set_id": 41,
+    "index": 10,
+    "chord": "Csus2/A#"
+  },
+  {
+    "set_id": 41,
+    "index": 11,
+    "chord": "G7/B"
+  },
+  {
+    "set_id": 42,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 42,
+    "index": 1,
+    "chord": "A#sus2/D#"
+  },
+  {
+    "set_id": 42,
+    "index": 2,
+    "chord": "A#7/G#"
+  },
+  {
+    "set_id": 42,
+    "index": 3,
+    "chord": "G/B"
+  },
+  {
+    "set_id": 42,
+    "index": 4,
+    "chord": "C"
+  },
+  {
+    "set_id": 42,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 42,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 42,
+    "index": 7,
+    "chord": "C"
+  },
+  {
+    "set_id": 42,
+    "index": 8,
+    "chord": "G#add9"
+  },
+  {
+    "set_id": 42,
+    "index": 9,
+    "chord": "F/A"
+  },
+  {
+    "set_id": 42,
+    "index": 10,
+    "chord": "A#"
+  },
+  {
+    "set_id": 42,
+    "index": 11,
+    "chord": "G7/B"
+  },
+  {
+    "set_id": 43,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 43,
+    "index": 1,
+    "chord": "A#/C"
+  },
+  {
+    "set_id": 43,
+    "index": 2,
+    "chord": "D#/G#"
+  },
+  {
+    "set_id": 43,
+    "index": 3,
+    "chord": "A#/G#"
+  },
+  {
+    "set_id": 43,
+    "index": 4,
+    "chord": "D#/F"
+  },
+  {
+    "set_id": 43,
+    "index": 5,
+    "chord": "A#/F"
+  },
+  {
+    "set_id": 43,
+    "index": 6,
+    "chord": "G#add9"
+  },
+  {
+    "set_id": 43,
+    "index": 7,
+    "chord": "A#"
+  },
+  {
+    "set_id": 43,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 43,
+    "index": 9,
+    "chord": "Fsus2/A"
+  },
+  {
+    "set_id": 43,
+    "index": 10,
+    "chord": "A#6"
+  },
+  {
+    "set_id": 43,
+    "index": 11,
+    "chord": "Fm7/B"
+  },
+  {
+    "set_id": 44,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 44,
+    "index": 1,
+    "chord": "C#sus2/F"
+  },
+  {
+    "set_id": 44,
+    "index": 2,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 44,
+    "index": 3,
+    "chord": "D#"
+  },
+  {
+    "set_id": 44,
+    "index": 4,
+    "chord": "Csus2/E"
+  },
+  {
+    "set_id": 44,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 44,
+    "index": 6,
+    "chord": "D#dim7"
+  },
+  {
+    "set_id": 44,
+    "index": 7,
+    "chord": "G#sus2/G"
+  },
+  {
+    "set_id": 44,
+    "index": 8,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 44,
+    "index": 9,
+    "chord": "F7"
+  },
+  {
+    "set_id": 44,
+    "index": 10,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 44,
+    "index": 11,
+    "chord": "G5"
+  },
+  {
+    "set_id": 45,
+    "index": 0,
+    "chord": "Ab"
+  },
+  {
+    "set_id": 45,
+    "index": 1,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 45,
+    "index": 2,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 45,
+    "index": 3,
+    "chord": "Ab"
+  },
+  {
+    "set_id": 45,
+    "index": 4,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 45,
+    "index": 5,
+    "chord": "Bb"
+  },
+  {
+    "set_id": 45,
+    "index": 6,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 45,
+    "index": 7,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 45,
+    "index": 8,
+    "chord": "Ab"
+  },
+  {
+    "set_id": 45,
+    "index": 9,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 45,
+    "index": 10,
+    "chord": "Bb"
+  },
+  {
+    "set_id": 45,
+    "index": 11,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 46,
+    "index": 0,
+    "chord": "C"
+  },
+  {
+    "set_id": 46,
+    "index": 1,
+    "chord": "D"
+  },
+  {
+    "set_id": 46,
+    "index": 2,
+    "chord": "Em"
+  },
+  {
+    "set_id": 46,
+    "index": 3,
+    "chord": "D"
+  },
+  {
+    "set_id": 46,
+    "index": 4,
+    "chord": "G"
+  },
+  {
+    "set_id": 46,
+    "index": 5,
+    "chord": "Am"
+  },
+  {
+    "set_id": 46,
+    "index": 6,
+    "chord": "Bm"
+  },
+  {
+    "set_id": 46,
+    "index": 7,
+    "chord": "C"
+  },
+  {
+    "set_id": 46,
+    "index": 8,
+    "chord": "D"
+  },
+  {
+    "set_id": 46,
+    "index": 9,
+    "chord": "Em"
+  },
+  {
+    "set_id": 46,
+    "index": 10,
+    "chord": "D"
+  },
+  {
+    "set_id": 46,
+    "index": 11,
+    "chord": "G"
+  },
+  {
+    "set_id": 47,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 47,
+    "index": 1,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 47,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 47,
+    "index": 3,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 47,
+    "index": 4,
+    "chord": "D#M7"
+  },
+  {
+    "set_id": 47,
+    "index": 5,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 47,
+    "index": 6,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 47,
+    "index": 7,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 47,
+    "index": 8,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 47,
+    "index": 9,
+    "chord": "A#7"
+  },
+  {
+    "set_id": 47,
+    "index": 10,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 47,
+    "index": 11,
+    "chord": "C#/C"
+  },
+  {
+    "set_id": 48,
+    "index": 0,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 48,
+    "index": 1,
+    "chord": "Ab/C"
+  },
+  {
+    "set_id": 48,
+    "index": 2,
+    "chord": "Bb/D"
+  },
+  {
+    "set_id": 48,
+    "index": 3,
+    "chord": "Eb"
+  },
+  {
+    "set_id": 48,
+    "index": 4,
+    "chord": "C/E"
+  },
+  {
+    "set_id": 48,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 48,
+    "index": 6,
+    "chord": "F"
+  },
+  {
+    "set_id": 48,
+    "index": 7,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 48,
+    "index": 8,
+    "chord": "Ab"
+  },
+  {
+    "set_id": 48,
+    "index": 9,
+    "chord": "F7/A"
+  },
+  {
+    "set_id": 48,
+    "index": 10,
+    "chord": "Bb"
+  },
+  {
+    "set_id": 48,
+    "index": 11,
+    "chord": "G7/B"
+  },
+  {
+    "set_id": 49,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 49,
+    "index": 1,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 49,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 49,
+    "index": 3,
+    "chord": "EbM7"
+  },
+  {
+    "set_id": 49,
+    "index": 4,
+    "chord": "Gm/E"
+  },
+  {
+    "set_id": 49,
+    "index": 5,
+    "chord": "Eb/F"
+  },
+  {
+    "set_id": 49,
+    "index": 6,
+    "chord": "D7/F#"
+  },
+  {
+    "set_id": 49,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 49,
+    "index": 8,
+    "chord": "AbM7"
+  },
+  {
+    "set_id": 49,
+    "index": 9,
+    "chord": "Ab/Bb"
+  },
+  {
+    "set_id": 49,
+    "index": 10,
+    "chord": "BbM7"
+  },
+  {
+    "set_id": 49,
+    "index": 11,
+    "chord": "Bm7b5"
+  },
+  {
+    "set_id": 50,
+    "index": 0,
+    "chord": "Cmaj7"
+  },
+  {
+    "set_id": 50,
+    "index": 1,
+    "chord": "Dmaj7"
+  },
+  {
+    "set_id": 50,
+    "index": 2,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 50,
+    "index": 3,
+    "chord": "Fmaj9"
+  },
+  {
+    "set_id": 50,
+    "index": 4,
+    "chord": "Gmaj9"
+  },
+  {
+    "set_id": 50,
+    "index": 5,
+    "chord": "Eadd9/G#"
+  },
+  {
+    "set_id": 50,
+    "index": 6,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 50,
+    "index": 7,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 50,
+    "index": 8,
+    "chord": "Cmaj9"
+  },
+  {
+    "set_id": 50,
+    "index": 9,
+    "chord": "Dm7/9"
+  },
+  {
+    "set_id": 50,
+    "index": 10,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 50,
+    "index": 11,
+    "chord": "Fmaj7"
+  },
+  {
+    "set_id": 51,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 51,
+    "index": 1,
+    "chord": "G#/C#"
+  },
+  {
+    "set_id": 51,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 51,
+    "index": 3,
+    "chord": "A#/D#"
+  },
+  {
+    "set_id": 51,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 51,
+    "index": 5,
+    "chord": "C/F"
+  },
+  {
+    "set_id": 51,
+    "index": 6,
+    "chord": "F#m7"
+  },
+  {
+    "set_id": 51,
+    "index": 7,
+    "chord": "D/G"
+  },
+  {
+    "set_id": 51,
+    "index": 8,
+    "chord": "G#m7"
+  },
+  {
+    "set_id": 51,
+    "index": 9,
+    "chord": "E/A"
+  },
+  {
+    "set_id": 51,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 51,
+    "index": 11,
+    "chord": "F#/B"
+  },
+  {
+    "set_id": 52,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 52,
+    "index": 1,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 52,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 52,
+    "index": 3,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 52,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 52,
+    "index": 5,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 52,
+    "index": 6,
+    "chord": "F#m7"
+  },
+  {
+    "set_id": 52,
+    "index": 7,
+    "chord": "DM7"
+  },
+  {
+    "set_id": 52,
+    "index": 8,
+    "chord": "G#m7"
+  },
+  {
+    "set_id": 52,
+    "index": 9,
+    "chord": "EM7"
+  },
+  {
+    "set_id": 52,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 52,
+    "index": 11,
+    "chord": "F#M7"
+  },
+  {
+    "set_id": 53,
+    "index": 0,
+    "chord": "Cm7/11"
+  },
+  {
+    "set_id": 53,
+    "index": 1,
+    "chord": "Cdim7"
+  },
+  {
+    "set_id": 53,
+    "index": 2,
+    "chord": "C#M7/b5"
+  },
+  {
+    "set_id": 53,
+    "index": 3,
+    "chord": "Ddim7"
+  },
+  {
+    "set_id": 53,
+    "index": 4,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 53,
+    "index": 5,
+    "chord": "C#M7"
+  },
+  {
+    "set_id": 53,
+    "index": 6,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 53,
+    "index": 7,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 53,
+    "index": 8,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 53,
+    "index": 9,
+    "chord": "Fm6"
+  },
+  {
+    "set_id": 53,
+    "index": 10,
+    "chord": "Csus2/E"
+  },
+  {
+    "set_id": 53,
+    "index": 11,
+    "chord": "F#m7/b5"
+  },
+  {
+    "set_id": 54,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 54,
+    "index": 1,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 54,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 54,
+    "index": 3,
+    "chord": "D#m7"
+  },
+  {
+    "set_id": 54,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 54,
+    "index": 5,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 54,
+    "index": 6,
+    "chord": "F#m7"
+  },
+  {
+    "set_id": 54,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 54,
+    "index": 8,
+    "chord": "G#m7"
+  },
+  {
+    "set_id": 54,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 54,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 54,
+    "index": 11,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 55,
+    "index": 0,
+    "chord": "Cm"
+  },
+  {
+    "set_id": 55,
+    "index": 1,
+    "chord": "C#dim"
+  },
+  {
+    "set_id": 55,
+    "index": 2,
+    "chord": "Dm"
+  },
+  {
+    "set_id": 55,
+    "index": 3,
+    "chord": "D#dim"
+  },
+  {
+    "set_id": 55,
+    "index": 4,
+    "chord": "Em"
+  },
+  {
+    "set_id": 55,
+    "index": 5,
+    "chord": "Fm"
+  },
+  {
+    "set_id": 55,
+    "index": 6,
+    "chord": "F#dim"
+  },
+  {
+    "set_id": 55,
+    "index": 7,
+    "chord": "Gm"
+  },
+  {
+    "set_id": 55,
+    "index": 8,
+    "chord": "G#dim"
+  },
+  {
+    "set_id": 55,
+    "index": 9,
+    "chord": "Am"
+  },
+  {
+    "set_id": 55,
+    "index": 10,
+    "chord": "A#dim"
+  },
+  {
+    "set_id": 55,
+    "index": 11,
+    "chord": "Bm"
+  },
+  {
+    "set_id": 56,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 56,
+    "index": 1,
+    "chord": "DbM9"
+  },
+  {
+    "set_id": 56,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 56,
+    "index": 3,
+    "chord": "Ebm9"
+  },
+  {
+    "set_id": 56,
+    "index": 4,
+    "chord": "Em9"
+  },
+  {
+    "set_id": 56,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 56,
+    "index": 6,
+    "chord": "F#m9"
+  },
+  {
+    "set_id": 56,
+    "index": 7,
+    "chord": "Gm9"
+  },
+  {
+    "set_id": 56,
+    "index": 8,
+    "chord": "Abm9"
+  },
+  {
+    "set_id": 56,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 56,
+    "index": 10,
+    "chord": "Bbm9"
+  },
+  {
+    "set_id": 56,
+    "index": 11,
+    "chord": "Bm9"
+  },
+  {
+    "set_id": 57,
+    "index": 0,
+    "chord": "C5b9"
+  },
+  {
+    "set_id": 57,
+    "index": 1,
+    "chord": "DbM7"
+  },
+  {
+    "set_id": 57,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 57,
+    "index": 3,
+    "chord": "Ebsus11"
+  },
+  {
+    "set_id": 57,
+    "index": 4,
+    "chord": "EM7#11"
+  },
+  {
+    "set_id": 57,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 57,
+    "index": 6,
+    "chord": "GbM7#11"
+  },
+  {
+    "set_id": 57,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 57,
+    "index": 8,
+    "chord": "AbM7#11"
+  },
+  {
+    "set_id": 57,
+    "index": 9,
+    "chord": "A7alt"
+  },
+  {
+    "set_id": 57,
+    "index": 10,
+    "chord": "Bb5add9/b13"
+  },
+  {
+    "set_id": 57,
+    "index": 11,
+    "chord": "C7sus4"
+  },
+  {
+    "set_id": 58,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 58,
+    "index": 1,
+    "chord": "A#m/C#"
+  },
+  {
+    "set_id": 58,
+    "index": 2,
+    "chord": "A#/D"
+  },
+  {
+    "set_id": 58,
+    "index": 3,
+    "chord": "D#"
+  },
+  {
+    "set_id": 58,
+    "index": 4,
+    "chord": "C/E"
+  },
+  {
+    "set_id": 58,
+    "index": 5,
+    "chord": "Cm/F"
+  },
+  {
+    "set_id": 58,
+    "index": 6,
+    "chord": "D/F#"
+  },
+  {
+    "set_id": 58,
+    "index": 7,
+    "chord": "G"
+  },
+  {
+    "set_id": 58,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 58,
+    "index": 9,
+    "chord": "Csus4/A"
+  },
+  {
+    "set_id": 58,
+    "index": 10,
+    "chord": "D#/A#"
+  },
+  {
+    "set_id": 58,
+    "index": 11,
+    "chord": "G/B"
+  },
+  {
+    "set_id": 59,
+    "index": 0,
+    "chord": "CM9"
+  },
+  {
+    "set_id": 59,
+    "index": 1,
+    "chord": "C6"
+  },
+  {
+    "set_id": 59,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 59,
+    "index": 3,
+    "chord": "Dm6"
+  },
+  {
+    "set_id": 59,
+    "index": 4,
+    "chord": "EM9"
+  },
+  {
+    "set_id": 59,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 59,
+    "index": 6,
+    "chord": "F6"
+  },
+  {
+    "set_id": 59,
+    "index": 7,
+    "chord": "GM9"
+  },
+  {
+    "set_id": 59,
+    "index": 8,
+    "chord": "G6"
+  },
+  {
+    "set_id": 59,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 59,
+    "index": 10,
+    "chord": "Am6"
+  },
+  {
+    "set_id": 59,
+    "index": 11,
+    "chord": "Bm9"
+  },
+  {
+    "set_id": 60,
+    "index": 0,
+    "chord": "Cmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 1,
+    "chord": "Dbmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 2,
+    "chord": "Dmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 3,
+    "chord": "Ebmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 4,
+    "chord": "Emaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 5,
+    "chord": "Fmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 6,
+    "chord": "Gbmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 7,
+    "chord": "Gmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 8,
+    "chord": "Abmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 9,
+    "chord": "Amaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 10,
+    "chord": "Bbmaj7"
+  },
+  {
+    "set_id": 60,
+    "index": 11,
+    "chord": "Bmaj7"
+  },
+  {
+    "set_id": 61,
+    "index": 0,
+    "chord": "Cadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 1,
+    "chord": "Dbadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 2,
+    "chord": "Dadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 3,
+    "chord": "Ebadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 4,
+    "chord": "Eadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 5,
+    "chord": "Fadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 6,
+    "chord": "Gbadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 7,
+    "chord": "Gadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 8,
+    "chord": "Abadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 9,
+    "chord": "Aadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 10,
+    "chord": "Bbadd9"
+  },
+  {
+    "set_id": 61,
+    "index": 11,
+    "chord": "Badd9"
+  },
+  {
+    "set_id": 62,
+    "index": 0,
+    "chord": "CM13"
+  },
+  {
+    "set_id": 62,
+    "index": 1,
+    "chord": "C#sus9"
+  },
+  {
+    "set_id": 62,
+    "index": 2,
+    "chord": "DM13"
+  },
+  {
+    "set_id": 62,
+    "index": 3,
+    "chord": "D#sus9"
+  },
+  {
+    "set_id": 62,
+    "index": 4,
+    "chord": "EM13"
+  },
+  {
+    "set_id": 62,
+    "index": 5,
+    "chord": "FM13"
+  },
+  {
+    "set_id": 62,
+    "index": 6,
+    "chord": "F#sus9"
+  },
+  {
+    "set_id": 62,
+    "index": 7,
+    "chord": "GMaj13"
+  },
+  {
+    "set_id": 62,
+    "index": 8,
+    "chord": "Absus9"
+  },
+  {
+    "set_id": 62,
+    "index": 9,
+    "chord": "AM13"
+  },
+  {
+    "set_id": 62,
+    "index": 10,
+    "chord": "Bbsus9"
+  },
+  {
+    "set_id": 62,
+    "index": 11,
+    "chord": "BM13"
+  },
+  {
+    "set_id": 63,
+    "index": 0,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 63,
+    "index": 1,
+    "chord": "Dbm7"
+  },
+  {
+    "set_id": 63,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 63,
+    "index": 3,
+    "chord": "Eb6"
+  },
+  {
+    "set_id": 63,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 63,
+    "index": 5,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 63,
+    "index": 6,
+    "chord": "Gbm7"
+  },
+  {
+    "set_id": 63,
+    "index": 7,
+    "chord": "GM7"
+  },
+  {
+    "set_id": 63,
+    "index": 8,
+    "chord": "Abm7"
+  },
+  {
+    "set_id": 63,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 63,
+    "index": 10,
+    "chord": "Bb6"
+  },
+  {
+    "set_id": 63,
+    "index": 11,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 64,
+    "index": 0,
+    "chord": "C6"
+  },
+  {
+    "set_id": 64,
+    "index": 1,
+    "chord": "AM7"
+  },
+  {
+    "set_id": 64,
+    "index": 2,
+    "chord": "D6"
+  },
+  {
+    "set_id": 64,
+    "index": 3,
+    "chord": "BM7"
+  },
+  {
+    "set_id": 64,
+    "index": 4,
+    "chord": "E6"
+  },
+  {
+    "set_id": 64,
+    "index": 5,
+    "chord": "F6"
+  },
+  {
+    "set_id": 64,
+    "index": 6,
+    "chord": "DM7"
+  },
+  {
+    "set_id": 64,
+    "index": 7,
+    "chord": "G6"
+  },
+  {
+    "set_id": 64,
+    "index": 8,
+    "chord": "EM7"
+  },
+  {
+    "set_id": 64,
+    "index": 9,
+    "chord": "A6"
+  },
+  {
+    "set_id": 64,
+    "index": 10,
+    "chord": "GbM7"
+  },
+  {
+    "set_id": 64,
+    "index": 11,
+    "chord": "B6"
+  },
+  {
+    "set_id": 65,
+    "index": 0,
+    "chord": "G/C"
+  },
+  {
+    "set_id": 65,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 65,
+    "index": 2,
+    "chord": "Dm7b5"
+  },
+  {
+    "set_id": 65,
+    "index": 3,
+    "chord": "D#dim7"
+  },
+  {
+    "set_id": 65,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 65,
+    "index": 5,
+    "chord": "Fm11"
+  },
+  {
+    "set_id": 65,
+    "index": 6,
+    "chord": "F#dim7"
+  },
+  {
+    "set_id": 65,
+    "index": 7,
+    "chord": "Gm7b13"
+  },
+  {
+    "set_id": 65,
+    "index": 8,
+    "chord": "G#M7"
+  },
+  {
+    "set_id": 65,
+    "index": 9,
+    "chord": "A7alt"
+  },
+  {
+    "set_id": 65,
+    "index": 10,
+    "chord": "A#M7"
+  },
+  {
+    "set_id": 65,
+    "index": 11,
+    "chord": "Bdim7"
+  },
+  {
+    "set_id": 66,
+    "index": 0,
+    "chord": "C9"
+  },
+  {
+    "set_id": 66,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 66,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 66,
+    "index": 3,
+    "chord": "D#dim7"
+  },
+  {
+    "set_id": 66,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 66,
+    "index": 5,
+    "chord": "Fmaj7"
+  },
+  {
+    "set_id": 66,
+    "index": 6,
+    "chord": "F#m7b5"
+  },
+  {
+    "set_id": 66,
+    "index": 7,
+    "chord": "G7"
+  },
+  {
+    "set_id": 66,
+    "index": 8,
+    "chord": "G#dim7"
+  },
+  {
+    "set_id": 66,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 66,
+    "index": 10,
+    "chord": "A#dim7"
+  },
+  {
+    "set_id": 66,
+    "index": 11,
+    "chord": "Bm7b5"
+  },
+  {
+    "set_id": 67,
+    "index": 0,
+    "chord": "Cmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 1,
+    "chord": "Dbmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 2,
+    "chord": "Dmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 3,
+    "chord": "Ebmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 4,
+    "chord": "Emaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 5,
+    "chord": "Fmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 6,
+    "chord": "Gbmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 7,
+    "chord": "Gmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 8,
+    "chord": "Abmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 9,
+    "chord": "Amaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 10,
+    "chord": "Bbmaj9"
+  },
+  {
+    "set_id": 67,
+    "index": 11,
+    "chord": "Bmaj9"
+  },
+  {
+    "set_id": 68,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 68,
+    "index": 1,
+    "chord": "C#m9"
+  },
+  {
+    "set_id": 68,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 68,
+    "index": 3,
+    "chord": "D#m9"
+  },
+  {
+    "set_id": 68,
+    "index": 4,
+    "chord": "Em9"
+  },
+  {
+    "set_id": 68,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 68,
+    "index": 6,
+    "chord": "F#m9"
+  },
+  {
+    "set_id": 68,
+    "index": 7,
+    "chord": "Gm9"
+  },
+  {
+    "set_id": 68,
+    "index": 8,
+    "chord": "G#m9"
+  },
+  {
+    "set_id": 68,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 68,
+    "index": 10,
+    "chord": "A#m9"
+  },
+  {
+    "set_id": 68,
+    "index": 11,
+    "chord": "Bm9"
+  },
+  {
+    "set_id": 69,
+    "index": 0,
+    "chord": "Cm11"
+  },
+  {
+    "set_id": 69,
+    "index": 1,
+    "chord": "C#m11"
+  },
+  {
+    "set_id": 69,
+    "index": 2,
+    "chord": "Dm11"
+  },
+  {
+    "set_id": 69,
+    "index": 3,
+    "chord": "D#m11"
+  },
+  {
+    "set_id": 69,
+    "index": 4,
+    "chord": "Em11"
+  },
+  {
+    "set_id": 69,
+    "index": 5,
+    "chord": "Fm11"
+  },
+  {
+    "set_id": 69,
+    "index": 6,
+    "chord": "F#m11"
+  },
+  {
+    "set_id": 69,
+    "index": 7,
+    "chord": "Gm11"
+  },
+  {
+    "set_id": 69,
+    "index": 8,
+    "chord": "G#m11"
+  },
+  {
+    "set_id": 69,
+    "index": 9,
+    "chord": "Am11"
+  },
+  {
+    "set_id": 69,
+    "index": 10,
+    "chord": "A#m11"
+  },
+  {
+    "set_id": 69,
+    "index": 11,
+    "chord": "Bm11"
+  },
+  {
+    "set_id": 70,
+    "index": 0,
+    "chord": "CM13"
+  },
+  {
+    "set_id": 70,
+    "index": 1,
+    "chord": "C#M13"
+  },
+  {
+    "set_id": 70,
+    "index": 2,
+    "chord": "DM13"
+  },
+  {
+    "set_id": 70,
+    "index": 3,
+    "chord": "D#M13"
+  },
+  {
+    "set_id": 70,
+    "index": 4,
+    "chord": "EM13"
+  },
+  {
+    "set_id": 70,
+    "index": 5,
+    "chord": "FM13"
+  },
+  {
+    "set_id": 70,
+    "index": 6,
+    "chord": "F#M13"
+  },
+  {
+    "set_id": 70,
+    "index": 7,
+    "chord": "GM13"
+  },
+  {
+    "set_id": 70,
+    "index": 8,
+    "chord": "G#M13"
+  },
+  {
+    "set_id": 70,
+    "index": 9,
+    "chord": "AM13"
+  },
+  {
+    "set_id": 70,
+    "index": 10,
+    "chord": "A#M13"
+  },
+  {
+    "set_id": 70,
+    "index": 11,
+    "chord": "BM13"
+  },
+  {
+    "set_id": 71,
+    "index": 0,
+    "chord": "C7alt"
+  },
+  {
+    "set_id": 71,
+    "index": 1,
+    "chord": "DbM7"
+  },
+  {
+    "set_id": 71,
+    "index": 2,
+    "chord": "D7alt"
+  },
+  {
+    "set_id": 71,
+    "index": 3,
+    "chord": "Eb7"
+  },
+  {
+    "set_id": 71,
+    "index": 4,
+    "chord": "C7/E"
+  },
+  {
+    "set_id": 71,
+    "index": 5,
+    "chord": "F7alt"
+  },
+  {
+    "set_id": 71,
+    "index": 6,
+    "chord": "F11sus2"
+  },
+  {
+    "set_id": 71,
+    "index": 7,
+    "chord": "Gm7b5"
+  },
+  {
+    "set_id": 71,
+    "index": 8,
+    "chord": "Ab9"
+  },
+  {
+    "set_id": 71,
+    "index": 9,
+    "chord": "Bb9sus"
+  },
+  {
+    "set_id": 71,
+    "index": 10,
+    "chord": "Bb7add9"
+  },
+  {
+    "set_id": 71,
+    "index": 11,
+    "chord": "C11sus2"
+  },
+  {
+    "set_id": 72,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 72,
+    "index": 1,
+    "chord": "AbM7"
+  },
+  {
+    "set_id": 72,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 72,
+    "index": 3,
+    "chord": "EbDimM7"
+  },
+  {
+    "set_id": 72,
+    "index": 4,
+    "chord": "EbM7"
+  },
+  {
+    "set_id": 72,
+    "index": 5,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 72,
+    "index": 6,
+    "chord": "CM7#5"
+  },
+  {
+    "set_id": 72,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 72,
+    "index": 8,
+    "chord": "G7#5"
+  },
+  {
+    "set_id": 72,
+    "index": 9,
+    "chord": "AbM7"
+  },
+  {
+    "set_id": 72,
+    "index": 10,
+    "chord": "Fm7b5/B"
+  },
+  {
+    "set_id": 72,
+    "index": 11,
+    "chord": "Bb13/D"
+  },
+  {
+    "set_id": 73,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 73,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 73,
+    "index": 2,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 73,
+    "index": 3,
+    "chord": "Fm7/b5"
+  },
+  {
+    "set_id": 73,
+    "index": 4,
+    "chord": "EbM7"
+  },
+  {
+    "set_id": 73,
+    "index": 5,
+    "chord": "Cm7/Eb"
+  },
+  {
+    "set_id": 73,
+    "index": 6,
+    "chord": "Edim"
+  },
+  {
+    "set_id": 73,
+    "index": 7,
+    "chord": "AbM7"
+  },
+  {
+    "set_id": 73,
+    "index": 8,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 73,
+    "index": 9,
+    "chord": "AbM13"
+  },
+  {
+    "set_id": 73,
+    "index": 10,
+    "chord": "Bb13"
+  },
+  {
+    "set_id": 73,
+    "index": 11,
+    "chord": "Bb6"
+  },
+  {
+    "set_id": 74,
+    "index": 0,
+    "chord": "Em7/D"
+  },
+  {
+    "set_id": 74,
+    "index": 1,
+    "chord": "Gm7b5/C#"
+  },
+  {
+    "set_id": 74,
+    "index": 2,
+    "chord": "FM7/E"
+  },
+  {
+    "set_id": 74,
+    "index": 3,
+    "chord": "DMb7/D#"
+  },
+  {
+    "set_id": 74,
+    "index": 4,
+    "chord": "GM7/F#"
+  },
+  {
+    "set_id": 74,
+    "index": 5,
+    "chord": "Edim7"
+  },
+  {
+    "set_id": 74,
+    "index": 6,
+    "chord": "Cadd13/E"
+  },
+  {
+    "set_id": 74,
+    "index": 7,
+    "chord": "E"
+  },
+  {
+    "set_id": 74,
+    "index": 8,
+    "chord": "Gaddb9/G#"
+  },
+  {
+    "set_id": 74,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 74,
+    "index": 10,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 74,
+    "index": 11,
+    "chord": "Emb9/F"
+  },
+  {
+    "set_id": 75,
+    "index": 0,
+    "chord": "CM7"
+  },
+  {
+    "set_id": 75,
+    "index": 1,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 75,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 75,
+    "index": 3,
+    "chord": "EbM7"
+  },
+  {
+    "set_id": 75,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 75,
+    "index": 5,
+    "chord": "FM7"
+  },
+  {
+    "set_id": 75,
+    "index": 6,
+    "chord": "Gb7"
+  },
+  {
+    "set_id": 75,
+    "index": 7,
+    "chord": "GM7"
+  },
+  {
+    "set_id": 75,
+    "index": 8,
+    "chord": "AbM7"
+  },
+  {
+    "set_id": 75,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 75,
+    "index": 10,
+    "chord": "BbM7"
+  },
+  {
+    "set_id": 75,
+    "index": 11,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 76,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 76,
+    "index": 1,
+    "chord": "C#M9"
+  },
+  {
+    "set_id": 76,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 76,
+    "index": 3,
+    "chord": "D#M9"
+  },
+  {
+    "set_id": 76,
+    "index": 4,
+    "chord": "Em9"
+  },
+  {
+    "set_id": 76,
+    "index": 5,
+    "chord": "FM9"
+  },
+  {
+    "set_id": 76,
+    "index": 6,
+    "chord": "F#M9"
+  },
+  {
+    "set_id": 76,
+    "index": 7,
+    "chord": "GM9"
+  },
+  {
+    "set_id": 76,
+    "index": 8,
+    "chord": "G#M9"
+  },
+  {
+    "set_id": 76,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 76,
+    "index": 10,
+    "chord": "A#M9"
+  },
+  {
+    "set_id": 76,
+    "index": 11,
+    "chord": "Bm9"
+  },
+  {
+    "set_id": 77,
+    "index": 0,
+    "chord": "Cm11"
+  },
+  {
+    "set_id": 77,
+    "index": 1,
+    "chord": "C#m11"
+  },
+  {
+    "set_id": 77,
+    "index": 2,
+    "chord": "Dm11"
+  },
+  {
+    "set_id": 77,
+    "index": 3,
+    "chord": "D#m11"
+  },
+  {
+    "set_id": 77,
+    "index": 4,
+    "chord": "Em11"
+  },
+  {
+    "set_id": 77,
+    "index": 5,
+    "chord": "Fm11"
+  },
+  {
+    "set_id": 77,
+    "index": 6,
+    "chord": "F#m11"
+  },
+  {
+    "set_id": 77,
+    "index": 7,
+    "chord": "Gm11"
+  },
+  {
+    "set_id": 77,
+    "index": 8,
+    "chord": "G#m11"
+  },
+  {
+    "set_id": 77,
+    "index": 9,
+    "chord": "Am11"
+  },
+  {
+    "set_id": 77,
+    "index": 10,
+    "chord": "A#m11"
+  },
+  {
+    "set_id": 77,
+    "index": 11,
+    "chord": "Bm11"
+  },
+  {
+    "set_id": 78,
+    "index": 0,
+    "chord": "C11sus"
+  },
+  {
+    "set_id": 78,
+    "index": 1,
+    "chord": "A7/C#"
+  },
+  {
+    "set_id": 78,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 78,
+    "index": 3,
+    "chord": "EbM7"
+  },
+  {
+    "set_id": 78,
+    "index": 4,
+    "chord": "C7/E"
+  },
+  {
+    "set_id": 78,
+    "index": 5,
+    "chord": "F6"
+  },
+  {
+    "set_id": 78,
+    "index": 6,
+    "chord": "D7/F#"
+  },
+  {
+    "set_id": 78,
+    "index": 7,
+    "chord": "Gdim7"
+  },
+  {
+    "set_id": 78,
+    "index": 8,
+    "chord": "E7/G#"
+  },
+  {
+    "set_id": 78,
+    "index": 9,
+    "chord": "F6/A"
+  },
+  {
+    "set_id": 78,
+    "index": 10,
+    "chord": "Bb6"
+  },
+  {
+    "set_id": 78,
+    "index": 11,
+    "chord": "Bm7b5"
+  },
+  {
+    "set_id": 79,
+    "index": 0,
+    "chord": "Ab/C"
+  },
+  {
+    "set_id": 79,
+    "index": 1,
+    "chord": "Db"
+  },
+  {
+    "set_id": 79,
+    "index": 2,
+    "chord": "Bb/D"
+  },
+  {
+    "set_id": 79,
+    "index": 3,
+    "chord": "Ebm"
+  },
+  {
+    "set_id": 79,
+    "index": 4,
+    "chord": "C/E"
+  },
+  {
+    "set_id": 79,
+    "index": 5,
+    "chord": "Db/F"
+  },
+  {
+    "set_id": 79,
+    "index": 6,
+    "chord": "Gb"
+  },
+  {
+    "set_id": 79,
+    "index": 7,
+    "chord": "Eb/G"
+  },
+  {
+    "set_id": 79,
+    "index": 8,
+    "chord": "Db/Ab"
+  },
+  {
+    "set_id": 79,
+    "index": 9,
+    "chord": "F7/A"
+  },
+  {
+    "set_id": 79,
+    "index": 10,
+    "chord": "Ebm/Bb"
+  },
+  {
+    "set_id": 79,
+    "index": 11,
+    "chord": "B"
+  },
+  {
+    "set_id": 80,
+    "index": 0,
+    "chord": "Cm7b5"
+  },
+  {
+    "set_id": 80,
+    "index": 1,
+    "chord": "Db7sus"
+  },
+  {
+    "set_id": 80,
+    "index": 2,
+    "chord": "Bbadd2/D"
+  },
+  {
+    "set_id": 80,
+    "index": 3,
+    "chord": "Ebm7"
+  },
+  {
+    "set_id": 80,
+    "index": 4,
+    "chord": "EM7"
+  },
+  {
+    "set_id": 80,
+    "index": 5,
+    "chord": "Fmb6"
+  },
+  {
+    "set_id": 80,
+    "index": 6,
+    "chord": "GbM9"
+  },
+  {
+    "set_id": 80,
+    "index": 7,
+    "chord": "Ebadd9/G"
+  },
+  {
+    "set_id": 80,
+    "index": 8,
+    "chord": "Ab7sus"
+  },
+  {
+    "set_id": 80,
+    "index": 9,
+    "chord": "AdimM7"
+  },
+  {
+    "set_id": 80,
+    "index": 10,
+    "chord": "Bbm9"
+  },
+  {
+    "set_id": 80,
+    "index": 11,
+    "chord": "Gb/B"
+  },
+  {
+    "set_id": 81,
+    "index": 0,
+    "chord": "C7alt"
+  },
+  {
+    "set_id": 81,
+    "index": 1,
+    "chord": "DbM7add6"
+  },
+  {
+    "set_id": 81,
+    "index": 2,
+    "chord": "Bb7/D"
+  },
+  {
+    "set_id": 81,
+    "index": 3,
+    "chord": "Db/Eb"
+  },
+  {
+    "set_id": 81,
+    "index": 4,
+    "chord": "Edim7"
+  },
+  {
+    "set_id": 81,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 81,
+    "index": 6,
+    "chord": "Gb6/9"
+  },
+  {
+    "set_id": 81,
+    "index": 7,
+    "chord": "Gm7b5"
+  },
+  {
+    "set_id": 81,
+    "index": 8,
+    "chord": "Eb/Ab"
+  },
+  {
+    "set_id": 81,
+    "index": 9,
+    "chord": "F7/A"
+  },
+  {
+    "set_id": 81,
+    "index": 10,
+    "chord": "Bbm9"
+  },
+  {
+    "set_id": 81,
+    "index": 11,
+    "chord": "BM7#11"
+  },
+  {
+    "set_id": 82,
+    "index": 0,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 82,
+    "index": 1,
+    "chord": "Bb/Ab"
+  },
+  {
+    "set_id": 82,
+    "index": 2,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 82,
+    "index": 3,
+    "chord": "C/Bb"
+  },
+  {
+    "set_id": 82,
+    "index": 4,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 82,
+    "index": 5,
+    "chord": "D/C"
+  },
+  {
+    "set_id": 82,
+    "index": 6,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 82,
+    "index": 7,
+    "chord": "E/D"
+  },
+  {
+    "set_id": 82,
+    "index": 8,
+    "chord": "D#m7"
+  },
+  {
+    "set_id": 82,
+    "index": 9,
+    "chord": "F#/E"
+  },
+  {
+    "set_id": 82,
+    "index": 10,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 82,
+    "index": 11,
+    "chord": "Ab/Gb"
+  },
+  {
+    "set_id": 83,
+    "index": 0,
+    "chord": "Cmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 1,
+    "chord": "Dbmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 2,
+    "chord": "Dmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 3,
+    "chord": "Ebmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 4,
+    "chord": "Emaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 5,
+    "chord": "Fmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 6,
+    "chord": "Gbmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 7,
+    "chord": "Gmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 8,
+    "chord": "Abmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 9,
+    "chord": "Amaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 10,
+    "chord": "Bbmaj7"
+  },
+  {
+    "set_id": 83,
+    "index": 11,
+    "chord": "Bmaj7"
+  },
+  {
+    "set_id": 84,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 84,
+    "index": 1,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 84,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 84,
+    "index": 3,
+    "chord": "D#m7"
+  },
+  {
+    "set_id": 84,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 84,
+    "index": 5,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 84,
+    "index": 6,
+    "chord": "F#m7"
+  },
+  {
+    "set_id": 84,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 84,
+    "index": 8,
+    "chord": "G#m7"
+  },
+  {
+    "set_id": 84,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 84,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 84,
+    "index": 11,
+    "chord": "Bm7"
+  },
+  {
+    "set_id": 85,
+    "index": 0,
+    "chord": "Cm9"
+  },
+  {
+    "set_id": 85,
+    "index": 1,
+    "chord": "C#m9"
+  },
+  {
+    "set_id": 85,
+    "index": 2,
+    "chord": "Dm9"
+  },
+  {
+    "set_id": 85,
+    "index": 3,
+    "chord": "D#m9"
+  },
+  {
+    "set_id": 85,
+    "index": 4,
+    "chord": "Em9"
+  },
+  {
+    "set_id": 85,
+    "index": 5,
+    "chord": "Fm9"
+  },
+  {
+    "set_id": 85,
+    "index": 6,
+    "chord": "F#m9"
+  },
+  {
+    "set_id": 85,
+    "index": 7,
+    "chord": "Gm9"
+  },
+  {
+    "set_id": 85,
+    "index": 8,
+    "chord": "G#m9"
+  },
+  {
+    "set_id": 85,
+    "index": 9,
+    "chord": "Am9"
+  },
+  {
+    "set_id": 85,
+    "index": 10,
+    "chord": "A#m9"
+  },
+  {
+    "set_id": 85,
+    "index": 11,
+    "chord": "Bm9"
+  },
+  {
+    "set_id": 86,
+    "index": 0,
+    "chord": "Cmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 1,
+    "chord": "Dbmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 2,
+    "chord": "Dmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 3,
+    "chord": "Ebmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 4,
+    "chord": "Emaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 5,
+    "chord": "Fmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 6,
+    "chord": "Gbmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 7,
+    "chord": "Gmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 8,
+    "chord": "Abmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 9,
+    "chord": "Amaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 10,
+    "chord": "Bbmaj7"
+  },
+  {
+    "set_id": 86,
+    "index": 11,
+    "chord": "Bmaj7"
+  },
+  {
+    "set_id": 87,
+    "index": 0,
+    "chord": "Cmaj7"
+  },
+  {
+    "set_id": 87,
+    "index": 1,
+    "chord": "Aadd9/C#"
+  },
+  {
+    "set_id": 87,
+    "index": 2,
+    "chord": "Dm6"
+  },
+  {
+    "set_id": 87,
+    "index": 3,
+    "chord": "B7/D#"
+  },
+  {
+    "set_id": 87,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 87,
+    "index": 5,
+    "chord": "Fmaj9"
+  },
+  {
+    "set_id": 87,
+    "index": 6,
+    "chord": "Dadd9/F#"
+  },
+  {
+    "set_id": 87,
+    "index": 7,
+    "chord": "Gm7/9"
+  },
+  {
+    "set_id": 87,
+    "index": 8,
+    "chord": "Abmaj9"
+  },
+  {
+    "set_id": 87,
+    "index": 9,
+    "chord": "Cadd9/G"
+  },
+  {
+    "set_id": 87,
+    "index": 10,
+    "chord": "Eadd9/G#"
+  },
+  {
+    "set_id": 87,
+    "index": 11,
+    "chord": "Asus7"
+  },
+  {
+    "set_id": 88,
+    "index": 0,
+    "chord": "Fmaj7/9"
+  },
+  {
+    "set_id": 88,
+    "index": 1,
+    "chord": "Gm7/b5"
+  },
+  {
+    "set_id": 88,
+    "index": 2,
+    "chord": "Abmaj7/9"
+  },
+  {
+    "set_id": 88,
+    "index": 3,
+    "chord": "Bbm7/b5"
+  },
+  {
+    "set_id": 88,
+    "index": 4,
+    "chord": "Bmaj7/9"
+  },
+  {
+    "set_id": 88,
+    "index": 5,
+    "chord": "C#m7/b5"
+  },
+  {
+    "set_id": 88,
+    "index": 6,
+    "chord": "DM7/9"
+  },
+  {
+    "set_id": 88,
+    "index": 7,
+    "chord": "Em7/b5"
+  },
+  {
+    "set_id": 88,
+    "index": 8,
+    "chord": "CM7/9"
+  },
+  {
+    "set_id": 88,
+    "index": 9,
+    "chord": "Dm7b5/9"
+  },
+  {
+    "set_id": 88,
+    "index": 10,
+    "chord": "GbM7/9"
+  },
+  {
+    "set_id": 88,
+    "index": 11,
+    "chord": "Abm7/b5"
+  },
+  {
+    "set_id": 89,
+    "index": 0,
+    "chord": "Cadd9"
+  },
+  {
+    "set_id": 89,
+    "index": 1,
+    "chord": "C#dim7"
+  },
+  {
+    "set_id": 89,
+    "index": 2,
+    "chord": "Gadd13/B"
+  },
+  {
+    "set_id": 89,
+    "index": 3,
+    "chord": "D#dim#5"
+  },
+  {
+    "set_id": 89,
+    "index": 4,
+    "chord": "FM7/E"
+  },
+  {
+    "set_id": 89,
+    "index": 5,
+    "chord": "G7sus2/F"
+  },
+  {
+    "set_id": 89,
+    "index": 6,
+    "chord": "D#dim7"
+  },
+  {
+    "set_id": 89,
+    "index": 7,
+    "chord": "C6"
+  },
+  {
+    "set_id": 89,
+    "index": 8,
+    "chord": "Ddim7"
+  },
+  {
+    "set_id": 89,
+    "index": 9,
+    "chord": "Am/C"
+  },
+  {
+    "set_id": 89,
+    "index": 10,
+    "chord": "Dm7b5"
+  },
+  {
+    "set_id": 89,
+    "index": 11,
+    "chord": "G7/D"
+  },
+  {
+    "set_id": 90,
+    "index": 0,
+    "chord": "Cmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 1,
+    "chord": "Dbmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 2,
+    "chord": "Dmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 3,
+    "chord": "Ebmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 4,
+    "chord": "Emaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 5,
+    "chord": "Fmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 6,
+    "chord": "Gbmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 7,
+    "chord": "Gmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 8,
+    "chord": "Abmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 9,
+    "chord": "Amaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 10,
+    "chord": "Bbmaj13"
+  },
+  {
+    "set_id": 90,
+    "index": 11,
+    "chord": "Bmaj13"
+  },
+  {
+    "set_id": 91,
+    "index": 0,
+    "chord": "Cm13"
+  },
+  {
+    "set_id": 91,
+    "index": 1,
+    "chord": "C#m13"
+  },
+  {
+    "set_id": 91,
+    "index": 2,
+    "chord": "Dm13"
+  },
+  {
+    "set_id": 91,
+    "index": 3,
+    "chord": "D#m13"
+  },
+  {
+    "set_id": 91,
+    "index": 4,
+    "chord": "Em13"
+  },
+  {
+    "set_id": 91,
+    "index": 5,
+    "chord": "Fm13"
+  },
+  {
+    "set_id": 91,
+    "index": 6,
+    "chord": "F#m13"
+  },
+  {
+    "set_id": 91,
+    "index": 7,
+    "chord": "Gm13"
+  },
+  {
+    "set_id": 91,
+    "index": 8,
+    "chord": "G#m13"
+  },
+  {
+    "set_id": 91,
+    "index": 9,
+    "chord": "Am13"
+  },
+  {
+    "set_id": 91,
+    "index": 10,
+    "chord": "A#m13"
+  },
+  {
+    "set_id": 91,
+    "index": 11,
+    "chord": "Bm13"
+  },
+  {
+    "set_id": 92,
+    "index": 0,
+    "chord": "C7"
+  },
+  {
+    "set_id": 92,
+    "index": 1,
+    "chord": "C#7"
+  },
+  {
+    "set_id": 92,
+    "index": 2,
+    "chord": "D7"
+  },
+  {
+    "set_id": 92,
+    "index": 3,
+    "chord": "D#7"
+  },
+  {
+    "set_id": 92,
+    "index": 4,
+    "chord": "E7"
+  },
+  {
+    "set_id": 92,
+    "index": 5,
+    "chord": "F7"
+  },
+  {
+    "set_id": 92,
+    "index": 6,
+    "chord": "F#7"
+  },
+  {
+    "set_id": 92,
+    "index": 7,
+    "chord": "G7"
+  },
+  {
+    "set_id": 92,
+    "index": 8,
+    "chord": "G#7"
+  },
+  {
+    "set_id": 92,
+    "index": 9,
+    "chord": "A7"
+  },
+  {
+    "set_id": 92,
+    "index": 10,
+    "chord": "A#7"
+  },
+  {
+    "set_id": 92,
+    "index": 11,
+    "chord": "B7"
+  },
+  {
+    "set_id": 93,
+    "index": 0,
+    "chord": "Cm7"
+  },
+  {
+    "set_id": 93,
+    "index": 1,
+    "chord": "C#m7"
+  },
+  {
+    "set_id": 93,
+    "index": 2,
+    "chord": "Dm7"
+  },
+  {
+    "set_id": 93,
+    "index": 3,
+    "chord": "D#m7"
+  },
+  {
+    "set_id": 93,
+    "index": 4,
+    "chord": "Em7"
+  },
+  {
+    "set_id": 93,
+    "index": 5,
+    "chord": "Fm7"
+  },
+  {
+    "set_id": 93,
+    "index": 6,
+    "chord": "F#m7"
+  },
+  {
+    "set_id": 93,
+    "index": 7,
+    "chord": "Gm7"
+  },
+  {
+    "set_id": 93,
+    "index": 8,
+    "chord": "G#m7"
+  },
+  {
+    "set_id": 93,
+    "index": 9,
+    "chord": "Am7"
+  },
+  {
+    "set_id": 93,
+    "index": 10,
+    "chord": "A#m7"
+  },
+  {
+    "set_id": 93,
+    "index": 11,
+    "chord": "Bm7"
+  }
+]

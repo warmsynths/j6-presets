@@ -1,0 +1,2510 @@
+[
+  {
+    "id": 1,
+    "number": 1,
+    "genre_id": 1,
+    "complexity": 45,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 8,
+        "Minor": 4,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 3,
+        "9": 5,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 2,
+    "number": 2,
+    "genre_id": 1,
+    "complexity": 37,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 5,
+        "Diminished": 3,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 4,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.75,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 3,
+    "number": 3,
+    "genre_id": 2,
+    "complexity": 56,
+    "inferred_key": "D Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 9,
+        "9": 7,
+        "11": 2,
+        "13": 2,
+        "sus": 1
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "D - C# - D - D"
+    }
+  },
+  {
+    "id": 4,
+    "number": 4,
+    "genre_id": 2,
+    "complexity": 52,
+    "inferred_key": "D Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 5,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 2
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 5,
+        "11": 1,
+        "13": 2,
+        "sus": 1
+      },
+      "tags": [
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 0.73,
+      "recommendedProgression": "D - C# - D - D#"
+    }
+  },
+  {
+    "id": 5,
+    "number": 5,
+    "genre_id": 2,
+    "complexity": 45,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 1,
+        "9": 11,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 6,
+    "number": 6,
+    "genre_id": 3,
+    "complexity": 43,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 2,
+        "Diminished": 2,
+        "Augmented": 1
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 6,
+        "11": 0,
+        "13": 2,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 0.65,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 7,
+    "number": 7,
+    "genre_id": 4,
+    "complexity": 16,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 4,
+        "Diminished": 4,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 4,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.67,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 8,
+    "number": 8,
+    "genre_id": 5,
+    "complexity": 16,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 4,
+        "Diminished": 4,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 4,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.67,
+      "recommendedProgression": "C - C# - D - Eb"
+    }
+  },
+  {
+    "id": 9,
+    "number": 9,
+    "genre_id": 6,
+    "complexity": 16,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 4,
+        "Diminished": 3,
+        "Augmented": 1
+      },
+      "extensionCounts": {
+        "7": 2,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.5700000000000001,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 10,
+    "number": 10,
+    "genre_id": 7,
+    "complexity": 27,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 5,
+        "Diminished": 3,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 9,
+        "9": 2,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.75,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 11,
+    "number": 11,
+    "genre_id": 7,
+    "complexity": 39,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 3,
+        "Minor": 5,
+        "Diminished": 2,
+        "Augmented": 2
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 4,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.5700000000000001,
+      "recommendedProgression": "C - G - D - D#"
+    }
+  },
+  {
+    "id": 12,
+    "number": 12,
+    "genre_id": 8,
+    "complexity": 33,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 4,
+        "Diminished": 2,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 10,
+        "9": 4,
+        "11": 1,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 0.83,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 13,
+    "number": 13,
+    "genre_id": 8,
+    "complexity": 45,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 7,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 5,
+        "9": 6,
+        "11": 0,
+        "13": 1,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 14,
+    "number": 14,
+    "genre_id": 9,
+    "complexity": 0,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C - C# - C#"
+    }
+  },
+  {
+    "id": 15,
+    "number": 15,
+    "genre_id": 10,
+    "complexity": 0,
+    "inferred_key": "F Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "F - C - F# - C#"
+    }
+  },
+  {
+    "id": 16,
+    "number": 16,
+    "genre_id": 11,
+    "complexity": 0,
+    "inferred_key": "G Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "G - C - G# - C#"
+    }
+  },
+  {
+    "id": 17,
+    "number": 17,
+    "genre_id": 12,
+    "complexity": 0,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 18,
+    "number": 18,
+    "genre_id": 12,
+    "complexity": 22,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 1,
+        "Minor": 11,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 19,
+    "number": 19,
+    "genre_id": 12,
+    "complexity": 0,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 20,
+    "number": 20,
+    "genre_id": 12,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 21,
+    "number": 21,
+    "genre_id": 12,
+    "complexity": 50,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 22,
+    "number": 22,
+    "genre_id": 12,
+    "complexity": 75,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 23,
+    "number": 23,
+    "genre_id": 12,
+    "complexity": 75,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 12,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 24,
+    "number": 24,
+    "genre_id": 12,
+    "complexity": 100,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 12,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 25,
+    "number": 25,
+    "genre_id": 12,
+    "complexity": 0,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C - C - C"
+    }
+  },
+  {
+    "id": 26,
+    "number": 26,
+    "genre_id": 12,
+    "complexity": 41,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C - C - C"
+    }
+  },
+  {
+    "id": 27,
+    "number": 27,
+    "genre_id": 13,
+    "complexity": 14,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 5,
+        "Minor": 7,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - E - G - A"
+    }
+  },
+  {
+    "id": 28,
+    "number": 28,
+    "genre_id": 1,
+    "complexity": 16,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 8,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 1
+      },
+      "extensionCounts": {
+        "7": 5,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.8200000000000001,
+      "recommendedProgression": "C - C - D - D#"
+    }
+  },
+  {
+    "id": 29,
+    "number": 29,
+    "genre_id": 1,
+    "complexity": 12,
+    "inferred_key": "G Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 8,
+        "Minor": 4,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - F - G - E"
+    }
+  },
+  {
+    "id": 30,
+    "number": 30,
+    "genre_id": 1,
+    "complexity": 14,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D# - G# - A#"
+    }
+  },
+  {
+    "id": 31,
+    "number": 31,
+    "genre_id": 1,
+    "complexity": 25,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 10,
+        "Minor": 2,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 1,
+        "11": 1,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Bb - D - D"
+    }
+  },
+  {
+    "id": 32,
+    "number": 32,
+    "genre_id": 1,
+    "complexity": 27,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 8,
+        "Minor": 4,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 1,
+        "11": 1,
+        "13": 1,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D# - G - A#"
+    }
+  },
+  {
+    "id": 33,
+    "number": 33,
+    "genre_id": 14,
+    "complexity": 10,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 10,
+        "Minor": 2,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 4,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - F - A# - G"
+    }
+  },
+  {
+    "id": 34,
+    "number": 34,
+    "genre_id": 15,
+    "complexity": 25,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 12
+      },
+      "tags": [
+        "Bright",
+        "Retro"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D - D# - F"
+    }
+  },
+  {
+    "id": 35,
+    "number": 35,
+    "genre_id": 16,
+    "complexity": 12,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - A - D - B"
+    }
+  },
+  {
+    "id": 36,
+    "number": 36,
+    "genre_id": 14,
+    "complexity": 50,
+    "inferred_key": "Eb Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 12
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "Eb - F - G - Ab"
+    }
+  },
+  {
+    "id": 37,
+    "number": 37,
+    "genre_id": 14,
+    "complexity": 43,
+    "inferred_key": "E Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 4,
+        "9": 3,
+        "11": 2,
+        "13": 0,
+        "sus": 3
+      },
+      "tags": [
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D - E - D"
+    }
+  },
+  {
+    "id": 38,
+    "number": 38,
+    "genre_id": 17,
+    "complexity": 22,
+    "inferred_key": "G Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 11,
+        "Minor": 1,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 1,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 4
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - G - G - A#"
+    }
+  },
+  {
+    "id": 39,
+    "number": 39,
+    "genre_id": 18,
+    "complexity": 41,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 5,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 4,
+        "9": 2,
+        "11": 1,
+        "13": 0,
+        "sus": 2
+      },
+      "tags": [
+        "Retro"
+      ],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - G - E - F"
+    }
+  },
+  {
+    "id": 40,
+    "number": 40,
+    "genre_id": 18,
+    "complexity": 50,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Retro"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D - D# - F"
+    }
+  },
+  {
+    "id": 41,
+    "number": 41,
+    "genre_id": 18,
+    "complexity": 29,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 10,
+        "Minor": 0,
+        "Diminished": 2,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 3,
+        "9": 1,
+        "11": 0,
+        "13": 0,
+        "sus": 5
+      },
+      "tags": [
+        "Bright",
+        "Retro"
+      ],
+      "diatonicToneRatio": 0.83,
+      "recommendedProgression": "C - C# - F - D#"
+    }
+  },
+  {
+    "id": 42,
+    "number": 42,
+    "genre_id": 18,
+    "complexity": 20,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 10,
+        "Minor": 1,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 3,
+        "9": 1,
+        "11": 0,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [
+        "Bright",
+        "Retro"
+      ],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - A# - A# - G"
+    }
+  },
+  {
+    "id": 43,
+    "number": 43,
+    "genre_id": 18,
+    "complexity": 25,
+    "inferred_key": "A# Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 10,
+        "Minor": 2,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 3,
+        "9": 1,
+        "11": 0,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [
+        "Bright",
+        "Retro"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - A# - D# - A#"
+    }
+  },
+  {
+    "id": 44,
+    "number": 44,
+    "genre_id": 18,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 5,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 3
+      },
+      "tags": [
+        "Retro"
+      ],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - C# - G - D#"
+    }
+  },
+  {
+    "id": 45,
+    "number": 45,
+    "genre_id": 18,
+    "complexity": 14,
+    "inferred_key": "Ab Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 5,
+        "Minor": 7,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Retro"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "Ab - F - G - Ab"
+    }
+  },
+  {
+    "id": 46,
+    "number": 46,
+    "genre_id": 18,
+    "complexity": 8,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 8,
+        "Minor": 4,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Retro"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D - E - D"
+    }
+  },
+  {
+    "id": 47,
+    "number": 47,
+    "genre_id": 19,
+    "complexity": 14,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 11,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Retro"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D# - D - F"
+    }
+  },
+  {
+    "id": 48,
+    "number": 48,
+    "genre_id": 20,
+    "complexity": 16,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 2,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Ab - Bb - Eb"
+    }
+  },
+  {
+    "id": 49,
+    "number": 49,
+    "genre_id": 21,
+    "complexity": 20,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 9,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - Eb"
+    }
+  },
+  {
+    "id": 50,
+    "number": 50,
+    "genre_id": 21,
+    "complexity": 47,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 8,
+        "9": 5,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - D - E - F"
+    }
+  },
+  {
+    "id": 51,
+    "number": 51,
+    "genre_id": 21,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - G# - D - A#"
+    }
+  },
+  {
+    "id": 52,
+    "number": 52,
+    "genre_id": 21,
+    "complexity": 12,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - G# - D - A#"
+    }
+  },
+  {
+    "id": 53,
+    "number": 53,
+    "genre_id": 21,
+    "complexity": 29,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 5,
+        "Minor": 5,
+        "Diminished": 2,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 9,
+        "9": 0,
+        "11": 1,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.83,
+      "recommendedProgression": "C - C - C# - D"
+    }
+  },
+  {
+    "id": 54,
+    "number": 54,
+    "genre_id": 22,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 55,
+    "number": 55,
+    "genre_id": 22,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 7,
+        "Diminished": 5,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 0.58,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 56,
+    "number": 56,
+    "genre_id": 23,
+    "complexity": 72,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 1,
+        "Minor": 11,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 57,
+    "number": 57,
+    "genre_id": 23,
+    "complexity": 41,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 8,
+        "9": 3,
+        "11": 4,
+        "13": 1,
+        "sus": 2
+      },
+      "tags": [
+        "Bright",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 58,
+    "number": 58,
+    "genre_id": 22,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 2,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - A# - A# - D#"
+    }
+  },
+  {
+    "id": 59,
+    "number": 59,
+    "genre_id": 24,
+    "complexity": 39,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 7,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C - D - D"
+    }
+  },
+  {
+    "id": 60,
+    "number": 60,
+    "genre_id": 24,
+    "complexity": 25,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 61,
+    "number": 61,
+    "genre_id": 24,
+    "complexity": 50,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 62,
+    "number": 62,
+    "genre_id": 24,
+    "complexity": 60,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 5,
+        "11": 0,
+        "13": 7,
+        "sus": 5
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 63,
+    "number": 63,
+    "genre_id": 24,
+    "complexity": 14,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 5,
+        "Minor": 7,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 10,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 64,
+    "number": 64,
+    "genre_id": 24,
+    "complexity": 0,
+    "inferred_key": "B Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 5,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - A - D - B"
+    }
+  },
+  {
+    "id": 65,
+    "number": 65,
+    "genre_id": 25,
+    "complexity": 27,
+    "inferred_key": "G Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 4,
+        "Minor": 4,
+        "Diminished": 4,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 10,
+        "9": 0,
+        "11": 1,
+        "13": 1,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.67,
+      "recommendedProgression": "G - C# - D - D#"
+    }
+  },
+  {
+    "id": 66,
+    "number": 66,
+    "genre_id": 25,
+    "complexity": 25,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 3,
+        "Minor": 5,
+        "Diminished": 4,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 11,
+        "9": 1,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.67,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 67,
+    "number": 67,
+    "genre_id": 25,
+    "complexity": 75,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 68,
+    "number": 68,
+    "genre_id": 25,
+    "complexity": 75,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 69,
+    "number": 69,
+    "genre_id": 25,
+    "complexity": 75,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 12,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 70,
+    "number": 70,
+    "genre_id": 25,
+    "complexity": 50,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 12,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 71,
+    "number": 71,
+    "genre_id": 26,
+    "complexity": 31,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 11,
+        "Minor": 1,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 8,
+        "9": 3,
+        "11": 2,
+        "13": 0,
+        "sus": 3
+      },
+      "tags": [
+        "Bright",
+        "Jazzy"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 72,
+    "number": 72,
+    "genre_id": 27,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 10,
+        "9": 1,
+        "11": 0,
+        "13": 1,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Ab - D - Eb"
+    }
+  },
+  {
+    "id": 73,
+    "number": 73,
+    "genre_id": 27,
+    "complexity": 27,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 5,
+        "Minor": 5,
+        "Diminished": 2,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 8,
+        "9": 0,
+        "11": 0,
+        "13": 2,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.83,
+      "recommendedProgression": "C - C# - F - F"
+    }
+  },
+  {
+    "id": 74,
+    "number": 74,
+    "genre_id": 27,
+    "complexity": 45,
+    "inferred_key": "E Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 5,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 3,
+        "11": 0,
+        "13": 1,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "E - G - F - D"
+    }
+  },
+  {
+    "id": 75,
+    "number": 75,
+    "genre_id": 27,
+    "complexity": 10,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - Eb"
+    }
+  },
+  {
+    "id": 76,
+    "number": 76,
+    "genre_id": 27,
+    "complexity": 60,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 5,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 77,
+    "number": 77,
+    "genre_id": 27,
+    "complexity": 75,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 12,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 78,
+    "number": 78,
+    "genre_id": 28,
+    "complexity": 22,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 2,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 8,
+        "9": 0,
+        "11": 1,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - A - D - Eb"
+    }
+  },
+  {
+    "id": 79,
+    "number": 79,
+    "genre_id": 28,
+    "complexity": 20,
+    "inferred_key": "Ab Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 10,
+        "Minor": 2,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 1,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "Ab - Db - Bb - Eb"
+    }
+  },
+  {
+    "id": 80,
+    "number": 80,
+    "genre_id": 28,
+    "complexity": 33,
+    "inferred_key": "Gb Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 7,
+        "Minor": 4,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 3,
+        "11": 0,
+        "13": 0,
+        "sus": 2
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - Db - Bb - Eb"
+    }
+  },
+  {
+    "id": 81,
+    "number": 81,
+    "genre_id": 28,
+    "complexity": 35,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 8,
+        "Minor": 3,
+        "Diminished": 1,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 3,
+        "11": 1,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.92,
+      "recommendedProgression": "C - Db - Bb - Db"
+    }
+  },
+  {
+    "id": 82,
+    "number": 82,
+    "genre_id": 29,
+    "complexity": 25,
+    "inferred_key": "G Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 6,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "G - Bb - A - C"
+    }
+  },
+  {
+    "id": 83,
+    "number": 83,
+    "genre_id": 29,
+    "complexity": 25,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 84,
+    "number": 84,
+    "genre_id": 29,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 85,
+    "number": 85,
+    "genre_id": 29,
+    "complexity": 75,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 12,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 86,
+    "number": 86,
+    "genre_id": 2,
+    "complexity": 25,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 87,
+    "number": 87,
+    "genre_id": 2,
+    "complexity": 56,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 9,
+        "Minor": 3,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 5,
+        "9": 7,
+        "11": 0,
+        "13": 0,
+        "sus": 1
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - A - D - B"
+    }
+  },
+  {
+    "id": 88,
+    "number": 88,
+    "genre_id": 2,
+    "complexity": 72,
+    "inferred_key": "Ab Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 6,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 7,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "F - G - Ab - Bb"
+    }
+  },
+  {
+    "id": 89,
+    "number": 89,
+    "genre_id": 2,
+    "complexity": 33,
+    "inferred_key": "G Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 6,
+        "Minor": 2,
+        "Diminished": 4,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 7,
+        "9": 1,
+        "11": 0,
+        "13": 1,
+        "sus": 1
+      },
+      "tags": [],
+      "diatonicToneRatio": 0.67,
+      "recommendedProgression": "C - C# - G - D#"
+    }
+  },
+  {
+    "id": 90,
+    "number": 90,
+    "genre_id": 2,
+    "complexity": 75,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 12,
+        "sus": 0
+      },
+      "tags": [
+        "Bright",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - Db - D - Eb"
+    }
+  },
+  {
+    "id": 91,
+    "number": 91,
+    "genre_id": 2,
+    "complexity": 75,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 0,
+        "9": 0,
+        "11": 0,
+        "13": 12,
+        "sus": 0
+      },
+      "tags": [
+        "Dark",
+        "Jazzy",
+        "Complex"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 92,
+    "number": 92,
+    "genre_id": 2,
+    "complexity": 0,
+    "inferred_key": "C Major",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 12,
+        "Minor": 0,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Bright"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  },
+  {
+    "id": 93,
+    "number": 93,
+    "genre_id": 2,
+    "complexity": 25,
+    "inferred_key": "C Minor",
+    "analysis": {
+      "qualityCounts": {
+        "Major": 0,
+        "Minor": 12,
+        "Diminished": 0,
+        "Augmented": 0
+      },
+      "extensionCounts": {
+        "7": 12,
+        "9": 0,
+        "11": 0,
+        "13": 0,
+        "sus": 0
+      },
+      "tags": [
+        "Dark"
+      ],
+      "diatonicToneRatio": 1,
+      "recommendedProgression": "C - C# - D - D#"
+    }
+  }
+]
