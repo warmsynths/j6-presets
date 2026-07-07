@@ -37,6 +37,8 @@ export class J6App extends LitElement {
   @state() private aboutOpen = false;
   @state() private isEdited = false;
 
+  @state() private activeView: 'preset' | 'chords' | 'styles' = 'preset';
+
   // Custom tweaked parameters (override preset defaults)
   @state() private customValues: Record<string, number> = {};
 
@@ -90,19 +92,84 @@ export class J6App extends LitElement {
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
 
-    .plugout-badge {
-      background: linear-gradient(135deg, #e4e6eb 0%, #b2b4b8 40%, #76787e 50%, #b2b4b8 60%, #e4e6eb 100%);
-      border: 2px solid #4e5055;
-      border-radius: 3px;
-      padding: 3px 10px;
-      font-size: 0.65rem;
-      font-weight: 900;
-      color: var(--color-orange-primary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 4px rgba(0,0,0,0.4);
-      text-shadow: 0 0 2px rgba(255, 93, 0, 0.4);
+    /* 3-way Juno-60 Style Toggle Switch */
+    .juno-switch {
+      display: inline-flex;
+      flex-direction: column;
+      margin-left: 16px;
+      user-select: none;
+      cursor: pointer;
     }
+
+    .juno-switch-labels {
+      display: flex;
+    }
+
+    .juno-switch-label-box {
+      border: 2px solid #e2e1d7;
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      font-weight: 900;
+      color: #e2e1d7;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      text-align: center;
+      background: transparent;
+      position: relative;
+    }
+
+    /* Don't collapse the borders between items, instead hide the left border of adjacent ones so the single line looks continuous */
+    .juno-switch-label-box:not(:first-child) {
+      margin-left: -2px;
+    }
+
+    .juno-switch-track-container {
+      border: 2px solid #e2e1d7;
+      border-top: none;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      margin-top: 0;
+    }
+
+    .juno-switch-track {
+      width: 100%;
+      height: 6px;
+      background: #000;
+      border-radius: 1px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.9);
+      position: relative;
+    }
+
+    .juno-switch-handle {
+      position: absolute;
+      top: -8px;
+      width: 24px;
+      height: 22px;
+      background: linear-gradient(180deg, #2b2b2b 0%, #111 100%);
+      border: 1px solid #0a0a0a;
+      border-radius: 2px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.15);
+      transition: left 0.15s cubic-bezier(0.2, 0, 0, 1);
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+
+    .juno-switch-handle::before,
+    .juno-switch-handle::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: #000;
+      box-shadow: 1px 0 0 rgba(255,255,255,0.1);
+    }
+    .juno-switch-handle::before { left: 8px; }
+    .juno-switch-handle::after { right: 8px; }
 
     .juno-logo {
       font-family: 'Arial Black', system-ui, sans-serif;
@@ -734,6 +801,19 @@ export class J6App extends LitElement {
     window.addEventListener('touchend', handleTouchEnd);
   }
 
+  private handleSwitchClick(e: MouseEvent) {
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const third = rect.width / 3;
+    if (x < third) {
+      this.activeView = 'preset';
+    } else if (x < third * 2) {
+      this.activeView = 'chords';
+    } else {
+      this.activeView = 'styles';
+    }
+  }
+
   private updateFaderFromCoord(clientY: number, track: HTMLElement, paramName: string) {
     const rect = track.getBoundingClientRect();
     const relativeY = Math.max(0, Math.min(1, (rect.bottom - clientY) / rect.height));
@@ -858,7 +938,20 @@ Effect Chorus: ${this.customValues.effect}%
         <div class="synth-header">
           <div class="header-left">
             <span class="roland-logo">Roland</span>
-            <span class="plugout-badge">Plug-Out</span>
+            
+            <!-- 3-Way Mode Toggle -->
+            <div class="juno-switch" @click=${this.handleSwitchClick}>
+              <div class="juno-switch-labels">
+                <div class="juno-switch-label-box" style="flex: 1; ${this.activeView === 'preset' ? 'color: #fff; background: rgba(255,255,255,0.1);' : ''}">Preset</div>
+                <div class="juno-switch-label-box" style="flex: 1; ${this.activeView === 'chords' ? 'color: #fff; background: rgba(255,255,255,0.1);' : ''}">Chords</div>
+                <div class="juno-switch-label-box" style="flex: 1; ${this.activeView === 'styles' ? 'color: #fff; background: rgba(255,255,255,0.1);' : ''}">Styles</div>
+              </div>
+              <div class="juno-switch-track-container">
+                <div class="juno-switch-track">
+                  <div class="juno-switch-handle" style="left: ${this.activeView === 'preset' ? '16.6%' : this.activeView === 'chords' ? '50%' : '83.3%'}"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="juno-logo">J6</div>
@@ -866,6 +959,7 @@ Effect Chorus: ${this.customValues.effect}%
 
         <!-- Main Body Controls -->
         <div class="synth-body">
+          ${this.activeView === 'preset' ? html`
           <div class="synth-grid">
             <!-- Left Grid (Patch Display + Oscillator Settings) -->
             <div class="grid-left">
@@ -1102,6 +1196,15 @@ Effect Chorus: ${this.customValues.effect}%
 
             </div>
           </div>
+          ` : this.activeView === 'chords' ? html`
+            <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; color: #5d5f66; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border: 2px dashed #2e3037; border-radius: 4px; margin: 16px;">
+              Chords view coming soon
+            </div>
+          ` : html`
+            <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; color: #5d5f66; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border: 2px dashed #2e3037; border-radius: 4px; margin: 16px;">
+              Styles view coming soon
+            </div>
+          `}
         </div>
 
         <!-- Footer bar inside synth container -->
