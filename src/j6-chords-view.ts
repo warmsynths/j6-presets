@@ -9,6 +9,7 @@ const chordsData = (chordsDataRaw as unknown) as ChordsData;
 export class J6ChordsView extends LitElement {
   @state() private searchQuery: string = '';
   @state() private selectedGenre: string = 'All';
+  @state() private maxComplexity: number = 100;
   
   @state() private currentFilteredIndex: number = 0;
   @state() private showSearchModal: boolean = false;
@@ -17,9 +18,21 @@ export class J6ChordsView extends LitElement {
     return ['All', ...Array.from(new Set(chordsData.chord_sets.map(s => s.genre))).sort()];
   }
 
+  private getChordSetComplexity(chords: string[]): number {
+    let score = 0;
+    chords.forEach(c => {
+       if (c.includes('9') || c.includes('11') || c.includes('13')) score += 2;
+       if (c.includes('m') || c.includes('aug') || c.includes('dim')) score += 1;
+       if (c.includes('/')) score += 1;
+       if (c.includes('sus')) score += 1;
+    });
+    return Math.min(100, Math.floor((score / 48) * 100));
+  }
+
   private get filteredSets() {
     return chordsData.chord_sets.filter(s => {
       if (this.selectedGenre !== 'All' && s.genre !== this.selectedGenre) return false;
+      if (this.getChordSetComplexity(s.chords) > this.maxComplexity) return false;
       if (this.searchQuery) {
         const q = this.searchQuery.toLowerCase();
         if (
@@ -66,6 +79,71 @@ export class J6ChordsView extends LitElement {
     if (nextIdx < 0) nextIdx = total - 1;
     if (nextIdx >= total) nextIdx = 0;
     this.currentFilteredIndex = nextIdx;
+  }
+
+  private selectRandomSet(genre?: string) {
+    let sets = chordsData.chord_sets;
+    if (genre) {
+      sets = sets.filter(s => s.genre === genre);
+    }
+    if (sets.length > 0) {
+      const randomSet = sets[Math.floor(Math.random() * sets.length)];
+      
+      const setComplexity = this.getChordSetComplexity(randomSet.chords);
+      if (setComplexity > this.maxComplexity) {
+        this.maxComplexity = setComplexity;
+      }
+
+      if (genre) {
+        this.selectedGenre = genre;
+      } else {
+        this.selectedGenre = 'All';
+      }
+      this.searchQuery = '';
+      
+      const newFilteredSets = chordsData.chord_sets.filter(s => {
+        if (this.selectedGenre !== 'All' && s.genre !== this.selectedGenre) return false;
+        if (this.getChordSetComplexity(s.chords) > this.maxComplexity) return false;
+        return true;
+      });
+      
+      const newIndex = newFilteredSets.findIndex(s => s.number === randomSet.number);
+      if (newIndex !== -1) {
+        this.currentFilteredIndex = newIndex;
+      }
+    }
+  }
+
+  private handleFaderMouseDown(e: MouseEvent) {
+    e.preventDefault();
+    this.startFaderDrag(e.clientY);
+  }
+
+  private handleFaderTouchStart(e: TouchEvent) {
+    e.preventDefault();
+    this.startFaderDrag(e.touches[0].clientY);
+  }
+
+  private startFaderDrag(startY: number) {
+    const startVal = this.maxComplexity;
+    const moveHandler = (ev: MouseEvent | TouchEvent) => {
+      const clientY = 'touches' in ev ? (ev as TouchEvent).touches[0].clientY : (ev as MouseEvent).clientY;
+      const deltaY = startY - clientY;
+      let newVal = startVal + deltaY;
+      newVal = Math.max(0, Math.min(100, Math.round(newVal)));
+      this.maxComplexity = newVal;
+      this.currentFilteredIndex = 0;
+    };
+    const upHandler = () => {
+      window.removeEventListener('mousemove', moveHandler);
+      window.removeEventListener('mouseup', upHandler);
+      window.removeEventListener('touchmove', moveHandler);
+      window.removeEventListener('touchend', upHandler);
+    };
+    window.addEventListener('mousemove', moveHandler);
+    window.addEventListener('mouseup', upHandler);
+    window.addEventListener('touchmove', moveHandler, { passive: false });
+    window.addEventListener('touchend', upHandler);
   }
 
   static styles = css`
@@ -447,7 +525,67 @@ export class J6ChordsView extends LitElement {
     }
     .set-list-btn .s-num { color: #ff5d00; font-family: monospace; font-size: 1.1rem; }
     .set-list-btn .s-genre { color: #fff; }
-    .set-list-btn .s-key { color: #a4a5aa; font-size: 0.7rem; text-align: right; }
+      .set-list-btn .s-key { color: #a4a5aa; font-size: 0.7rem; text-align: right; }
+
+    /* FADER CSS */
+    .fader-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .fader-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #a4a5aa;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .fader-track-wrapper {
+      position: relative;
+      padding: 0 10px;
+    }
+    .fader-track {
+      width: 5px;
+      height: 100px;
+      background: #000000;
+      border-radius: 2px;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+      position: relative;
+      cursor: pointer;
+    }
+    .fader-track::before, .fader-track::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; width: 4px;
+      background: repeating-linear-gradient(180deg, #9e9a8e, #9e9a8e 1.5px, transparent 1.5px, transparent 10px);
+      opacity: 0.55;
+    }
+    .fader-track::before { left: -8px; }
+    .fader-track::after { right: -8px; }
+    .fader-handle {
+      width: 24px; height: 14px;
+      background: linear-gradient(180deg, #44464f 0%, #1a1b1e 100%);
+      border: 1.5px solid #0a0b0d; border-radius: 3px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.1);
+      position: absolute; left: calc(50% - 12px);
+      cursor: ns-resize; transition: bottom 0.05s linear;
+    }
+    .fader-handle::before {
+      content: ''; display: block; position: absolute;
+      left: 1.5px; right: 1.5px; top: 5px; height: 1.5px;
+      background: var(--text-primary);
+      box-shadow: 0 0.5px 1px rgba(0,0,0,0.3);
+    }
+    .fader-val-label {
+      font-family: monospace; font-size: 0.6rem; color: #5d5f66; margin-top: 8px;
+    }
+    .fader-scale-shared {
+      font-family: monospace; font-size: 0.55rem; color: #a4a5aa;
+      font-weight: bold; display: flex; flex-direction: column;
+      justify-content: space-between; height: 100px; margin-top: 20px; padding: 0 2px;
+    }
+    .fader-scale-shared span { text-align: center; line-height: 1; }
 
     @media (max-width: 768px) {
       .top-row { flex-direction: column; }
@@ -463,32 +601,9 @@ export class J6ChordsView extends LitElement {
       <div class="juno-panel-container">
         
         <div class="top-row">
-          
-          <!-- SEARCH & FILTERS -->
-          <div class="juno-block">
-            <div class="juno-header blue">DCO / FILTER SEARCH</div>
-            <div class="juno-content" style="flex-direction: column; gap: 20px;">
-              
-              <div class="led-screen clickable" style="width: 100%; box-sizing: border-box;" @click=${() => this.showSearchModal = true}>
-                <span class="led-text" style="font-size: 0.9rem;">
-                  ${this.searchQuery ? `Q: ${this.searchQuery}` : 'CLICK TO SEARCH...'}
-                </span>
-              </div>
-
-              <div style="display: flex; gap: 24px; width: 100%; justify-content: center;">
-                <div class="cycle-group">
-                  <div class="cycle-label">GENRE</div>
-                  <div class="led-screen clickable" style="min-width: 110px;" @click=${() => this.showSearchModal = true}>
-                    <span class="led-text" style="font-size: 0.8rem;">${this.selectedGenre}</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
 
           <!-- SET INFO & SELECTION -->
-          <div class="juno-block" style="flex: 1.5;">
+          <div class="juno-block" style="flex: 1;">
             <div class="juno-header orange">SET INFO</div>
             <div class="juno-content">
               <div class="set-info-container">
@@ -547,6 +662,82 @@ export class J6ChordsView extends LitElement {
             </div>
           </div>
           
+          <!-- PARAMETERS / COMPLEXITY -->
+          <div class="juno-block" style="flex: 1;">
+            <div class="juno-header blue">PARAMETERS</div>
+            <div class="juno-content" style="gap: 24px; padding: 8px 16px;">
+              <div class="fader-scale-shared">
+                <span>10</span>
+                <span>-</span>
+                <span>0</span>
+              </div>
+              <div 
+                class="fader-group"
+                @mousedown=${(e: MouseEvent) => this.handleFaderMouseDown(e)}
+                @touchstart=${(e: TouchEvent) => this.handleFaderTouchStart(e)}
+              >
+                <span class="fader-label">COMPLEX</span>
+                <div class="fader-track-wrapper">
+                  <div class="fader-track">
+                    <div class="fader-handle" style="bottom: calc(${this.maxComplexity}% * 0.86)"></div>
+                  </div>
+                </div>
+                <span class="fader-val-label">${this.maxComplexity}%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SEARCH & FILTERS -->
+          <div class="juno-block" style="flex: 1;">
+            <div class="juno-header blue">DCO / FILTER SEARCH</div>
+            <div class="juno-content" style="flex-direction: column; gap: 20px;">
+              
+              <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                
+                <div class="patch-btn-wrapper">
+                  <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.65rem; min-width: 0; overflow: visible;">
+                    <span>RND</span>
+                    <span>POP</span>
+                  </div>
+                  <button class="patch-btn color-1" @click=${() => this.selectRandomSet('Pop')}></button>
+                </div>
+
+                <div class="patch-btn-wrapper">
+                  <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.5rem; letter-spacing: 0; min-width: 0; overflow: visible;">
+                    <span>RND</span>
+                    <span>NEO SOUL</span>
+                  </div>
+                  <button class="patch-btn color-1" @click=${() => this.selectRandomSet('Neo Soul')}></button>
+                </div>
+
+                <div class="patch-btn-wrapper">
+                  <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.65rem; min-width: 0; overflow: visible;">
+                    <span>RND</span>
+                    <span>JAZZ</span>
+                  </div>
+                  <button class="patch-btn color-1" @click=${() => this.selectRandomSet('Jazz')}></button>
+                </div>
+
+                <div class="patch-btn-wrapper">
+                  <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.65rem; min-width: 0; overflow: visible;">
+                    <span>RND</span>
+                  </div>
+                  <button class="patch-btn color-3" @click=${() => this.selectRandomSet()}></button>
+                </div>
+
+              </div>
+
+              <div style="margin-top: auto; width: 100%;">
+                <div class="led-screen clickable" style="width: 100%; box-sizing: border-box;" @click=${() => this.showSearchModal = true}>
+                  <span class="led-text" style="font-size: 0.8rem; display: flex; align-items: center; gap: 8px; justify-content: center;">
+                    <span style="font-size: 1.2rem; margin-top: -2px;">+</span> ADVANCED SEARCH
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
         <!-- BOTTOM CHORDS ROW (PATCH BUTTONS) -->
