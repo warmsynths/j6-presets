@@ -1,0 +1,21 @@
+:root {
+  --color-orange-primary: #ff5d00;
+  --color-orange-glow: #ff5500;
+  --color-orange-light: #ff7700;
+  --bg-app-base: #101010;
+  --bg-surface: #141416;
+  --bg-panel: #1e1e1e;
+  --bg-list-header: #1c1d22;
+  --bg-input: #120201;
+  --bg-element-dark: #0c0c0e;
+  --bg-element-hover: #24252b;
+  --text-primary: #e2e2e4;
+  --text-secondary: #8c8e94;
+  --text-muted: #6a6b72;
+  --border-dark: #1f2024;
+  --border-medium: #2e2f34;
+  --border-light: #3c3d42;
+  --border-lighter: #444;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'VT323', monospace;
+}

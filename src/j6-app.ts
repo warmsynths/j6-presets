@@ -43,10 +43,10 @@ export class J6App extends LitElement {
   static styles = css`
     :host {
       display: block;
-      color: #e2e2e4;
-      background-color: #0b0c0d;
+      color: var(--text-primary);
+      background-color: var(--bg-app-base);
       min-height: 100vh;
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: var(--font-sans);
       padding: 20px;
       box-sizing: border-box;
     }
@@ -97,7 +97,7 @@ export class J6App extends LitElement {
       padding: 3px 10px;
       font-size: 0.65rem;
       font-weight: 900;
-      color: #ff5d00;
+      color: var(--color-orange-primary);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 2px 4px rgba(0,0,0,0.4);
@@ -258,7 +258,7 @@ export class J6App extends LitElement {
       left: 1.5px; right: 1.5px;
       top: 5px;
       height: 1.5px;
-      background: #e2e2e4;
+      background: var(--text-primary);
       box-shadow: 0 0.5px 1px rgba(0,0,0,0.3);
     }
 
@@ -273,7 +273,7 @@ export class J6App extends LitElement {
     .fader-scale-shared {
       font-family: monospace;
       font-size: 0.55rem;
-      color: #8c8e94;
+      color: var(--text-secondary);
       font-weight: bold;
       display: flex;
       flex-direction: column;
@@ -349,7 +349,7 @@ export class J6App extends LitElement {
     .knob-label {
       font-size: 0.6rem;
       font-weight: bold;
-      color: #8c8e94;
+      color: var(--text-secondary);
       text-transform: uppercase;
     }
 
@@ -372,7 +372,7 @@ export class J6App extends LitElement {
       width: auto !important;
       height: 34px !important;
       padding: 0 12px;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 800;
       font-size: 0.8rem;
       color: #2b271d;
@@ -383,7 +383,7 @@ export class J6App extends LitElement {
     .led-search-screen {
       flex: 1;
       height: 34px;
-      background-color: #120201;
+      background-color: var(--bg-input);
       background-image: radial-gradient(rgba(255, 93, 0, 0.2) 1.5px, transparent 0);
       background-size: 4px 4px;
       border: 2px solid #09090b;
@@ -400,8 +400,8 @@ export class J6App extends LitElement {
       width: 100%;
       background: transparent;
       border: none;
-      color: #ff5d00;
-      font-family: 'VT323', monospace;
+      color: var(--color-orange-primary);
+      font-family: var(--font-mono);
       font-size: 1.7rem;
       letter-spacing: 0.05em;
       outline: none;
@@ -409,11 +409,11 @@ export class J6App extends LitElement {
       text-shadow: 0 0 6px rgba(255, 93, 0, 0.8);
       padding: 0;
     }
-    .led-search-input::placeholder { color: #ff5d0033; text-shadow: none; }
+    .led-search-input::placeholder { color: var(--color-orange-primary)33; text-shadow: none; }
     
     .led-search-icon {
       position: absolute; right: 8px; top: calc(50% - 9px);
-      width: 18px; height: 18px; fill: #ff5d00;
+      width: 18px; height: 18px; fill: var(--color-orange-primary);
       filter: drop-shadow(0 0 4px rgba(255, 93, 0, 0.7)); pointer-events: none;
     }
 
@@ -427,7 +427,7 @@ export class J6App extends LitElement {
     .search-toggle-label {
       font-size: 0.55rem;
       font-weight: 800;
-      color: #8c8e94;
+      color: var(--text-secondary);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -467,7 +467,7 @@ export class J6App extends LitElement {
 
     .patch-counts {
       font-size: 0.55rem;
-      color: #8c8e94;
+      color: var(--text-secondary);
       font-weight: 800;
       text-align: right;
       line-height: 1.3;
@@ -492,7 +492,7 @@ export class J6App extends LitElement {
     .waveform-label {
       font-size: 0.6rem;
       font-weight: bold;
-      color: #8c8e94;
+      color: var(--text-secondary);
       text-transform: uppercase;
       height: 12px;
       display: flex;
@@ -513,7 +513,7 @@ export class J6App extends LitElement {
     .led-well.active {
       background: #ff9d00; /* warm amber glow */
       border-color: #ffc466;
-      box-shadow: 0 0 8px #ff9d00, 0 0 16px #ff5d00, inset 0 0 2px #fff;
+      box-shadow: 0 0 8px #ff9d00, 0 0 16px var(--color-orange-primary), inset 0 0 2px #fff;
     }
 
     /* Skeuomorphic retro keys with thick black borders and deep drop shadows */
@@ -587,7 +587,7 @@ export class J6App extends LitElement {
     .chorus-button span {
       font-size: 0.6rem;
       font-weight: bold;
-      color: #8c8e94;
+      color: var(--text-secondary);
     }
 
     /* Modals & Overlays */
@@ -598,27 +598,27 @@ export class J6App extends LitElement {
     }
     .preset-dropdown-container { width: 100%; max-width: 500px; }
     .retro-modal {
-      background: #141518; border: 3px solid #3c3d42; border-radius: 8px;
+      background: #141518; border: 3px solid var(--border-light); border-radius: 8px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9); width: 100%; max-width: 550px;
-      overflow: hidden; font-family: 'Inter', sans-serif;
+      overflow: hidden; font-family: var(--font-sans);
     }
     .modal-header {
       background: #111214; padding: 10px 16px; display: flex;
       justify-content: space-between; align-items: center; border-bottom: 2px solid #2a2b30;
     }
-    .modal-title { font-size: 0.8rem; font-weight: bold; color: #ff5d00; letter-spacing: 0.08em; }
+    .modal-title { font-size: 0.8rem; font-weight: bold; color: var(--color-orange-primary); letter-spacing: 0.08em; }
     .close-btn { background: transparent; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; transition: color 0.2s ease; }
-    .close-btn:hover { color: #ff5d00; }
+    .close-btn:hover { color: var(--color-orange-primary); }
     .modal-body { padding: 20px; }
-    .modal-body.text-content h3 { margin-top: 0; color: #ff5d00; }
+    .modal-body.text-content h3 { margin-top: 0; color: var(--color-orange-primary); }
     .modal-body.text-content p { line-height: 1.5; font-size: 0.9rem; color: #b2b4b8; }
-    .modal-body.text-content a { color: #ff5d00; text-decoration: none; font-weight: bold; transition: color 0.2s ease; }
+    .modal-body.text-content a { color: var(--color-orange-primary); text-decoration: none; font-weight: bold; transition: color 0.2s ease; }
     .modal-body.text-content a:hover { color: #fff; text-decoration: underline; }
     .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
     .filter-group { display: flex; flex-direction: column; gap: 6px; }
-    .filter-group label { font-size: 0.75rem; font-weight: bold; color: #8c8e94; text-transform: uppercase; }
+    .filter-group label { font-size: 0.75rem; font-weight: bold; color: var(--text-secondary); text-transform: uppercase; }
     .filter-select {
-      background: #0c0c0e; border: 2px solid #2e3037; color: #e2e2e4;
+      background: var(--bg-element-dark); border: 2px solid #2e3037; color: var(--text-primary);
       border-radius: 4px; padding: 8px; font-size: 0.85rem; outline: none;
     }
     .modal-footer {
@@ -627,17 +627,17 @@ export class J6App extends LitElement {
     }
     .retro-btn {
       background: linear-gradient(180deg, #3c3e44 0%, #202124 100%);
-      border: 2px solid #5a5c62; color: #e2e2e4; font-size: 0.7rem; font-weight: bold;
+      border: 2px solid #5a5c62; color: var(--text-primary); font-size: 0.7rem; font-weight: bold;
       padding: 6px 12px; border-radius: 4px; cursor: pointer; text-transform: uppercase;
     }
     .retro-btn.accent { background: #cd5a1e; border-color: #3e2010; color: #fff; }
-    .retro-btn.accent:hover { background: #ff5d00; }
+    .retro-btn.accent:hover { background: var(--color-orange-primary); }
     .synth-footer {
       padding: 16px 24px; background: #0d0d10; border-top: 3px solid #1a1b1f;
-      display: flex; justify-content: center; align-items: center; gap: 24px; font-size: 0.8rem; color: #6a6b72;
+      display: flex; justify-content: center; align-items: center; gap: 24px; font-size: 0.8rem; color: var(--text-muted);
     }
     .synth-footer a {
-      color: #8c8e94;
+      color: var(--text-secondary);
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -646,7 +646,7 @@ export class J6App extends LitElement {
       font-weight: 600;
     }
     .synth-footer a:hover {
-      color: #e2e2e4;
+      color: var(--text-primary);
     }
     .footer-divider {
       color: #2e3037;
@@ -887,7 +887,7 @@ Effect Chorus: ${this.customValues.effect}%
                     <!-- ADSR LCD Screen -->
                     <div class="led-search-screen" style="padding: 0; overflow: hidden; justify-content: center;">
                       <svg viewBox="0 0 100 40" style="width: 90%; height: 80%; overflow: visible;" preserveAspectRatio="none">
-                        <path d=${adsrPath} fill="none" stroke="#ff5d00" stroke-width="2" vector-effect="non-scaling-stroke" filter="drop-shadow(0 0 4px rgba(255, 93, 0, 0.7))"/>
+                        <path d=${adsrPath} fill="none" stroke="var(--color-orange-primary)" stroke-width="2" vector-effect="non-scaling-stroke" filter="drop-shadow(0 0 4px rgba(255, 93, 0, 0.7))"/>
                       </svg>
                     </div>
                   </div>
@@ -926,7 +926,7 @@ Effect Chorus: ${this.customValues.effect}%
                   <div class="waveform-picker">
                     <div class="waveform-item">
                       <span class="waveform-label">
-                        <svg width="12" height="12" viewBox="0 0 10 10" stroke="#8c8e94" fill="none" stroke-width="1.5">
+                        <svg width="12" height="12" viewBox="0 0 10 10" stroke="var(--text-secondary)" fill="none" stroke-width="1.5">
                           <path d="M1 9 L9 1 L9 9 Z" />
                         </svg>
                       </span>
@@ -936,7 +936,7 @@ Effect Chorus: ${this.customValues.effect}%
 
                     <div class="waveform-item">
                       <span class="waveform-label">
-                        <svg width="12" height="12" viewBox="0 0 10 10" stroke="#8c8e94" fill="none" stroke-width="1.5">
+                        <svg width="12" height="12" viewBox="0 0 10 10" stroke="var(--text-secondary)" fill="none" stroke-width="1.5">
                           <path d="M1 9 L1 1 L5 1 L5 9 L9 9" />
                         </svg>
                       </span>
@@ -946,7 +946,7 @@ Effect Chorus: ${this.customValues.effect}%
 
                     <div class="waveform-item">
                       <span class="waveform-label">
-                        <svg width="12" height="12" viewBox="0 0 10 10" stroke="#8c8e94" fill="none" stroke-width="1.5">
+                        <svg width="12" height="12" viewBox="0 0 10 10" stroke="var(--text-secondary)" fill="none" stroke-width="1.5">
                           <path d="M1 5 L9 5" stroke-dasharray="2 2" />
                           <path d="M3 9 L3 1 L7 1 L7 9" />
                         </svg>
@@ -1073,7 +1073,7 @@ Effect Chorus: ${this.customValues.effect}%
                     <div class="chorus-picker">
                       <div class="chorus-button">
                         <span>
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8c8e94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block; margin-bottom: 1px;">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block; margin-bottom: 1px;">
                             <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"/>
                           </svg>
                         </span>

@@ -1,0 +1,187 @@
+/* Extracted from docs/assets/index-B3_ZuoMM.js */
+/* Flat JUNO Section Panel Outline styling */
+    .panel-card {
+  background: transparent;
+      border: 1px solid #2e3037;
+      border-radius: 4px;
+      box-sizing: border-box;
+      position: relative;
+}
+/* Red and Blue screen-printed block headers */
+    .panel-header {
+  padding: 6px 12px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+}
+.panel-header.red {
+  background: #b52c24;
+      border-bottom: 1.5px solid #ffa19922;
+}
+.panel-header.blue {
+  background: #346d92;
+      border-bottom: 1.5px solid #a8cce422;
+}
+.panel-content {
+  padding: 20px 16px 16px;
+      display: flex;
+      gap: 16px;
+      justify-content: space-around;
+      align-items: center;
+}
+/* Skeuomorphic retro keys with thick black borders and deep drop shadows */
+    .btn-key {
+  width: 34px;
+      height: 34px;
+      border: 2px solid #101113;
+      border-radius: 4px;
+      box-shadow: 0 4px 0 #000000, 0 6px 10px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      position: relative;
+}
+.btn-key::after {
+  /* Subtle top highlight inner bevel for plastic texture */
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: rgba(255,255,255,0.25);
+}
+/* Only physically depress the button while the mouse is actively holding it down */
+    .btn-key:active {
+  transform: translateY(3px);
+      box-shadow: 0 1px 0 #000000, 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Modals & Overlays */
+    .modal-backdrop {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(4px);
+      z-index: 2000; display: flex; justify-content: center; align-items: center; padding: 20px;
+}
+.modal-header {
+  background: #111214; padding: 10px 16px; display: flex;
+      justify-content: space-between; align-items: center; border-bottom: 2px solid #2a2b30;
+}
+.modal-title {
+  font-size: 0.8rem; font-weight: bold; color: #ff5d00; letter-spacing: 0.08em;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-body.text-content h3 {
+  margin-top: 0; color: #ff5d00;
+}
+.modal-body.text-content p {
+  line-height: 1.5; font-size: 0.9rem; color: #b2b4b8;
+}
+.modal-body.text-content a {
+  color: #ff5d00; text-decoration: none; font-weight: bold; transition: color 0.2s ease;
+}
+.modal-body.text-content a:hover {
+  color: #fff; text-decoration: underline;
+}
+.modal-footer {
+  background: #0f1012; padding: 12px 16px; display: flex;
+      justify-content: flex-end; gap: 12px; border-top: 1px solid #1f2025;
+}
+.panel-content {
+  padding: 10px; gap: 8px;
+}
+
+/* Extracted from src/j6-app.ts */
+/* Flat JUNO Section Panel Outline styling */
+    .panel-card {
+  background: transparent;
+      border: 1px solid #2e3037;
+      border-radius: 4px;
+      box-sizing: border-box;
+      position: relative;
+}
+/* Red and Blue screen-printed block headers */
+    .panel-header {
+  padding: 6px 12px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+}
+.panel-header.red {
+  background: #b52c24;
+      border-bottom: 1.5px solid #ffa19922;
+}
+.panel-header.blue {
+  background: #346d92;
+      border-bottom: 1.5px solid #a8cce422;
+}
+.panel-content {
+  padding: 20px 16px 16px;
+      display: flex;
+      gap: 16px;
+      justify-content: space-around;
+      align-items: center;
+}
+/* Skeuomorphic retro keys with thick black borders and deep drop shadows */
+    .btn-key {
+  width: 34px;
+      height: 34px;
+      border: 2px solid #101113;
+      border-radius: 4px;
+      box-shadow: 0 4px 0 #000000, 0 6px 10px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      position: relative;
+}
+.btn-key::after {
+  /* Subtle top highlight inner bevel for plastic texture */
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: rgba(255,255,255,0.25);
+}
+/* Only physically depress the button while the mouse is actively holding it down */
+    .btn-key:active {
+  transform: translateY(3px);
+      box-shadow: 0 1px 0 #000000, 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Modals & Overlays */
+    .modal-backdrop {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(4px);
+      z-index: 2000; display: flex; justify-content: center; align-items: center; padding: 20px;
+}
+.modal-header {
+  background: #111214; padding: 10px 16px; display: flex;
+      justify-content: space-between; align-items: center; border-bottom: 2px solid #2a2b30;
+}
+.modal-title {
+  font-size: 0.8rem; font-weight: bold; color: var(--color-orange-primary); letter-spacing: 0.08em;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-body.text-content h3 {
+  margin-top: 0; color: var(--color-orange-primary);
+}
+.modal-body.text-content p {
+  line-height: 1.5; font-size: 0.9rem; color: #b2b4b8;
+}
+.modal-body.text-content a {
+  color: var(--color-orange-primary); text-decoration: none; font-weight: bold; transition: color 0.2s ease;
+}
+.modal-body.text-content a:hover {
+  color: #fff; text-decoration: underline;
+}
+.modal-footer {
+  background: #0f1012; padding: 12px 16px; display: flex;
+      justify-content: flex-end; gap: 12px; border-top: 1px solid #1f2025;
+}
+.panel-content {
+  padding: 10px; gap: 8px;
+}

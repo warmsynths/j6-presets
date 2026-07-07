@@ -26,21 +26,21 @@ export class J6PresetList extends LitElement {
     :host {
       display: flex;
       flex-direction: column;
-      background: #141416;
-      border: 3px solid #3c3d42;
+      background: var(--bg-surface);
+      border: 3px solid var(--border-light);
       border-radius: 8px;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), inset 0 0 20px rgba(0, 0, 0, 0.6);
       overflow: hidden;
       max-height: 85vh;
-      font-family: 'Inter', system-ui, sans-serif;
-      color: #e2e2e4;
+      font-family: var(--font-sans);
+      color: var(--text-primary);
       z-index: 1000;
       width: 100%;
     }
     
     .list-header {
-      background: #1c1d22;
-      border-bottom: 2px solid #2e2f34;
+      background: var(--bg-list-header);
+      border-bottom: 2px solid var(--border-medium);
       padding: 14px;
       display: flex;
       flex-direction: column;
@@ -55,21 +55,21 @@ export class J6PresetList extends LitElement {
     }
 
     .preset-count {
-      font-family: 'VT323', monospace;
-      color: #ff5d00;
+      font-family: var(--font-mono);
+      color: var(--color-orange-primary);
       font-size: 1.2rem;
       letter-spacing: 0.05em;
       background: #0c0c0d;
       padding: 2px 8px;
       border-radius: 4px;
-      border: 1px solid #ff5d0033;
+      border: 1px solid var(--color-orange-primary)33;
       box-shadow: 0 0 6px rgba(255, 93, 0, 0.15);
     }
     
     .led-search-screen {
       flex: 1;
       height: 34px;
-      background-color: #120201;
+      background-color: var(--bg-input);
       background-image: radial-gradient(rgba(255, 93, 0, 0.2) 1.5px, transparent 0);
       background-size: 4px 4px;
       border: 2px solid #09090b;
@@ -86,8 +86,8 @@ export class J6PresetList extends LitElement {
       width: 100%;
       background: transparent;
       border: none;
-      color: #ff5d00;
-      font-family: 'VT323', monospace;
+      color: var(--color-orange-primary);
+      font-family: var(--font-mono);
       font-size: 1.7rem;
       letter-spacing: 0.05em;
       outline: none;
@@ -95,17 +95,17 @@ export class J6PresetList extends LitElement {
       text-shadow: 0 0 6px rgba(255, 93, 0, 0.8);
       padding: 0;
     }
-    .led-search-input::placeholder { color: #ff5d0033; text-shadow: none; }
+    .led-search-input::placeholder { color: var(--color-orange-primary)33; text-shadow: none; }
     
     .led-search-icon {
       position: absolute; right: 8px; top: calc(50% - 9px);
-      width: 18px; height: 18px; fill: #ff5d00;
+      width: 18px; height: 18px; fill: var(--color-orange-primary);
       filter: drop-shadow(0 0 4px rgba(255, 93, 0, 0.7)); pointer-events: none;
     }
 
     .retro-btn {
       background: linear-gradient(180deg, #3c3e44 0%, #202124 100%);
-      border: 2px solid #5a5c62; color: #e2e2e4; font-size: 0.7rem; font-weight: bold;
+      border: 2px solid #5a5c62; color: var(--text-primary); font-size: 0.7rem; font-weight: bold;
       padding: 6px 12px; border-radius: 4px; cursor: pointer; text-transform: uppercase;
       height: 34px;
     }
@@ -114,7 +114,7 @@ export class J6PresetList extends LitElement {
 
     .patch-counts {
       font-size: 0.65rem;
-      color: #8c8e94;
+      color: var(--text-secondary);
       font-weight: 800;
       text-align: right;
       text-transform: uppercase;
@@ -122,15 +122,15 @@ export class J6PresetList extends LitElement {
 
     .filters-drawer {
       background: #18191e;
-      border-bottom: 2px solid #2e2f34;
+      border-bottom: 2px solid var(--border-medium);
       padding: 14px;
     }
     
     .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
     .filter-group { display: flex; flex-direction: column; gap: 4px; }
-    .filter-group label { font-size: 0.7rem; font-weight: bold; color: #8c8e94; text-transform: uppercase; }
+    .filter-group label { font-size: 0.7rem; font-weight: bold; color: var(--text-secondary); text-transform: uppercase; }
     .filter-select {
-      background: #0c0c0e; border: 2px solid #2e3037; color: #e2e2e4;
+      background: var(--bg-element-dark); border: 2px solid #2e3037; color: var(--text-primary);
       border-radius: 4px; padding: 6px; font-size: 0.8rem; outline: none;
     }
     .filters-footer {
@@ -159,7 +159,7 @@ export class J6PresetList extends LitElement {
       border: 2px solid #0f0f11;
     }
     .scroll-container::-webkit-scrollbar-thumb:hover {
-      background: #ff5d00;
+      background: var(--color-orange-primary);
     }
 
     ul {
@@ -170,7 +170,7 @@ export class J6PresetList extends LitElement {
     
     li {
       padding: 10px 14px;
-      border-bottom: 1px solid #1f2024;
+      border-bottom: 1px solid var(--border-dark);
       cursor: pointer;
       display: grid;
       grid-template-columns: 50px 1fr;
@@ -181,20 +181,20 @@ export class J6PresetList extends LitElement {
     }
     
     li:hover {
-      background: #24252b;
+      background: var(--bg-element-hover);
       color: #ffffff;
     }
     
     li.selected {
       background: rgba(255, 93, 0, 0.08);
-      border-left: 4px solid #ff5d00;
-      color: #ff7700;
+      border-left: 4px solid var(--color-orange-primary);
+      color: var(--color-orange-light);
     }
     
     .preset-id {
-      font-family: 'VT323', monospace;
+      font-family: var(--font-mono);
       font-size: 1.4rem;
-      color: #ff5d00;
+      color: var(--color-orange-primary);
       text-shadow: 0 0 4px rgba(255, 93, 0, 0.2);
     }
     
@@ -205,8 +205,8 @@ export class J6PresetList extends LitElement {
     .no-results {
       padding: 30px;
       text-align: center;
-      color: #6a6b72;
-      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
       font-size: 1.5rem;
     }
   `;

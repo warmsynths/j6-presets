@@ -14,7 +14,7 @@ export class J6PresetDetail extends LitElement {
   static styles = css`
     :host {
       display: block;
-      background: #1e1e1e;
+      background: var(--bg-panel);
       border: 1px solid #333;
       border-radius: 8px;
       padding: 1.5rem;
@@ -30,7 +30,7 @@ export class J6PresetDetail extends LitElement {
       height: 120px;
     }
     path {
-      stroke: #ff5500; /* Roland orange vibe */
+      stroke: var(--color-orange-glow); /* Roland orange vibe */
       stroke-width: 3;
       fill: none;
       stroke-dasharray: 1000;
@@ -78,8 +78,8 @@ export class J6PresetDetail extends LitElement {
     }
     .param-group h4 {
       margin-top: 0;
-      color: #ff5500;
-      border-bottom: 1px solid #444;
+      color: var(--color-orange-glow);
+      border-bottom: 1px solid var(--border-lighter);
       padding-bottom: 0.5rem;
     }
     .tag-bar {
@@ -94,7 +94,7 @@ export class J6PresetDetail extends LitElement {
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
       font-size: 0.8rem;
-      border: 1px solid #444;
+      border: 1px solid var(--border-lighter);
     }
     .param-group p {
       margin: 0.5rem 0;
