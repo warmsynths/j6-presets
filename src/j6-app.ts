@@ -740,8 +740,34 @@ export class J6App extends LitElement {
     @media (max-width: 768px) {
       :host { padding: 8px; }
       .synth-container { border-width: 2px; }
-      .roland-logo { font-size: 1.6rem; }
-      .juno-logo { font-size: 2rem; }
+      .synth-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 12px;
+      }
+      .header-left {
+        display: contents;
+      }
+      .roland-logo {
+        font-size: 1.6rem;
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: start;
+      }
+      .juno-logo {
+        font-size: 2rem;
+        grid-row: 1;
+        grid-column: 2;
+        justify-self: end;
+        margin-right: 0;
+      }
+      .juno-switch {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        justify-self: center;
+        margin-left: 0;
+      }
       .synth-grid { display: flex; flex-direction: column; gap: 12px; }
       .grid-right { display: grid; grid-template-columns: 1fr; gap: 12px; }
       .grid-right-mobile-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }

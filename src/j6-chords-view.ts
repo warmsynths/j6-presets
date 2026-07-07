@@ -13,6 +13,7 @@ export class J6ChordsView extends LitElement {
   
   @state() private currentFilteredIndex: number = 0;
   @state() private showSearchModal: boolean = false;
+  @state() private showComplexHelpModal: boolean = false;
 
   private get uniqueGenres() {
     return ['All', ...Array.from(new Set(chordsData.chord_sets.map(s => s.genre))).sort()];
@@ -588,8 +589,43 @@ export class J6ChordsView extends LitElement {
     .fader-scale-shared span { text-align: center; line-height: 1; }
 
     @media (max-width: 768px) {
-      .top-row { flex-direction: column; }
-      .set-header-row { flex-direction: column; align-items: flex-start; }
+      .juno-panel-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .top-row {
+        display: contents;
+      }
+      .panel-set-info {
+        order: 1;
+      }
+      .chords-block {
+        order: 2;
+      }
+      .panel-parameters {
+        order: 3;
+      }
+      .panel-random-selection {
+        order: 4;
+      }
+      .set-header-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .info-screen {
+        align-items: center;
+        text-align: center;
+      }
+      .info-row {
+        justify-content: center;
+        width: 100%;
+      }
+      .info-row div {
+        justify-content: center;
+      }
+      .info-label {
+        width: auto;
+      }
       .chords-row { padding: 24px 16px; gap: 12px; }
       .patch-btn { width: 38px; height: 38px; }
       .patch-legend { font-size: 0.65rem; }
@@ -603,7 +639,7 @@ export class J6ChordsView extends LitElement {
         <div class="top-row">
 
           <!-- SET INFO & SELECTION -->
-          <div class="juno-block" style="flex: 1;">
+          <div class="juno-block panel-set-info" style="flex: 1;">
             <div class="juno-header orange">SET INFO</div>
             <div class="juno-content">
               <div class="set-info-container">
@@ -663,7 +699,7 @@ export class J6ChordsView extends LitElement {
           </div>
           
           <!-- PARAMETERS / COMPLEXITY -->
-          <div class="juno-block" style="flex: 1;">
+          <div class="juno-block panel-parameters" style="flex: 1;">
             <div class="juno-header blue">PARAMETERS</div>
             <div class="juno-content" style="gap: 24px; padding: 8px 16px;">
               <div class="fader-scale-shared">
@@ -676,7 +712,19 @@ export class J6ChordsView extends LitElement {
                 @mousedown=${(e: MouseEvent) => this.handleFaderMouseDown(e)}
                 @touchstart=${(e: TouchEvent) => this.handleFaderTouchStart(e)}
               >
-                <span class="fader-label">COMPLEX</span>
+                <span class="fader-label" style="display: flex; align-items: center; gap: 4px;">
+                  COMPLEX
+                  <span 
+                    class="help-icon" 
+                    @mousedown=${(e: Event) => e.stopPropagation()} 
+                    @touchstart=${(e: Event) => e.stopPropagation()} 
+                    @click=${() => this.showComplexHelpModal = true}
+                    style="cursor: pointer; background: #2a2b30; color: #a4a5aa; border-radius: 50%; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: bold; line-height: 1; border: 1px solid #3c3e44; transition: all 0.1s ease;"
+                    onmouseover="this.style.color='#fff'; this.style.borderColor='#555861'"
+                    onmouseout="this.style.color='#a4a5aa'; this.style.borderColor='#3c3e44'"
+                    title="What is this?"
+                  >?</span>
+                </span>
                 <div class="fader-track-wrapper">
                   <div class="fader-track">
                     <div class="fader-handle" style="bottom: calc(${this.maxComplexity}% * 0.86)"></div>
@@ -688,15 +736,14 @@ export class J6ChordsView extends LitElement {
           </div>
 
           <!-- SEARCH & FILTERS -->
-          <div class="juno-block" style="flex: 1;">
-            <div class="juno-header blue">DCO / FILTER SEARCH</div>
+          <div class="juno-block panel-random-selection" style="flex: 1;">
+            <div class="juno-header blue">RANDOM SELECTION</div>
             <div class="juno-content" style="flex-direction: column; gap: 20px;">
               
               <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                 
                 <div class="patch-btn-wrapper">
                   <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.65rem; min-width: 0; overflow: visible;">
-                    <span>RND</span>
                     <span>POP</span>
                   </div>
                   <button class="patch-btn color-1" @click=${() => this.selectRandomSet('Pop')}></button>
@@ -704,7 +751,6 @@ export class J6ChordsView extends LitElement {
 
                 <div class="patch-btn-wrapper">
                   <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.5rem; letter-spacing: 0; min-width: 0; overflow: visible;">
-                    <span>RND</span>
                     <span>NEO SOUL</span>
                   </div>
                   <button class="patch-btn color-1" @click=${() => this.selectRandomSet('Neo Soul')}></button>
@@ -712,7 +758,6 @@ export class J6ChordsView extends LitElement {
 
                 <div class="patch-btn-wrapper">
                   <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.65rem; min-width: 0; overflow: visible;">
-                    <span>RND</span>
                     <span>JAZZ</span>
                   </div>
                   <button class="patch-btn color-1" @click=${() => this.selectRandomSet('Jazz')}></button>
@@ -720,7 +765,7 @@ export class J6ChordsView extends LitElement {
 
                 <div class="patch-btn-wrapper">
                   <div class="patch-legend" style="flex-direction: column; justify-content: flex-start; height: 28px; font-size: 0.65rem; min-width: 0; overflow: visible;">
-                    <span>RND</span>
+                    <span>ALL</span>
                   </div>
                   <button class="patch-btn color-3" @click=${() => this.selectRandomSet()}></button>
                 </div>
@@ -812,6 +857,23 @@ export class J6ChordsView extends LitElement {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- COMPLEX HELP MODAL -->
+      ${this.showComplexHelpModal ? html`
+        <div class="modal-backdrop" style="z-index: 2500;" @click=${(e: Event) => { if (e.target === e.currentTarget) this.showComplexHelpModal = false; }}>
+          <div class="retro-modal" style="max-width: 450px;">
+            <div class="modal-header">
+              <div class="modal-title">COMPLEXITY PARAMETER</div>
+              <button class="close-btn" @click=${() => this.showComplexHelpModal = false}>&times;</button>
+            </div>
+            <div class="modal-body" style="color: #a4a5aa; font-size: 0.85rem; line-height: 1.6;">
+              <p style="margin-top: 0; color: #fff;">The <strong>COMPLEX</strong> parameter filters the chord sets based on their harmonic complexity.</p>
+              <p>It calculates a score by checking for advanced chord extensions (like 9ths, 11ths, 13ths), alterations (diminished, augmented), suspended chords, and slash chords.</p>
+              <p style="margin-bottom: 0;">Lower the fader to show only simpler, more basic chord sets. Raise it to include jazzier, more complex progressions.</p>
             </div>
           </div>
         </div>
