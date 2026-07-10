@@ -1,13 +1,13 @@
-# Roland J-6 Preset Explorer
+# Roland J-6 Companion
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-![Roland J-6 Preset Explorer Screenshot](./public/screenshot.png)
+![Roland J-6 Companion Screenshot](./public/screenshot.png)
 
 > Built from the work of Nick Standing and their compilation spreadsheet and video.
 > See: https://www.youtube.com/watch?v=z6hoNwWadR8
 
-A lightweight browser app for exploring and understanding Roland J-6 presets.
+A lightweight browser companion app for exploring and understanding Roland J-6 presets, chord sets, and styles.
 
 ## What it does
 

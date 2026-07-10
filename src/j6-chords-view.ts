@@ -14,9 +14,9 @@ export class J6ChordsView extends LitElement {
   @state() private currentFilteredIndex: number = 0;
   @state() private showSearchModal: boolean = false;
   @state() private showComplexHelpModal: boolean = false;
-  @state() private genreFilterCollapsed: boolean = localStorage.getItem('j6-presets:genre-filter-collapsed') === null
+  @state() private genreFilterCollapsed: boolean = localStorage.getItem('j6-companion:genre-filter-collapsed') === null
     ? true
-    : localStorage.getItem('j6-presets:genre-filter-collapsed') === 'true';
+    : localStorage.getItem('j6-companion:genre-filter-collapsed') === 'true';
 
   private get uniqueGenres() {
     return ['All', ...Array.from(new Set(chordsData.chord_sets.map(s => s.genre))).sort()];
@@ -70,7 +70,7 @@ export class J6ChordsView extends LitElement {
 
   private toggleGenreFilter() {
     this.genreFilterCollapsed = !this.genreFilterCollapsed;
-    localStorage.setItem('j6-presets:genre-filter-collapsed', String(this.genreFilterCollapsed));
+    localStorage.setItem('j6-companion:genre-filter-collapsed', String(this.genreFilterCollapsed));
   }
 
   private jumpToSet(setNumber: number) {
