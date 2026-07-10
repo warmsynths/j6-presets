@@ -63,9 +63,10 @@ export interface Preset extends RawPreset {
  */
 export interface StyleVariation {
   var: string | number;
-  pattern: string;
-  description: string;
-  use_case: string;
+  pattern?: string;
+  note_value?: string;
+  description?: string;
+  use_case?: string;
 }
 
 /**

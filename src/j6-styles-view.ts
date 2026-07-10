@@ -48,45 +48,115 @@ export class J6StylesView extends LitElement {
     this.selectedVariationIndex = nextIdx;
   }
 
-  private renderOscilloscope(pattern: string) {
-    const p = pattern.toUpperCase();
-    let bars: number[] = [];
-    
-    if (p.includes('UP&DOWN') || p.includes('U/D') || p.includes('ALT')) {
-      bars = [3, 6, 9, 12, 15, 18, 15, 12, 9, 6, 3];
-    } else if (p.includes('DOWN&UP') || p.includes('D/U')) {
-      bars = [18, 15, 12, 9, 6, 3, 6, 9, 12, 15, 18];
-    } else if (p.includes('UP')) {
-      bars = [3, 6, 9, 12, 15, 18];
-    } else if (p.includes('DOWN')) {
-      bars = [18, 15, 12, 9, 6, 3];
-    } else if (p.includes('RANDOM') || p.includes('RND') || p.includes('R')) {
-      bars = [6, 18, 3, 14, 9, 17, 4, 11];
-    } else if (p.includes('CHORD') || p.includes('POLY') || p.includes('SYNC')) {
-      bars = [15, 15, 0, 15, 15, 0, 15, 15];
-    } else if (p.includes('BASS') || p.includes('ROOT')) {
-      bars = [6, 6, 6, 6, 6, 6, 6, 6];
-    } else {
-      bars = [12, 3, 12, 3, 12, 3, 12, 3];
+  private renderStepGrid(patternStr: string | undefined, category: string, subdivision: string | undefined) {
+    const p = (patternStr || '').toUpperCase();
+    const cat = category.toLowerCase();
+    const sub = (subdivision || '').toLowerCase();
+    const rows = 8;
+
+    // Determine columns from subdivision
+    let cols = 8;
+    if (sub.includes('16th')) {
+      cols = 16;
+    } else if (sub.includes('variable') || sub.includes('spacious')) {
+      cols = 4;
+    }
+    // Triplet variations: use 12 columns (4 groups of 3)
+    if (p.includes('TRIPLET')) {
+      cols = 12;
     }
 
-    const maxBar = Math.max(...bars);
-    const scale = 20 / (maxBar || 20);
-    
-    const svgWidth = bars.length * 16;
+    const grid: boolean[][] = Array.from({ length: rows }, () => Array(cols).fill(false));
+
+    if (cat.includes('chord') || cat.includes('phrase')) {
+      if (p.includes('STRUM')) {
+        const hitCols = [0, 1, Math.floor(cols/2), Math.floor(cols/2)+1];
+        for (const col of hitCols) {
+          if (col < cols) { grid[2][col] = true; grid[3][col] = true; grid[4][col] = true; grid[5][col] = true; }
+        }
+      } else if (p.includes('RHYTHMIC') || p.includes('GROOVE')) {
+        const spacing = Math.max(1, Math.floor(cols / 4));
+        for (let i = 0; i < 4; i++) {
+          const col = i * spacing;
+          if (col < cols) { grid[2][col] = true; grid[3][col] = true; grid[4][col] = true; grid[5][col] = true; }
+        }
+      } else {
+        const spacing = Math.max(1, Math.floor(cols / 4));
+        for (let i = 0; i < 4; i++) {
+          const col = i * spacing;
+          if (col < cols) { grid[2][col] = true; grid[3][col] = true; grid[4][col] = true; grid[5][col] = true; }
+        }
+      }
+    } else if (cat.includes('beat')) {
+      if (p.includes('SYNC') || p.includes('SYNCO')) {
+        for (let i = 0; i < cols; i++) {
+          if (i % 2 === 1) grid[3][i] = true;
+          if (i % 2 === 0) grid[4][i] = true;
+        }
+      } else if (p.includes('_O')) {
+        for (let i = 1; i < cols; i += Math.max(2, Math.floor(cols/4))) {
+          grid[3][i] = true; grid[4][i] = true;
+        }
+      } else {
+        const spacing = Math.max(1, Math.floor(cols / 4));
+        for (let i = 0; i < cols; i += spacing) {
+          grid[3][i] = true; grid[4][i] = true;
+        }
+      }
+    } else {
+      // Arpeggio patterns — scale sequence to fit column count
+      if (p.includes('UP&DOWN') || p.includes('U/D') || p.includes('ALT')) {
+        const half = Math.floor(cols / 2);
+        for (let i = 0; i < cols; i++) {
+          const pitch = i < half ? 7 - Math.floor((i / half) * 6) : 1 + Math.floor(((i - half) / (cols - half - 1 || 1)) * 6);
+          grid[Math.min(7, Math.max(0, pitch))][i] = true;
+        }
+      } else if (p.includes('DOWN&UP') || p.includes('D/U')) {
+        const half = Math.floor(cols / 2);
+        for (let i = 0; i < cols; i++) {
+          const pitch = i < half ? 1 + Math.floor((i / half) * 6) : 7 - Math.floor(((i - half) / (cols - half - 1 || 1)) * 6);
+          grid[Math.min(7, Math.max(0, pitch))][i] = true;
+        }
+      } else if (p.includes('DOWN')) {
+        for (let i = 0; i < cols; i++) {
+          const pitch = Math.min(7, Math.floor((i / (cols - 1)) * 7));
+          grid[pitch][i] = true;
+        }
+      } else if (p.includes('UP')) {
+        for (let i = 0; i < cols; i++) {
+          const pitch = Math.min(7, 7 - Math.floor((i / (cols - 1)) * 7));
+          grid[pitch][i] = true;
+        }
+      } else if (p.includes('RANDOM') || p.includes('RND')) {
+        const rndSeq = [2, 6, 1, 5, 3, 7, 0, 4, 3, 5, 1, 6, 2, 7, 4, 0];
+        for (let i = 0; i < cols; i++) {
+          grid[rndSeq[i % rndSeq.length]][i] = true;
+        }
+      } else if (p.includes('TRIPLET')) {
+        // Triplet groupings across 12 columns
+        const seq = [7, 5, 3, 6, 4, 2, 5, 3, 1, 4, 2, 0];
+        seq.forEach((row, col) => { if (col < cols) grid[row][col] = true; });
+      } else if (p.includes('UNPUBLISHED') || p === '') {
+        grid[1][Math.floor(cols/2)-1] = true; grid[1][Math.floor(cols/2)] = true;
+        grid[2][Math.floor(cols/2)+1] = true; grid[3][Math.floor(cols/2)] = true;
+        grid[4][Math.floor(cols/2)-1] = true;
+        grid[6][Math.floor(cols/2)-1] = true; grid[6][Math.floor(cols/2)] = true;
+      } else {
+        for (let i = 0; i < cols; i++) {
+          const pitch = Math.min(7, 7 - Math.floor((i / (cols - 1)) * 7));
+          grid[pitch][i] = true;
+        }
+      }
+    }
 
     return html`
-      <svg width="${svgWidth}" height="80" viewBox="0 0 ${svgWidth} 80" class="osc-svg">
-        <defs>
-          <linearGradient id="osc-glow" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#ff3300" stop-opacity="0.3" />
-            <stop offset="100%" stop-color="#ff6600" stop-opacity="1" />
-          </linearGradient>
-        </defs>
-        ${bars.map((h, i) => html`
-          <rect x="${i * 16}" y="${80 - (h * scale * 3.5)}" width="12" height="${h * scale * 3.5}" rx="2" fill="url(#osc-glow)" class="osc-bar" style="animation-delay: ${i * 0.05}s" />
+      <div class="step-grid" style="grid-template-columns: repeat(${cols}, 1fr)">
+        ${grid.map(row => html`
+          ${row.map(active => html`
+            <div class="step-cell ${active ? 'on' : ''}"></div>
+          `)}
         `)}
-      </svg>
+      </div>
     `;
   }
 
@@ -105,6 +175,24 @@ export class J6StylesView extends LitElement {
       grid-template-columns: 240px 1fr;
       gap: 40px;
       box-shadow: inset 0 2px 10px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .beta-badge {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 0.55rem;
+      font-weight: 900;
+      color: #ff5d00;
+      opacity: 0.4;
+      letter-spacing: 0.15em;
+      border: 1.5px solid rgba(255, 93, 0, 0.4);
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      pointer-events: none;
+      font-family: system-ui, -apple-system, sans-serif;
     }
 
     @media (max-width: 800px) {
@@ -134,61 +222,66 @@ export class J6StylesView extends LitElement {
       letter-spacing: 0.15em;
     }
 
-    /* Category Switch */
-    .switch-container {
-      background: #060608;
-      border: 1px solid #1a1b20;
-      border-radius: 4px;
-      position: relative;
-      height: 40px;
+    /* Hardware Category Buttons */
+    .hw-category-container {
       display: flex;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
-    }
-
-    .switch-indicator {
-      position: absolute;
-      top: 2px;
-      bottom: 2px;
-      width: calc(33.333% - 4px);
-      background: #2a2b30;
-      border: 1px solid #3d3e45;
-      border-radius: 2px;
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.1);
-      pointer-events: none;
-    }
-
-    .switch-indicator::after {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 4px; height: 12px;
-      background: #ff5d00;
-      border-radius: 2px;
-      box-shadow: 0 0 4px #ff5d00;
-    }
-
-    .switch-indicator.pos-0 { transform: translateX(2px); }
-    .switch-indicator.pos-1 { transform: translateX(calc(100% + 6px)); }
-    .switch-indicator.pos-2 { transform: translateX(calc(200% + 10px)); }
-
-    .switch-btn {
-      flex: 1;
-      z-index: 1;
-      display: flex;
-      align-items: center;
+      gap: 20px;
+      align-items: flex-end;
       justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 800;
-      color: #6a6b70;
+    }
+
+    .hw-btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
       cursor: pointer;
-      user-select: none;
+    }
+
+    .hw-btn-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #a4a5aa;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       transition: color 0.2s;
     }
 
-    .switch-btn.active {
+    .hw-btn-group:hover .hw-btn-label {
       color: #fff;
+    }
+
+    .hw-btn-led {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #2a0000;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+      margin-bottom: 4px;
+    }
+
+    .hw-btn-led.on {
+      background: #ffaa00;
+      box-shadow: 0 0 6px #ffaa00, 0 0 12px #ff5d00, inset 0 1px 2px rgba(255,255,255,0.8);
+    }
+
+    .hw-btn-square {
+      width: 44px;
+      height: 40px;
+      background: #e0dbba; /* cream */
+      border-radius: 2px;
+      border-bottom: 4px solid #111;
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.4), 0 3px 6px rgba(0,0,0,0.5);
+      transition: all 0.1s;
+    }
+
+    .hw-btn-square.active {
+      background: #f4a236; /* orange */
+    }
+
+    .hw-btn-group:active .hw-btn-square {
+      transform: translateY(2px);
+      border-bottom: 2px solid #111;
     }
 
     /* Stepper Controls */
@@ -272,52 +365,32 @@ export class J6StylesView extends LitElement {
     }
 
     .oscilloscope-screen {
-      background: #060608;
-      border-radius: 6px;
-      border: 2px solid #000;
-      box-shadow: inset 0 4px 16px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.05);
-      height: 180px;
-      position: relative;
+      background-color: #0a0a0c;
+      border: 2px solid #09090b;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.98), 0 1px 1px rgba(255,255,255,0.05);
+      border-radius: 3px;
+      padding: 16px;
+      box-sizing: border-box;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    .oscilloscope-screen::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
-      background-size: 100% 3px, 3px 100%;
-      pointer-events: none;
+    .step-grid {
+      display: grid;
+      grid-template-rows: repeat(8, 14px);
+      gap: 2px;
+      width: 100%;
     }
 
-    /* Grid lines */
-    .osc-grid {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image: 
-        linear-gradient(#1a2b3c 1px, transparent 1px),
-        linear-gradient(90deg, #1a2b3c 1px, transparent 1px);
-      background-size: 20px 20px;
-      opacity: 0.3;
+    .step-cell {
+      background: #1a1a1e;
+      border-radius: 2px;
+      border: 1px solid #222228;
     }
 
-    @keyframes osc-pulse {
-      0% { filter: drop-shadow(0 0 4px #ff5d00); opacity: 0.8; }
-      50% { filter: drop-shadow(0 0 12px #ff5d00); opacity: 1; transform: scaleY(1.02); }
-      100% { filter: drop-shadow(0 0 4px #ff5d00); opacity: 0.8; }
-    }
-
-    .osc-svg {
-      z-index: 1;
-      overflow: visible;
-    }
-
-    .osc-bar {
-      animation: osc-pulse 2s infinite ease-in-out;
-      transform-origin: bottom;
+    .step-cell.on {
+      background: #ff5d00;
+      border-color: #ff7a2e;
+      box-shadow: 0 0 6px rgba(255, 93, 0, 0.6), 0 0 12px rgba(255, 93, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.3);
     }
 
     /* Details Panel */
@@ -360,20 +433,18 @@ export class J6StylesView extends LitElement {
 
     return html`
       <div class="synth-panel">
+        <div class="beta-badge">Beta v0.9</div>
         
         <!-- Controls Column -->
         <div class="controls-section">
           
           <div class="control-block">
-            <div class="control-label">CATEGORY</div>
-            <div class="switch-container">
-              <div class="switch-indicator pos-${this.selectedCategoryIndex}"></div>
+            <div class="hw-category-container">
               ${stylesData.style_categories.map((cat, idx) => html`
-                <div 
-                  class="switch-btn ${this.selectedCategoryIndex === idx ? 'active' : ''}"
-                  @click=${() => this.setCategory(idx)}
-                >
-                  ${cat.category_name.split(' ')[0]}
+                <div class="hw-btn-group" @click=${() => this.setCategory(idx)}>
+                  <div class="hw-btn-label">${cat.category_name.split(' ')[0]}</div>
+                  <div class="hw-btn-led ${this.selectedCategoryIndex === idx ? 'on' : ''}"></div>
+                  <div class="hw-btn-square ${this.selectedCategoryIndex === idx ? 'active' : ''}"></div>
                 </div>
               `)}
             </div>
@@ -400,8 +471,8 @@ export class J6StylesView extends LitElement {
               </div>
               <button class="btn-rubber" @click=${() => this.cycleVariation(1)}>&gt;</button>
             </div>
-            <div class="control-subtext" title="${currentVariation.pattern}">
-              <strong>${currentVariation.pattern}</strong>
+            <div class="control-subtext" title="${currentVariation.pattern || currentVariation.note_value}">
+              <strong>${currentVariation.pattern || currentVariation.note_value || 'Unpublished'}</strong>
             </div>
           </div>
 
@@ -411,8 +482,7 @@ export class J6StylesView extends LitElement {
         <div class="display-section">
           
           <div class="oscilloscope-screen">
-            <div class="osc-grid"></div>
-            ${this.renderOscilloscope(currentVariation.pattern)}
+            ${this.renderStepGrid(currentVariation.pattern || currentVariation.note_value, currentCategory.category_name, currentStyle.subdivision)}
           </div>
 
           <div class="details-panel">
@@ -427,4 +497,6 @@ export class J6StylesView extends LitElement {
     `;
   }
 }
+
+
 
