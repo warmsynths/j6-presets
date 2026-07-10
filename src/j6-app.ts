@@ -15,6 +15,7 @@ import {
 import { RawPreset, Preset } from './types.js';
 import './j6-preset-list.js';
 import './j6-chords-view.js';
+import './j6-styles-view.js';
 
 // Parse raw data to Preset interface
 const presetsData: Preset[] = (rawPresetsData as RawPreset[]).map((p: RawPreset) => {
@@ -1248,9 +1249,7 @@ Effect Chorus: ${this.customValues.effect}%
           ` : this.activeView === 'chords' ? html`
             <j6-chords-view></j6-chords-view>
           ` : html`
-            <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; color: #5d5f66; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border: 2px dashed #2e3037; border-radius: 4px; margin: 16px;">
-              Styles view coming soon
-            </div>
+            <j6-styles-view></j6-styles-view>
           `}
         </div>
 

@@ -59,6 +59,44 @@ export interface Preset extends RawPreset {
 }
 
 /**
+ * Style Variation
+ */
+export interface StyleVariation {
+  var: string | number;
+  pattern: string;
+  description: string;
+  use_case: string;
+}
+
+/**
+ * Style Entry
+ */
+export interface StyleEntry {
+  style_number: number;
+  style_name: string;
+  subdivision: string;
+  variations: StyleVariation[];
+}
+
+/**
+ * Style Category
+ */
+export interface StyleCategory {
+  category_name: string;
+  description: string;
+  styles: StyleEntry[];
+}
+
+/**
+ * Styles Data
+ */
+export interface StylesData {
+  instrument: string;
+  engine_type: string;
+  style_categories: StyleCategory[];
+}
+
+/**
  * Chord analysis data
  */
 export interface ChordAnalysis {

@@ -1,0 +1,316 @@
+{
+    "instrument": "Roland Aira J-6",
+    "engine_type": "Style/Variation Phrase Engine",
+    "style_categories": [
+        {
+            "category_name": "Arpeggio Styles",
+            "description": "Melodic motion using single-note arpeggios. Traces the chord's notes in time rather than holding them as a block.",
+            "styles": [
+                {
+                    "style_number": 1,
+                    "style_name": "Classic 8th-Note Arpeggios",
+                    "subdivision": "8th-note",
+                    "variations": [
+                        {
+                            "var": 1,
+                            "pattern": "UP1",
+                            "description": "8th, ascending",
+                            "use_case": "Bright rising bassline or lead; good opening phrase"
+                        },
+                        {
+                            "var": 2,
+                            "pattern": "UP&DOWN1",
+                            "description": "8th, up/down",
+                            "use_case": "Balanced melodic motion for evolving chords"
+                        },
+                        {
+                            "var": 3,
+                            "pattern": "DOWN1",
+                            "description": "8th, descending",
+                            "use_case": "Falling bassline; moody transitions"
+                        },
+                        {
+                            "var": 4,
+                            "pattern": "DOWN2",
+                            "description": "8th, alt. descent",
+                            "use_case": "Descending variation, added rhythmic interest"
+                        },
+                        {
+                            "var": 5,
+                            "pattern": "UP&DOWN2",
+                            "description": "8th, alt.",
+                            "use_case": "Double-direction motion under sustained chords"
+                        },
+                        {
+                            "var": 6,
+                            "pattern": "UP2",
+                            "description": "8th, alt. ascend",
+                            "use_case": "Faster upward arps for energetic sections"
+                        },
+                        {
+                            "var": "7-12",
+                            "pattern": "Triplet versions of 1-6",
+                            "description": "8th-note triplets",
+                            "use_case": "Swing / shuffle feel; funk or jazz-leaning parts"
+                        }
+                    ]
+                },
+                {
+                    "style_number": 2,
+                    "style_name": "16th-Note Arpeggio Motion",
+                    "subdivision": "16th-note",
+                    "variations": [
+                        {
+                            "var": 1,
+                            "pattern": "UP1",
+                            "description": "16th, ascending",
+                            "use_case": "Fast rhythmic lead or bass figure"
+                        },
+                        {
+                            "var": 2,
+                            "pattern": "UP&DOWN1",
+                            "description": "16th, up/down",
+                            "use_case": "Busy, pulsing arpeggio motion"
+                        },
+                        {
+                            "var": 3,
+                            "pattern": "DOWN1",
+                            "description": "16th, descending",
+                            "use_case": "Quick descending fills"
+                        },
+                        {
+                            "var": 4,
+                            "pattern": "DOWN2",
+                            "description": "16th, alt. descent",
+                            "use_case": "Slightly varied downward feel"
+                        },
+                        {
+                            "var": 5,
+                            "pattern": "UP&DOWN2",
+                            "description": "16th, alt.",
+                            "use_case": "Complex bidirectional lines"
+                        },
+                        {
+                            "var": 6,
+                            "pattern": "UP2",
+                            "description": "16th, alt. ascend",
+                            "use_case": "High-energy melodic runs"
+                        },
+                        {
+                            "var": "7-12",
+                            "pattern": "16th triplet versions",
+                            "description": "16th-note triplets",
+                            "use_case": "Groove-oriented arps with swing"
+                        }
+                    ]
+                },
+                {
+                    "style_number": 3,
+                    "style_name": "Stepped Note Arpeggios",
+                    "subdivision": "Variable (Spacious)",
+                    "note": "Documented under 'BEAT' in the official manual, grouped here by sonic character.",
+                    "variations": [
+                        {
+                            "var": 1,
+                            "note_value": "Double whole note",
+                            "use_case": "Very slow motion under ambient pads"
+                        },
+                        {
+                            "var": 2,
+                            "note_value": "Whole note",
+                            "use_case": "Slow arpeggio fills"
+                        },
+                        {
+                            "var": 3,
+                            "note_value": "Half note",
+                            "use_case": "Broader melodic pacing"
+                        },
+                        {
+                            "var": 4,
+                            "note_value": "Quarter note",
+                            "use_case": "Subtle motion under chords"
+                        },
+                        {
+                            "var": 5,
+                            "note_value": "Eighth note",
+                            "use_case": "Moderate arpeggio pacing"
+                        },
+                        {
+                            "var": 6,
+                            "note_value": "Sixteenth note",
+                            "use_case": "Faster but still spaced motion"
+                        },
+                        {
+                            "var": "7-12",
+                            "note_value": "Triplet versions of 1-6",
+                            "use_case": "Varied rhythmic feel with swing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Beat Styles",
+            "description": "Rhythmic gating of the chord. The whole chord gates on and off on specific positions. Prioritizes timing over melodic motion.",
+            "styles": [
+                {
+                    "style_number": 4,
+                    "style_name": "Basic Rhythmic Patterns",
+                    "variations": [
+                        {
+                            "var": 1,
+                            "pattern": "o",
+                            "description": "16th hit, rest",
+                            "use_case": "Simple rhythmic stab under pads"
+                        },
+                        {
+                            "var": 2,
+                            "pattern": "_o",
+                            "description": "Syncopated 16th",
+                            "use_case": "Off-beat accents in grooves"
+                        },
+                        {
+                            "var": 3,
+                            "pattern": "_o_",
+                            "description": "Late 16th",
+                            "use_case": "Delay-like rhythmic feel"
+                        },
+                        {
+                            "var": 4,
+                            "pattern": "o",
+                            "description": "Very late 16th",
+                            "use_case": "Sparse late hits"
+                        },
+                        {
+                            "var": 5,
+                            "pattern": "~o_",
+                            "description": "8th + 16th",
+                            "use_case": "Groove with uneven feel"
+                        },
+                        {
+                            "var": 6,
+                            "pattern": "o_o~",
+                            "description": "8th/16th syncopation",
+                            "use_case": "More complex rhythm"
+                        },
+                        {
+                            "var": "7-12",
+                            "pattern": "16th groupings",
+                            "description": "Various 16th configurations",
+                            "use_case": "Varied rhythmic punctuations"
+                        }
+                    ]
+                },
+                {
+                    "style_number": 5,
+                    "style_name": "Syncopated Rhythmic Motion",
+                    "variations": [
+                        {
+                            "var": 1,
+                            "pattern": "o",
+                            "description": "Sync 16th",
+                            "use_case": "Strong starter hits under chords"
+                        },
+                        {
+                            "var": 2,
+                            "pattern": "o_o_",
+                            "description": "Syncopated 16ths",
+                            "use_case": "Funky, off-beat chord drive"
+                        },
+                        {
+                            "var": 3,
+                            "pattern": "o_o",
+                            "description": "Paired 16ths",
+                            "use_case": "Repeating rhythmic pushes"
+                        },
+                        {
+                            "var": 4,
+                            "pattern": "_oo_",
+                            "description": "Clustered rhythmic accents",
+                            "use_case": "Clustered rhythmic accents"
+                        },
+                        {
+                            "var": 5,
+                            "pattern": "_o_o",
+                            "description": "Offset sync",
+                            "use_case": "Jumpier rhythm"
+                        },
+                        {
+                            "var": 6,
+                            "pattern": "oo",
+                            "description": "Tight 16th pair",
+                            "use_case": "Fast rhythmic duet"
+                        },
+                        {
+                            "var": "7-12",
+                            "pattern": "Extended sync groupings",
+                            "description": "Extended syncopation",
+                            "use_case": "More sync accent feel"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Chord / Phrase Styles",
+            "description": "The chord moves as a block unit (rhythmic comping or strums) rather than breaking into single notes.",
+            "note": "No per-variation breakdown is published officially; variations 1-12 must be auditioned by ear.",
+            "styles": [
+                {
+                    "style_number": 6,
+                    "style_name": "Chord Phrases (Simple)",
+                    "use_case": "Basic chord backing, predictable motion. Variation 1 is the best candidate for a 'plain' held chord.",
+                    "variations": [
+                        {
+                            "var": "1-12",
+                            "pattern": "Unpublished",
+                            "use_case": "Predictable block harmonic motion"
+                        }
+                    ]
+                },
+                {
+                    "style_number": 7,
+                    "style_name": "Chord Phrases (Rhythmic)",
+                    "use_case": "Groove chords that move with beat emphasis.",
+                    "variations": [
+                        {
+                            "var": "1-12",
+                            "pattern": "Unpublished",
+                            "use_case": "Pulsing, groove-oriented block chords"
+                        }
+                    ]
+                },
+                {
+                    "style_number": 8,
+                    "style_name": "Strummed Chord Phrases (Simple)",
+                    "use_case": "Acoustic-like backing or rhythmic pulse simulating guitar or piano comping.",
+                    "variations": [
+                        {
+                            "var": "1-12",
+                            "pattern": "Unpublished",
+                            "use_case": "Strum-like acoustic simulation"
+                        }
+                    ]
+                },
+                {
+                    "style_number": 9,
+                    "style_name": "Strummed Chord Phrases (Rhythmic)",
+                    "use_case": "More pronounced groove and swing added to the strummed character.",
+                    "variations": [
+                        {
+                            "var": "1-12",
+                            "pattern": "Unpublished",
+                            "use_case": "Strumming with pronounced groove/swing"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "sequencer_behavior_rules": {
+        "style_off_mechanic": "STYLE OFF does not mean 'no phrase'. A step set to OFF inherits and continues playing the last assigned Style/Variation from the previous ON step.",
+        "default_fallback": "If no ON step has occurred yet when playback hits an OFF step, it falls back to the pattern's default phrase setting.",
+        "achieving_a_plain_chord": "To make a step sound like a plain held chord, you must explicitly set STYLE to ON, Style 6, Variation 1. Leaving it OFF will simply inherit whatever arpeggio/gate preceded it.",
+        "persistence": "An ON assignment persists forward indefinitely across steps and page boundaries until a new ON step overrides it."
+    }
+}
